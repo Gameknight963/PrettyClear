@@ -1,0 +1,12 @@
+:root {
+    --custom-app-top-bar-height: 0px !important;
+}
+
+.bar_c38106 {
+    display: none !important;
+}
+
+[class*="layers_"], [class*="layer_"], [class*="container_a2f192"] {
+    display: flex !important;
+    margin: 0 !important;
+}
