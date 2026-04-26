@@ -6580,9 +6580,15 @@ button[aria-label="Unmute"][aria-pressed="true"] {
 
 /*# sourceMappingURL=main.css.map */
 
+/* "what you missed" */
+.container__243fe {
+  background: var(--main-content-color);
+  backdrop-filter: blur(var(--app-blur));
+}
+
 :root {
 	/* APP ELEMENTS */
-	--app-bg: #00000000;
+	--app-bg: #0003279d;
 	--app-blur: 6px;
 	--app-margin: 24px;
 	--app-radius: 8px;
@@ -6614,7 +6620,7 @@ button[aria-label="Unmute"][aria-pressed="true"] {
 	--textarea-color: 255,255,255;
 	--textarea-alpha: 0.1;
 	--textarea-alpha-focus: 0.15;
-	--textarea-text-color: hsl(0,0%,100%);
+	--textarea-text-color: hsla(0, 0%, 100%, 1);
 	--textarea-radius: 15px;
 
 	/* CARD SETTINGS */
