@@ -6586,6 +6586,13 @@ button[aria-label="Unmute"][aria-pressed="true"] {
   backdrop-filter: blur(var(--app-blur));
 }
 
+/* reaction hover tooltip */
+div[class^="reactionTooltip"] {
+  background-color: transparent;
+  backdrop-filter: blur(var(--app-blur));
+}
+
+
 :root {
 	/* APP ELEMENTS */
 	--app-bg: #0003279d;
