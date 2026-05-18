@@ -6580,6 +6580,9 @@ button[aria-label="Unmute"][aria-pressed="true"] {
 
 /*# sourceMappingURL=main.css.map */
 
+
+/* NEW SHIT BY GAMEKNIGHT963 /*
+
 /* "what you missed" */
 .container__243fe {
   background: var(--main-content-color);
@@ -6588,6 +6591,22 @@ button[aria-label="Unmute"][aria-pressed="true"] {
 
 /* reaction hover tooltip */
 div[class^="reactionTooltip"] {
+  background: var(--main-content-color);
+  backdrop-filter: blur(var(--app-blur));
+}
+
+#emoji-picker-tab-panel > div {
+    background: transparent;
+}
+
+#popout_918 > div > div > div > div.guildSection_d5cd2d
+{
+  background: var(--main-content-color);
+}
+
+/* this might help */
+div[role="dialog"]
+{
   background-color: transparent;
   backdrop-filter: blur(var(--app-blur));
 }
