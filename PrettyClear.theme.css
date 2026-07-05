@@ -6620,7 +6620,10 @@ button[aria-label="Unmute"][aria-pressed="true"] {
   backdrop-filter: blur(var(--app-blur));
 }
 
-div.wrapper__4e6ce.categoryList_c0e32c {
+
+div.wrapper__4e6ce.categoryList_c0e32c,
+.popover_d6f39b,
+.reactionTooltip_bbcccb {
   background-color: var(--popout-color);
 }
 
