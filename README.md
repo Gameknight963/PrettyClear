@@ -28,3 +28,6 @@ all browsers seem to have this composition issue when backdrop filter blur
 is used on a transparent background. not much i can do about it
 
 <img width="356" height="86" alt="image" src="https://github.com/user-attachments/assets/856b8e20-462c-438b-8613-6e6ab051bb0d" />
+
+## why is the commit history screwed??
+I learned too late that you're supposed to use a noreply on github. Why doesn't anyone tell you ts
