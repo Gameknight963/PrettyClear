@@ -7,8 +7,7 @@
   background-color: var(--main-content-color);
 }
 
-.heroBanner_e16ab1,
-.shopBanner__7f856 {
+.heroBanner_d6d601 {
   border-radius: var(--card-radius);
 }
 
@@ -24,18 +23,4 @@
 .productCardContainer_fcbddd:hover {
   top: unset;
   box-shadow: none !important;
-}
-.productCardContainer_fcbddd .avatarContainer_c3d04b {
-  box-shadow: var(--card-header-shadow);
-}
-.productCardContainer_fcbddd .cardText_c3d04b {
-  width: 100%;
-  inset-inline-start: 0;
-  inset-block-end: 0;
-}
-.productCardContainer_fcbddd .cardTextBlur_c23530 {
-  border-radius: 0 0 var(--card-radius) var(--card-radius);
-}
-.productCardContainer_fcbddd .cardBackground_c23530 {
-  background-color: transparent !important;
 }

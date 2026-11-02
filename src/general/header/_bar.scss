@@ -7,9 +7,11 @@
   border-bottom: none;
   box-shadow: var(--popout-header-shadow);
 }
+
 .container__9293f:before {
   display: none;
 }
+
 .container__9293f.themed__9293f {
   background-color: transparent;
 }
@@ -18,19 +20,23 @@
   display: none;
 }
 
-.akaBadge__27cd4 {
+.akaBadge__5149c {
   background-color: var(--card-color);
 }
 
-.returnButton__0b563, .returnButton_c791b2 {
+.returnButton__5d7c9,
+.returnButton__41ed7 {
   --button-height: 32px;
 }
 
-.returnButtonText__0b563, .returnButtonText_c791b2 {
+.returnButtonText__5d7c9,
+.returnButtonText__41ed7 {
   font-size: 1em;
 }
-.returnButtonText__0b563,
-.returnButtonText__0b563 *, .returnButtonText_c791b2,
-.returnButtonText_c791b2 * {
+
+.returnButtonText__5d7c9,
+.returnButtonText__5d7c9 *,
+.returnButtonText__41ed7,
+.returnButtonText__41ed7 * {
   color: var(--accent-text-color) !important;
 }

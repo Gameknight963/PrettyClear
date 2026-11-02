@@ -77,12 +77,8 @@
   border-radius: 18px;
   border: none;
 }
-.inner_c0bea0 .input__0f084::-webkit-input-placeholder {
+.inner_c0bea0 .input__75098::-webkit-input-placeholder {
   color: var(--textarea-placeholder-color);
-}
-
-.wrapper-C1y4Sz {
-  border-radius: calc(var(--popout-radius) / 1.25) calc(var(--popout-radius) / 1.25) 0 0;
 }
 
 .banner__68edb {
@@ -96,24 +92,17 @@
   border: none;
 }
 
-.overlayBackground_c69a7b {
-  border-radius: calc(var(--popout-radius) / 1.25);
-}
-
-.biteSizeInnerThemed_c69a7b {
-  padding-block-end: 0;
-}
-
-.statusBubbleOuter_a82ccc, .statusBubbleOuter_af9888, .outer_ab8609,
+.outer_ab8609,
 .inner_ab8609 {
   background-color: var(--card-color);
   border-radius: var(--popout-radius);
 }
 
-.statusBubbleOuter_a82ccc, .statusBubbleOuter_af9888, .outer_ab8609 {
+.outer_ab8609 {
   border: none !important;
 }
-.statusBubbleOuter_a82ccc:before, .statusBubbleOuter_a82ccc:after, .statusBubbleOuter_af9888:before, .statusBubbleOuter_af9888:after, .outer_ab8609:before, .outer_ab8609:after {
+.outer_ab8609:before,
+.outer_ab8609:after {
   border: inherit !important;
 }
 
@@ -121,42 +110,12 @@
   backdrop-filter: blur(var(--popout-blur));
 }
 
-.custom-theme-background .menu_c1e9c4 {
-  border: none;
-}
-
-.activity__5be3e {
-  border-radius: var(--popout-radius);
-}
-
-.role_dfa8b6, .role__5d7c9 {
+.role__5d7c9 {
   background-color: var(--background-modifier-selected);
   border-radius: 11px;
   border: none;
 }
 
-.note_c90ad7 {
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-}
-.note_c90ad7 .input__0f084 {
-  height: unset;
-  font-size: 14px;
-  line-height: 16px;
-}
-.note_c90ad7 .textarea_dde0a8 {
-  padding: 4px 10px;
-  font-size: 14px;
-  line-height: 16px;
-}
-.note_c90ad7 .textarea_dde0a8::-webkit-input-placeholder {
-  color: var(--textarea-placeholder-color);
-}
-.note_c90ad7 .textarea_dde0a8:focus {
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
-}
-
-/* USER POPOUT -> STATUS AREA */
-.menu-KSaHL1:before {
-  display: none;
+.custom-theme-background .menu_c1e9c4 {
+  border: none;
 }

@@ -13,9 +13,7 @@
   box-shadow: var(--card-header-shadow);
   border: none;
 }
-.paymentPane__01014 .paginator__01014 {
-  background-color: transparent !important;
-}
+
 .paymentPane__01014 .bottomDivider__01014.scrollerBase_d125d2 {
   border-bottom: none;
 }
@@ -31,24 +29,4 @@
   background-color: var(--card-color) !important;
   border-radius: var(--card-radius) !important;
   border: none !important;
-}
-
-.pageButtonPrev__2d021,
-.pageButtonNext__2d021,
-.pageIndicator__2d021 {
-  background-color: var(--card-color);
-  border: none;
-}
-
-.pageButtonPrev__2d021:not(.disabled__2d021):hover,
-.pageButtonNext__2d021:not(.disabled__2d021):hover {
-  background-color: var(--card-color-hover);
-}
-
-.pageButtonPrev__2d021 {
-  border-radius: 21px 0 0 21px;
-}
-
-.pageButtonNext__2d021 {
-  border-radius: 0 21px 21px 0;
 }

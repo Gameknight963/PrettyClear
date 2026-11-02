@@ -42,10 +42,10 @@
   outline: none !important;
 }
 .bd-search-wrapper .bd-search {
-  color: var(--input-text-color);
+  color: var(--textarea-text-color);
 }
 .bd-search-wrapper .bd-search::-webkit-input-placeholder {
-  color: var(--input-placeholder-color);
+  color: var(--textarea-placeholder-color);
 }
 
 .bd-store-card {

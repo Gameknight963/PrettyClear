@@ -3,56 +3,6 @@
  *  FORUM NEW POST
  *
  */
-.container_d9be46.collapsed_d9be46 {
-  height: auto;
-}
-.container_d9be46 .titleContainer_d9be46 {
-  min-height: 0;
-  gap: 8px;
-}
-.container_d9be46 .prefixElement_d9be46 {
-  position: absolute;
-  display: flex;
-  width: var(--button-height);
-  height: var(--button-height);
-  margin: 0;
-  justify-content: center;
-  z-index: 2;
-}
-.container_d9be46 .prefixElement_d9be46 div[role=button],
-.container_d9be46 .prefixElement_d9be46 svg {
-  height: inherit;
-}
-.container_d9be46 .input__0f084 {
-  margin: 0;
-  height: var(--button-height);
-  padding-block: 0;
-  padding-inline: 10px;
-  line-height: var(--button-height);
-  font-weight: 400;
-  text-shadow: none;
-  cursor: text;
-}
-.container_d9be46 .input__0f084::-webkit-input-placeholder {
-  font-weight: inherit;
-}
-.container_d9be46 .forumPostFormButton_d9be46 {
-  margin: 0;
-  height: var(--button-height);
-}
-.container_d9be46 .lookFilled__201d5 {
-  height: var(--button-height);
-}
-.container_d9be46 .contentContainer_d9be46 {
-  padding-inline: 0 86px;
-}
-.container_d9be46 .form_d9be46 {
-  margin-inline: 40px 0;
-}
-.container_d9be46 .formContainer_d9be46 {
-  position: relative;
-  display: block;
-}
 .container_d9be46 .channelTextArea__74017 {
   margin-block: 16px 0;
   margin-inline: 0;
@@ -66,15 +16,7 @@
   border-radius: var(--textarea-radius);
   color: var(--textarea-text-color);
 }
-.container_d9be46 .inner__74017::-webkit-input-placeholder {
-  color: var(--textarea-placeholder-color);
-}
 
-.container__94439 {
-  position: absolute;
-  inset-block-start: calc(var(--button-height) + 16px);
-  inset-inline-end: 16px;
-}
 .container__94439 .uploadInput__94439 {
   background-color: var(--card-color);
   border-radius: var(--card-radius);

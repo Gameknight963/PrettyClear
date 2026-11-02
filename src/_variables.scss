@@ -9,8 +9,8 @@
 	--main-rgb: 0,0,0;
 	--main-content-opacity: 0.2;
 	--sidebar-opacity: 0.4;
-	--main-content-color: hsl(0,0%,0%,0.2);
-	--sidebar-color: hsl(0,0%,0%,0.4);
+	--main-content-color: rgba(var(--main-rgb), var(--main-content-opacity));
+	--sidebar-color: rgba(var(--main-rgb), var(--sidebar-opacity));
 
 	/* ACCENT HSL AND TEXT COLOR SETTINGS */
 	--accent-hue: 230;
@@ -111,8 +111,8 @@
 	--supporter-color: hsla(var(--accent-hsl), var(--accent-opacity));
 
 	/* TOOLTIP SETTINGS */
-	--tooltip-color: hsla(var(--accent-hsl), var(--accent-opacity));
-	--tooltip-text-color: var(--accent-text-color);
+	--tooltip-color: var(--popout-color);
+	--tooltip-text-color: var(--text-normal);
 	--tooltip-font-size: 14px;
 	--tooltip-padding: 8px 12px;
 	--tooltip-radius: var(--app-radius);

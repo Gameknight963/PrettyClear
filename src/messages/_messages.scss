@@ -7,10 +7,6 @@
   border-radius: var(--message-radius);
 }
 
-.backgroundFlash__5126c:not([style$="0);"]) {
-  background-color: hsla(var(--accent-hsl), 0.08) !important;
-  transition: 200ms ease-out background-color;
-}
 .backgroundFlash__5126c[style="background-color: rgba(148, 156, 247, 0);"] {
   background-color: hsla(var(--accent-hsl), 0) !important;
   transition: 400ms background-color;

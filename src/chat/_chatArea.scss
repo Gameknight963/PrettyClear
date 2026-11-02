@@ -11,9 +11,11 @@
 .chat_f75fb0[data-has-border=true] {
   border-top: none;
 }
+
 .chat_f75fb0.threadSidebarOpen_f75fb0 {
   border-radius: 0 var(--app-radius) var(--app-radius) 0;
 }
+
 .chat_f75fb0 .scrollerBase_d125d2 {
   background-color: transparent;
 }
@@ -44,15 +46,11 @@
 .emptyChannelIcon__00de6 {
   background-color: var(--message-color);
 }
-
-.button_fc8177 {
-  color: hsl(var(--accent-hsl));
-}
-
 .role_b4b2c3 {
   background-color: var(--message-color);
   border-radius: 12px;
 }
+
 .role_b4b2c3:hover {
   background-color: var(--message-color-hover);
 }
@@ -64,24 +62,24 @@
   border: none;
   backdrop-filter: blur(var(--popout-blur));
 }
+
 .jumpToPresentBar__0f481 .barButtonBase__0f481 {
   color: var(--text-normal);
 }
+
 .jumpToPresentBar__0f481 .spinner__46696 {
   --spinner-size: auto;
 }
-.jumpToPresentBar__0f481 .spinnerItem-2HfQC8 {
-  background-color: var(--accent-text-color);
-}
-
 .newMessagesBar__0f481 {
   background-color: hsl(var(--accent-hsl), var(--accent-opacity));
   border: none;
   box-shadow: none;
 }
+
 .newMessagesBar__0f481 .barButtonBase__0f481 {
   color: var(--accent-text-color);
 }
+
 .newMessagesBar__0f481 .barButtonBase__0f481,
 .newMessagesBar__0f481 .barButtonBase__0f481 span {
   font-weight: 500;

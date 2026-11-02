@@ -3,10 +3,12 @@
  *  SERVER SETTINGS EMOJI
  *
  */
-.emojiRow_e7d73e:before {
+.emojiRow_e7d73e:before,
+.emojiRow_f53c21:before {
   background-color: var(--background-modifier-hover);
 }
-.emojiRow_e7d73e .input__0f084 {
+.emojiRow_e7d73e input,
+.emojiRow_f53c21 .input__75098 {
   padding-block: 0;
   padding-inline: 12px;
 }

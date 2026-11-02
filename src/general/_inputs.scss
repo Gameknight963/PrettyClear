@@ -12,47 +12,41 @@
   color: var(--textarea-text-color);
   transition: var(--transition-time) var(--transition-type);
 }
+
 .wrapper__72c38:has(input:focus, textarea:focus) {
   background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
   outline: none !important;
 }
-.wrapper__72c38 .input__0f084 {
+
+.wrapper__72c38 :is(input, textarea) {
   background-color: transparent;
 }
-.wrapper__72c38 .input__0f084::-webkit-input-placeholder {
-  color: var(--input-placeholder-color);
-}
 
-.multiInput-1VARjC .wrapper__72c38 {
-  margin-inline-end: 8px;
-}
-
-.multiInputLast-35zVz0:before {
-  display: none;
+.wrapper__72c38 :is(input, textarea)::-webkit-input-placeholder {
+  color: var(--textarea-placeholder-color);
 }
 
 .fileUploadInput__8b203 {
   width: auto;
 }
 
-.fileUploadButton__8b203 {
-  padding-block: 0;
-  padding-inline: 12px;
-}
-
 /* INPUTS -> OPTION PILLS */
-.optionPill_a16aea {
+.optionPill_a16aea,
+.optionPill__1464f {
   background-color: var(--textarea-block-color) !important;
   border-radius: var(--button-radius);
   border-color: transparent !important;
 }
-.optionPill_a16aea.selectedPill__3f413 {
+
+.optionPill__1464f.selectedPill__1464f {
   border-color: hsl(var(--accent-hsl)) !important;
 }
-.optionPill_a16aea.erroredPill__3f413 {
+
+.optionPill__1464f.erroredPill__1464f {
   border-color: hsl(var(--alert-hsl)) !important;
 }
-.optionPill_a16aea .optionPillKey__3f413 {
+
+.optionPill__1464f .optionPillKey__1464f {
   background-color: var(--textarea-block-color) !important;
   border-top-left-radius: inherit;
   border-bottom-left-radius: inherit;

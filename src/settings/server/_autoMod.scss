@@ -11,7 +11,7 @@
 .editCard_a25a68:before {
   display: none;
 }
-.editCard_a25a68.active_ef2ec5 {
+.editCard_a25a68.active_a25a68 {
   background-color: var(--card-color) !important;
 }
 .editCard_a25a68 .ruleIconContainer_c5e6a1 {
@@ -21,15 +21,15 @@
   background-color: var(--card-color);
 }
 
-.collapseable__217b7 {
+:is(.collapseable_fc46b1, .collapseable__4546e) {
   background-color: var(--card-color);
   border-radius: var(--card-radius);
   border: none;
 }
-.collapseable__217b7:active {
+:is(.collapseable_fc46b1, .collapseable__4546e):active {
   background-color: var(--card-color) !important;
 }
-.collapseable__217b7:before {
+:is(.collapseable_fc46b1, .collapseable__4546e):before {
   display: none;
 }
 
@@ -64,13 +64,7 @@
 .stepperContainer_ed9c90 .stepper_ed9c90 {
   border-radius: var(--input-radius);
 }
-.stepperContainer_ed9c90 .iconWrapper__0d13e {
-  background-color: transparent;
-}
-.stepperContainer_ed9c90 .iconWrapper__0d13e .icon_bb7288 {
-  width: var(--input-height);
-  height: var(--input-height);
-}
-.stepperContainer_ed9c90 .input__0f084 {
+
+.stepperContainer_ed9c90 input {
   background-color: transparent;
 }

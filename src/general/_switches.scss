@@ -6,7 +6,7 @@
 .switchIndicator_a28278 {
   background-color: var(--switch-slider-color) !important;
 }
-.switchIndicator_a28278:has(.thumb_a28278[style="left: 24px;"]) {
+.container_a28278:has(input[role="switch"]:checked) .switchIndicator_a28278 {
   --switch-slider-color: hsla(var(--accent-hsl),var(--accent-opacity));
   --switch-knob-color: var(--accent-text-color);
 }

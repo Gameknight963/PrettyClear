@@ -45,8 +45,8 @@
   --button-shadow: none !important;
 }
 .bd-button-link:after {
-  --button-action-color: hsl(var(--accent-hsl--material-you));
+  --button-action-color: hsl(var(--accent-hsl--material-you, var(--accent-hsl)));
 }
 .bd-button-link.bd-button-color-brand, .bd-button-link.bd-button-color-primary {
-  --button-text-color: hsl(var(--accent-hsl--material-you));
+  --button-text-color: hsl(var(--accent-hsl--material-you, var(--accent-hsl)));
 }

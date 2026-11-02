@@ -3,13 +3,13 @@
  *  STREAM PREVIEW POPOUT
  *
  */
-.streamPreview__6da2d {
+.streamPreview__0489e {
   background-color: transparent !important;
   border-radius: var(--popout-radius) !important;
   box-shadow: none !important;
   overflow: hidden;
 }
-.streamPreview__6da2d:before {
+.streamPreview__0489e:before {
   position: absolute;
   content: " ";
   width: 100%;
@@ -23,11 +23,7 @@
   pointer-events: none;
   z-index: -1;
 }
-.streamPreview__6da2d:before {
-  width: 252px;
-  inset-inline-start: 16px;
-}
-.streamPreview__6da2d .previewContainer__6da2d {
+.streamPreview__0489e .previewContainer__0489e {
   background-color: transparent !important;
   box-shadow: var(--card-header-shadow);
   border: none !important;

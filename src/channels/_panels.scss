@@ -12,50 +12,13 @@
 .actionButtons_e131a9 .button__201d5 path[fill] {
   fill: currentColor !important;
 }
+
 .actionButtons_e131a9 .button__201d5 path[stroke] {
   stroke: currentColor !important;
 }
 
-.userAvatar__55bab[style*="box-shadow: 0 0 0 0px var(--status-speaking), inset 0 0 0 2px var(--status-speaking), inset 0 0 0 3px var(--background-base-lower)"] {
-  box-shadow: inset 0 0 0 2px hsl(var(--accent-hsl)), inset 0 0 0 3px var(--background-base-lower) !important;
-}
-
-.container_bd9e38 {
-  width: calc(100% - 16px);
-  margin-block: 0 8px;
-  margin-inline: 8px;
-  background-color: transparent;
-  border-radius: var(--popout-radius);
-  box-shadow: none;
-  overflow: hidden;
-}
-.container_bd9e38:before {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 100%;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  backdrop-filter: blur(var(--popout-blur));
-  pointer-events: none;
-  z-index: -1;
-}
-.container_bd9e38 .content_bd9e38 {
-  padding-block: 8px;
-  padding-inline: 0;
-}
-.container_bd9e38 .video_bd9e38 {
-  width: 208px !important;
-  height: 117px !important;
-  border-radius: var(--popout-radius);
-}
-
 .container_e131a9,
 .container__37e49,
-.content__37e49,
 .activityPanel__5e434 {
   background: transparent !important;
 }
@@ -69,6 +32,7 @@
   margin-inline-start: -4px;
   padding-inline-start: 4px;
 }
+
 .accountPopoutButtonWrapper__37e49:hover {
   border-radius: 20px;
 }
@@ -88,29 +52,7 @@
   background-color: transparent !important;
   border-radius: 0;
 }
+
 .contentWrapper__0d616:after {
   box-shadow: none !important;
-}
-
-.backgroundWrapper_efa999 {
-  display: none;
-}
-
-.heroAssetWrapper__24e2c {
-  border-radius: 0 !important;
-}
-
-.heroAssetWrapper__24e2c {
-  filter: none !important;
-}
-
-.legibilityGradient__24e2c {
-  background: none;
-  border-radius: 0;
-}
-
-.heroAssetDarken__24e2c,
-.heroAssetTint__24e2c {
-  background-color: transparent !important;
-  border-radius: 0;
 }

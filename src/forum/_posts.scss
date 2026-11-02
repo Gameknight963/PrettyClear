@@ -13,7 +13,8 @@
   box-shadow: none;
   transform: none;
 }
-.container__9a337.isOpen__9a337, .container__9a337 .isOpen_faa96b, .container_faa96b.isOpen__9a337, .container_faa96b .isOpen_faa96b {
+.container__9a337.isOpen__9a337,
+.container_faa96b.isOpen_faa96b {
   background-color: var(--card-color-select) !important;
 }
 
@@ -41,13 +42,7 @@
   background: transparent !important;
 }
 
-.container__9a337, .container_faa96b {
-  background-color: var(--card-color);
-}
-.container__9a337:hover, .container_faa96b:hover {
-  background-color: var(--card-color-hover);
-}
-.container__9a337:not(.isOpen__9a337, .isOpen_faa96b):hover .contentPreview__9a337, .container_faa96b:not(.isOpen__9a337, .isOpen_faa96b):hover .contentPreview__9a337 {
+.container__9a337:not(.isOpen__9a337):hover .contentPreview__9a337 {
   background-color: var(--card-color);
 }
 

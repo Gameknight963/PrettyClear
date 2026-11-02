@@ -24,9 +24,6 @@
   pointer-events: none;
   z-index: -1;
 }
-.container__3dde2 .item__97e86 {
-  border-radius: var(--popout-radius);
-}
 
 .overflowRolesPopout__48c1c {
   background-color: transparent !important;
@@ -58,6 +55,7 @@
 .overflowRolesPopout__48c1c .overflowRolesPopoutHeaderText__48c1c {
   color: var(--header-secondary);
 }
-.overflowRolesPopout__48c1c .role_dfa8b6, .overflowRolesPopout__48c1c .role__5d7c9 {
+
+.overflowRolesPopout__48c1c .role__5d7c9 {
   background-color: var(--card-color);
 }

@@ -3,22 +3,6 @@
  *  SERVER SETTINGS MEMBERSHIP SCREENING
  *
  */
-.enableContainer-1J91Aq {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-
-.settingsFormItem-25zW3t {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.settingsFormItem-25zW3t .settingsFormFieldWrapper-U99c9i {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
 
 .backgroundContainer_eaaeee {
   background-color: var(--card-color);
@@ -31,23 +15,8 @@
   border-radius: var(--input-radius);
 }
 
-.fieldBackground_d48a51 {
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha)) !important;
-  border-radius: var(--input-radius) !important;
-  border: none !important;
-}
-
 .containerFooter_eaaeee {
   background-color: transparent;
-}
-
-.fieldBackground_eaaeee {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.fieldBackground_eaaeee.withFooter_eaaeee {
-  box-shadow: var(--card-header-shadow);
 }
 
 .fieldFooterContainer_eaaeee {
@@ -55,19 +24,7 @@
   border-radius: 0 0 var(--card-radius) var(--card-radius);
 }
 
-.sidebarFixedContainer-2fX672 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-
 /* SERVER SETTINGS MEMBERSHIP SCREENING -> PREVIEW */
 .guildSidebar_b962dc {
   background-color: var(--sidebar-color);
-}
-
-.modal_b962dc .formFieldWrapper-2LV3S6 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
 }

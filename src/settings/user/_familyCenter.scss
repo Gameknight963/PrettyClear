@@ -15,21 +15,14 @@
   border: none;
 }
 
-.container__5b321, .container__5b321 .row__0624f {
+.box_f8c98c,
+.box_d9914b {
   background-color: var(--card-color);
   border-radius: var(--card-radius);
   border: none;
 }
-.container__5b321 .iconContainer__0624f {
-  background-color: var(--background-modifier-hover);
-}
-
-.box_f8c98c, .box_d9914b {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.box_f8c98c .stepNumber_d9914b, .box_d9914b .stepNumber_d9914b {
+.box_f8c98c .stepNumber_d9914b,
+.box_d9914b .stepNumber_d9914b {
   background-color: var(--background-modifier-hover);
 }
 

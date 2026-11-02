@@ -8,17 +8,17 @@
   border-radius: var(--card-radius);
   border: none;
 }
-.settingCard__1a4ef.active_dd864e {
+.settingCard__1a4ef.active__1a4ef {
   background-color: var(--card-color);
   border-radius: var(--card-radius);
   border: none;
   overflow: hidden;
 }
-.settingCard__1a4ef.active_dd864e .cardContent_f62fce {
+.settingCard__1a4ef.active__1a4ef .cardContent_f62fce {
   box-shadow: var(--card-header-shadow);
 }
 
-.cardFolder_dd864e {
+.cardFolder__1a4ef {
   background-color: transparent;
 }
 
@@ -43,13 +43,4 @@
 .selected__344e6.allow__344e6 {
   background-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%, 0.65);
   border-radius: 0 var(--card-radius) var(--card-radius) 0;
-}
-
-.background-3X6N7I {
-  padding: 0;
-  background-color: transparent;
-}
-
-.roleDot-1Rh5WS {
-  box-shadow: none;
 }

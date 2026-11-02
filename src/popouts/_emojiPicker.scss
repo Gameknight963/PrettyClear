@@ -3,12 +3,16 @@
  *  EMOJI PICKER
  *
  */
-.contentWrapper__08434, .contentWrapper_eab878,
+div.wrapper__4e6ce.categoryList_c0e32c {
+  background-color: var(--popout-color);
+}
+
+.contentWrapper__08434,
 .emojiPicker_c0e32c {
   background-color: transparent;
 }
 
-.contentWrapper__08434, .contentWrapper_eab878 {
+.contentWrapper__08434 {
   background-color: transparent;
   border-radius: var(--popout-radius);
   box-shadow: none;
@@ -16,7 +20,7 @@
   border: none;
   box-shadow: none;
 }
-.contentWrapper__08434:before, .contentWrapper_eab878:before {
+.contentWrapper__08434:before {
   position: absolute;
   content: " ";
   width: 100%;
@@ -53,10 +57,10 @@
 }
 
 /* EMOJI PICKER -> HEADER */
-.navButton__08434:hover, .navButton__0565e:hover {
+.navButton__08434:hover {
   background-color: var(--background-modifier-hover);
 }
-.navButton__08434.navButtonActive__08434, .navButton__08434 .navButtonActive_b003de, .navButton__0565e.navButtonActive__08434, .navButton__0565e .navButtonActive_b003de {
+.navButton__08434.navButtonActive__08434 {
   background-color: var(--background-modifier-selected);
 }
 
@@ -75,21 +79,6 @@
   backdrop-filter: blur(var(--popout-blur));
   border: none;
   overflow: hidden;
-}
-
-/* EMOJI PICKER -> HEADER -> SEARCH BAR */
-.container_fea832 {
-  min-height: var(--input-height);
-  height: var(--input-height);
-  border-radius: var(--input-radius);
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha));
-  border: none;
-  color: var(--textarea-text-color);
-  transition: var(--transition-time) var(--transition-type);
-}
-.container_fea832:has(input:focus, textarea:focus) {
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
-  outline: none !important;
 }
 
 /* EMOJI PICKER -> EMOJIS */
@@ -132,19 +121,6 @@
 }
 
 /* EMOJI PICKER -> GIFS */
-.searchBar_fed6d3 {
-  min-height: var(--input-height);
-  height: var(--input-height);
-  border-radius: var(--input-radius);
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha));
-  border: none;
-  color: var(--textarea-text-color);
-  transition: var(--transition-time) var(--transition-type);
-}
-.searchBar_fed6d3:has(input:focus, textarea:focus) {
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
-  outline: none !important;
-}
 
 .result__2dc39 {
   border-radius: var(--card-radius);

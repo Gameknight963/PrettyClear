@@ -10,16 +10,20 @@
 .sidebar__5e434 {
   background-color: var(--sidebar-color);
 }
+
 .sidebar__5e434:after {
   display: none;
 }
+
 .sidebar__5e434 .container__2637a {
   padding-block-end: calc(var(--custom-app-panels-height, 0) + 10px);
   background-color: transparent;
 }
+
 .sidebar__5e434 .link__2ea32 {
   border-radius: var(--list-item-radius);
 }
+
 .sidebar__5e434 .voiceChannelsButton__29444:hover {
   background-color: var(--background-modifier-hover);
 }
@@ -33,6 +37,7 @@
   border-bottom: none;
   box-shadow: var(--popout-header-shadow);
 }
+
 .header_f37cb1 .communityInfoPill_f37cb1 {
   background-color: var(--card-color);
   border-radius: var(--card-radius);
@@ -46,26 +51,8 @@
 .content__07f91 {
   border-radius: var(--list-item-radius);
 }
-
-.container_e88f3f {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-
 .progressContainer__0d0f9 {
   background-color: var(--card-color);
 }
 
 /* CHANNELS LIST -> ACTION BUTTONS */
-.actionButton-2ae9DJ {
-  background-color: var(--background-modifier-hover);
-  border-radius: var(--list-item-radius);
-  border: none;
-}
-.actionButton-2ae9DJ:hover {
-  background-color: var(--background-modifier-active);
-}
-.actionButton-2ae9DJ.actionButtonSelected-2a5GGr {
-  background-color: var(--background-modifier-accent);
-}

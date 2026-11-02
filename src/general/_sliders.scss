@@ -3,14 +3,15 @@
  *  SLIDERS
  *
  */
-.bar_a562c8 {
+.bar_d061ce {
   background-color: var(--background-modifier-selected) !important;
 }
-.bar_a562c8 .barFill_a562c8 {
+
+.bar_d061ce .barFill_d061ce {
   background-color: hsla(var(--accent-hsl), calc(var(--accent-opacity) * 0.8));
 }
 
-.grabber_a562c8 {
+.slider_d061ce .grabber_d061ce {
   background-color: hsla(var(--accent-hsl), var(--accent-opacity));
   border-color: hsla(var(--accent-hsl), var(--accent-opacity));
   box-shadow: var(--popout-shadow);

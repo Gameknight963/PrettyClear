@@ -3,18 +3,6 @@
  *  ADD SERVER MODAL
  *
  */
-.container__23ba6 {
-  --header-primary: #ddd;
-  --header-secondary: #aaa;
-  --text-normal: #aaa;
-  --interactive-normal: #aaa;
-}
-.container__23ba6 .lookBlank__201d5 {
-  color: hsl(var(--accent-hsl));
-}
-.container__23ba6 .wrapper__72c38 {
-  background-color: transparent;
-}
 
 .header_c04f35 {
   padding-block: 24px 12px;
@@ -31,16 +19,6 @@
   border: none;
 }
 .container_eb2cd2:hover {
-  background-color: var(--card-color-hover);
-  border: none;
-}
-
-.rowContainer-3t7486 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.rowContainer-3t7486:hover {
   background-color: var(--card-color-hover);
   border: none;
 }

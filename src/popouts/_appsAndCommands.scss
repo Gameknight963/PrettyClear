@@ -57,16 +57,15 @@
   background-color: transparent;
 }
 
-.profileAndVideoContainer_e80fe9 {
+.container__95856 {
   border-radius: var(--card-radius);
   border: none;
 }
-.profileAndVideoContainer_e80fe9 .overviewContainerNoVideo__95856 {
+.container__95856 .overviewContainerNoVideo__95856 {
   background-color: var(--card-color);
   border-radius: inherit;
 }
-.profileAndVideoContainer_e80fe9 .overviewContainerWithVideo__95856 {
-  margin-block-start: -4px;
+.container__95856 .overviewContainerWithVideo__95856 {
   background-color: var(--card-color);
   border-bottom-left-radius: var(--card-radius);
   border-bottom-right-radius: var(--card-radius);
