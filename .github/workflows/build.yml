@@ -2,11 +2,18 @@ name: Build theme
 
 on:
   push:
+    branches: ['**']
   workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
         - uses: actions/checkout@v4
@@ -26,3 +33,31 @@ jobs:
             name: PrettyClear
             path: PrettyClear.theme.css
             if-no-files-found: error
+
+        - name: Publish new version
+          if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+          env:
+            GH_TOKEN: ${{ github.token }}
+            GH_REPO: ${{ github.repository }}
+          run: |
+            version=$(sed -nE 's/^[[:space:]]*\*[[:space:]]+@version[[:space:]]+([^[:space:]]+)[[:space:]]*$/\1/p' src/_metadata.scss)
+            if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              echo "::error::Expected one @version in src/_metadata.scss in the form X.Y.Z"
+              exit 1
+            fi
+            tag="v$version"
+
+            if git ls-remote --exit-code --tags origin "refs/tags/$tag"; then
+              echo "$tag already exists; leaving the release unchanged."
+              exit 0
+            else
+              status=$?
+              if [[ "$status" -ne 2 ]]; then
+                exit "$status"
+              fi
+            fi
+
+            gh release create "$tag" PrettyClear.theme.css \
+              --target "$GITHUB_SHA" \
+              --title "PrettyClear $version" \
+              --generate-notes
