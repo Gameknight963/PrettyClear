@@ -1,0 +1,154 @@
+/* Bedrock plugin/theme lists, plugin settings, and detail pages. */
+.bedrock-page {
+  color: var(--text-normal);
+
+  .bedrock-card {
+    background-color: var(--card-color);
+    border-color: transparent;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-header-shadow);
+  }
+
+  .bedrock-button {
+    border-radius: var(--app-radius);
+    font-family: inherit;
+  }
+
+  .bedrock-button:not(.bedrock-danger, .bedrock-confirm-remove) {
+    background-color: var(--background-modifier-hover);
+    color: var(--text-normal);
+
+    &:hover:not(:disabled) {
+      background-color: var(--background-modifier-active);
+    }
+
+    &:active:not(:disabled) {
+      background-color: var(--background-modifier-selected);
+    }
+  }
+
+  .bedrock-danger,
+  .bedrock-error {
+    color: hsl(var(--alert-hsl)) !important;
+  }
+
+  .bedrock-tab[aria-selected="true"] {
+    border-bottom-color: hsl(var(--accent-hsl));
+  }
+
+  .bedrock-tab:hover:not(:disabled) {
+    color: var(--interactive-hover);
+  }
+
+  .bedrock-badge {
+    background-color: var(--background-modifier-selected);
+  }
+
+  .bedrock-toolbar input[type="search"],
+  .bedrock-setting input:not([type="range"], [type="checkbox"], [type="radio"], [type="hidden"]),
+  .bedrock-setting textarea,
+  .bedrock-setting select {
+    background-color: rgba(var(--textarea-color), var(--textarea-alpha));
+    color: var(--textarea-text-color);
+    border-color: var(--border-subtle);
+    border-radius: var(--app-radius);
+    font-family: inherit;
+    transition: background-color var(--transition-time) var(--transition-type);
+
+    &::placeholder {
+      color: var(--textarea-placeholder-color);
+    }
+
+    &:focus {
+      background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
+    }
+  }
+
+  .bedrock-toolbar input[type="search"] {
+    height: var(--input-height);
+    border-radius: var(--input-radius);
+  }
+
+  .bedrock-setting select option {
+    // Native select popups need an opaque surface for readable option text.
+    background-color: var(--background-floating, #18191c);
+    color: var(--text-normal);
+  }
+
+  .bedrock-setting input[type="range"] {
+    accent-color: hsl(var(--accent-hsl));
+  }
+
+  .bedrock-switch {
+    background-color: var(--switch-slider-color);
+
+    span {
+      background-color: var(--switch-knob-color);
+    }
+
+    &[aria-checked="true"] {
+      background-color: hsla(var(--accent-hsl), var(--accent-opacity));
+
+      span {
+        background-color: var(--accent-text-color);
+      }
+    }
+  }
+
+  :is(.bedrock-button, .bedrock-name, .bedrock-switch, .bedrock-tab, input, textarea, select):focus-visible {
+    outline: 2px solid hsl(var(--accent-hsl));
+    outline-offset: 3px;
+  }
+
+  .bedrock-readme pre {
+    background-color: var(--textarea-block-color);
+    color: var(--textarea-block-text-color);
+    border-radius: var(--card-radius);
+  }
+
+  .bedrock-readme :not(pre) > code {
+    background-color: var(--textarea-block-color);
+    color: var(--textarea-block-text-color);
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+
+  .bedrock-restart-banner {
+    background-color: var(--card-color);
+    border-radius: var(--card-radius);
+  }
+}
+
+/* These surfaces may render outside the settings page, in the top layer. */
+dialog.bedrock-remove-dialog,
+div.bedrock-tasks {
+  background-color: var(--popout-color);
+  color: var(--text-normal);
+  border-radius: var(--popout-radius);
+  box-shadow: var(--popout-shadow);
+  backdrop-filter: blur(var(--popout-blur));
+}
+
+dialog.bedrock-remove-dialog {
+  .bedrock-dialog-actions {
+    background-color: var(--card-color);
+  }
+
+  .bedrock-remove-option input {
+    accent-color: hsl(var(--accent-hsl));
+  }
+
+  .bedrock-confirm-remove {
+    background-color: hsl(var(--alert-hsl));
+    color: var(--alert-text-color);
+
+    &:hover:not(:disabled) {
+      background-color: hsl(from hsl(var(--alert-hsl)) h s calc(l * 0.85));
+    }
+  }
+
+  :is(button, input):focus-visible {
+    outline: 2px solid hsl(var(--accent-hsl));
+    outline-offset: 3px;
+  }
+}
