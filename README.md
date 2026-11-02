@@ -1,4 +1,5 @@
 ## PrettyClear
+
 modified version of [Translucence](https://github.com/CapnKitten/Translucence) that looks less gamery
 
 you may want to use the included remove-titlebar.css theme to remove 
@@ -8,9 +9,15 @@ if you want the window to be resizable with native titlebar on, consider install
 <br>
 [Discord Transparency Resize Fix](https://windhawk.net/mods/resizable-discord)
 
-shown with [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass) and [Aero11](https://github.com/Sand216/Aero11) msstyle
+### [download stable](https://github.com/Gameknight963/PrettyClear/releases/latest/download/PrettyClear.theme.css)
+
+[download nightly](https://nightly.link/Gameknight963/PrettyClear/workflows/build/master/PrettyClear.zip)
+
+---
 
 ### screenshots
+
+shown with [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass) and [Aero11](https://github.com/Sand216/Aero11) msstyle
 
 <img width="964" height="633" alt="image" src="https://github.com/user-attachments/assets/916da8b6-d906-465a-962c-ca28a3eb64d4" />
 
