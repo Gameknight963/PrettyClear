@@ -1,10 +1,12 @@
+@use '../classes' as *;
+
 /*
  *
  *  TOOLTIP
  *
  */
-.tooltip_c36707,
-.tooltip_fa450d {
+#{ $tooltip },
+#{ $tooltipV2 } {
   background-color: var(--tooltip-color) !important;
   color: var(--tooltip-text-color);
   font-size: var(--tooltip-font-size);
@@ -14,34 +16,34 @@
   box-shadow: var(--tooltip-shadow);
   backdrop-filter: blur(var(--popout-blur));
 
-  .tooltipContent_c36707,
-  .tooltipContent_fa450d,
-  .guildNameText_b1f768,
-  .clickCTA__0f481,
-  .emojiTooltipText__040f0,
-  .activityIcon_b1f768,
-  .text-sm\/medium_cf4812,
-  .muteText_b1f768 {
+  #{ $tooltipContent },
+  #{ $tooltipV2Content },
+  #{ $tooltipGuildNameText },
+  #{ $tooltipClickCTA },
+  #{ $tooltipEmojiText },
+  #{ $tooltipActivityIcon },
+  #{ $textSmMedium },
+  #{ $tooltipMuteText } {
     color: var(--tooltip-text-color) !important;
     text-shadow: none;
   }
 
-  .anchor_b6b013,
-  .anchor__14d82 {
+  #{ $anchor },
+  #{ $anchorAlt } {
     color: var(--tooltip-text-color);
     text-decoration: underline;
   }
 
-  .tooltipPointer_c36707 {
+  #{ $tooltipPointer } {
     border-top-color: var(--tooltip-color) !important;
   }
 
-  .caretFill_fa450d {
+  #{ $tooltipV2CaretFill } {
     fill: var(--tooltip-color);
   }
 }
 
-.reactionTooltip_bbcccb {
+#{ $reactionTooltip } {
   background-color: var(--popout-color);
   border-radius: var(--popout-radius);
   box-shadow: var(--popout-shadow);
@@ -49,6 +51,6 @@
 }
 
 /* Rich help popovers use a separate component from message hover actions. */
-.popover_d6f39b {
+#{ $voiceCallInvitePopover } {
   background-color: var(--popout-color);
 }

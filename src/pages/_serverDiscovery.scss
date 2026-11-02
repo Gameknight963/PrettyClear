@@ -1,49 +1,53 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  SERVER DISCOVERY
  *
  */
-.container_a592e1 {
+#{ $discoverContentContainer } {
   background-color: var(--main-content-color);
 }
 
 /* SERVER DISCOVERY -> SIDEBAR */
-.container__551b0 {
+#{ $discoverSidebar } {
   background: transparent;
 }
 
-.navItem__551b0 {
+#{ $discoverSidebarNavItem } {
   border-radius: var(--list-item-radius);
 }
 
 /* SERVER DISCOVERY -> HEADER BAR */
-.headerBar__8a7fc:after {
+#{ $discoverHeaderBar }:after {
   display: none;
 }
 
-.backdrop__8a7fc {
+#{ $discoverHeaderBarBackdrop } {
   background: var(--popout-color);
   backdrop-filter: blur(var(--app-blur));
 }
 
 /* SERVER DISCOVERY -> CARDS */
-.card__4cb8a {
-  background-color: var(--card-color) !important;
-  border-radius: var(--card-radius) !important;
-  border: none !important;
-}
-.card__4cb8a:hover {
-  background-color: var(--card-color-hover) !important;
-  border: none;
-}
-.card__4cb8a svg {
-  filter: none;
-}
-.card__4cb8a .iconMask__4cb8a {
-  background-color: var(--card-color-hover) !important;
+#{ $discoverServerCard } {
+  @include card-format($important: true);
+
+  &:hover {
+    background-color: var(--card-color-hover) !important;
+    border: none;
+  }
+
+  & svg {
+    filter: none;
+  }
+
+  #{ $discoverServerIconMask } {
+    background-color: var(--card-color-hover) !important;
+  }
 }
 
 /* SERVER DISCOVERY -> SEARCH RESULTS */
-.category__97499 {
+#{ $discoverSearchCategory } {
   border-radius: var(--list-item-radius);
 }

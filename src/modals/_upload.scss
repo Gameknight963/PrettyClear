@@ -1,16 +1,16 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  UPLOAD MODAL
  *
  */
 
-.uploadDropModal_b78547 .bgScale_b78547 {
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  border: none;
+#{ $uploadDropModal } #{ $uploadDropModalBgScale } {
+  @include add-translucence();
 }
-.uploadDropModal_b78547 .inner_b78547 {
+#{ $uploadDropModal } #{ $uploadDropModalInner } {
   border: none;
 }
 

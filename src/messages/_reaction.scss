@@ -1,32 +1,39 @@
+@use '../classes' as *;
+
 /*
  *
  *  MESSAGE REACTIONS
  *
  */
-.reaction__23977 {
+#{ $reaction } {
   background-color: var(--message-color);
   border-radius: var(--message-radius);
   border: none;
-}
-.reaction__23977:hover {
-  background-color: var(--message-color);
-}
-.reaction__23977.reactionMe__23977 {
-  background-color: hsla(var(--accent-hsl), 0.3);
-  border-color: transparent;
-}
-.reaction__23977.reactionMe__23977:hover {
-  background-color: hsla(var(--accent-hsl), 0.4);
-}
-.reaction__23977.reactionMe__23977 .reactionCount__23977 {
-  color: hsla(var(--accent-hsl), var(--accent-opacity));
-}
-.reaction__23977 .burstGlow__23977 {
-  border-radius: var(--message-radius);
+
+  &:hover {
+    background-color: var(--message-color);
+  }
+
+  &#{ $reactionMe } {
+    background-color: hsla(var(--accent-hsl), 0.3);
+    border-color: transparent;
+
+    &:hover {
+      background-color: hsla(var(--accent-hsl), 0.4);
+    }
+
+    #{ $reactionCount } {
+      color: hsla(var(--accent-hsl), var(--accent-opacity));
+    }
+  }
+
+  #{ $reactionGlow } {
+    border-radius: var(--message-radius);
+  }
 }
 
 /* MESSAGE REACTIONS -> REVERT BUTTONS TO REACTION STYLE */
-.container_b7e1cb .children__1647d .lookFilled__201d5 {
+#{ $embedContainer } #{ $embedChildren } #{ $buttonFilled } {
   --button-height: 28px;
   --button-padding: 0 8px;
 }

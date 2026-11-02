@@ -1,21 +1,23 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  AUTOCOMPLETE
  *
  */
-.autocomplete__13533 {
-  background-color: var(--popout-color) !important;
-  border-radius: var(--popout-radius) !important;
-  box-shadow: var(--popout-shadow) !important;
-  border: none !important;
-  backdrop-filter: blur(var(--popout-blur));
-}
-.autocomplete__13533 .wrapper_b1e4f3 {
-  background-color: transparent;
-}
-.autocomplete__13533 .base__13533 {
-  border-radius: var(--popout-radius);
-}
-.autocomplete__13533 .option_a19535 {
-  background-color: var(--card-color) !important;
+#{ $autocomplete } {
+  @include add-translucence($filter: true, $important: true);
+
+  #{ $autocompleteListWrapper } {
+    background-color: transparent;
+  }
+
+  #{ $autocompleteBase } {
+    border-radius: var(--popout-radius);
+  }
+
+  #{ $autocompleteOption } {
+    background-color: var(--card-color) !important;
+  }
 }

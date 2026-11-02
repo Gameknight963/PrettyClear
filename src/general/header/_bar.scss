@@ -1,42 +1,44 @@
+@use '../../classes' as *;
+
 /*
  *
  *  HEADER BAR
  *
  */
-.container__9293f {
+#{ $headerBar } {
   border-bottom: none;
   box-shadow: var(--popout-header-shadow);
+
+  &:before {
+    display: none;
+  }
+
+  &#{ $headerBarThemed } {
+    background-color: transparent;
+  }
 }
 
-.container__9293f:before {
+#{ $headerBarChildren }:after {
   display: none;
 }
 
-.container__9293f.themed__9293f {
-  background-color: transparent;
-}
-
-.children__9293f:after {
-  display: none;
-}
-
-.akaBadge__5149c {
+#{ $headerBarAkaBadge } {
   background-color: var(--card-color);
 }
 
-.returnButton__5d7c9,
-.returnButton__41ed7 {
+#{ $channelsAndRolesReturnButton },
+#{ $browseChannelsReturnButton } {
   --button-height: 32px;
 }
 
-.returnButtonText__5d7c9,
-.returnButtonText__41ed7 {
+#{ $channelsAndRolesReturnButtonText },
+#{ $browseChannelsReturnButtonText } {
   font-size: 1em;
 }
 
-.returnButtonText__5d7c9,
-.returnButtonText__5d7c9 *,
-.returnButtonText__41ed7,
-.returnButtonText__41ed7 * {
+#{ $channelsAndRolesReturnButtonText },
+#{ $channelsAndRolesReturnButtonText } *,
+#{ $browseChannelsReturnButtonText },
+#{ $browseChannelsReturnButtonText } * {
   color: var(--accent-text-color) !important;
 }

@@ -1,14 +1,17 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  FORUM NEW POST
  *
  */
-.container_d9be46 .channelTextArea__74017 {
+#{ $newPostContainer } #{ $channelTextArea } {
   margin-block: 16px 0;
   margin-inline: 0;
   background-color: transparent;
 }
-.container_d9be46 .inner__74017 {
+#{ $newPostContainer } #{ $channelTextAreaInner } {
   --textarea-alpha: 0.1;
   padding-block: 8px;
   padding-inline: 16px;
@@ -17,15 +20,13 @@
   color: var(--textarea-text-color);
 }
 
-.container__94439 .uploadInput__94439 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $newPostAttachmentPopoutContainer } #{ $newPostAttachmentUploadInput } {
+  @include card-format();
 }
-.container__94439 .imageSmall__41ea0 {
+#{ $newPostAttachmentPopoutContainer } #{ $newPostAttachmentImageSmall } {
   border-radius: var(--card-radius);
 }
-.container__94439 .badge__94439 {
+#{ $newPostAttachmentPopoutContainer } #{ $newPostAttachmentBadge } {
   background-color: hsl(var(--accent-hsl));
   border-width: 4px;
   color: var(--accent-text-color);

@@ -1,14 +1,15 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  VENCORD BUTTONS
  *
  */
-.vc-card-base {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $vencordCardBase } {
+  @include card-format();
 }
 
-.vc-settings-quickActions-pill {
+#{ $vencordSettingsQuickActionsPill } {
   color: var(--text-normal);
 }

@@ -1,0 +1,86 @@
+// Shared styles adapted from Translucence to PrettyClear's existing appearance.
+@mixin add-translucence($pseudo: null, $filter: false, $bg: true, $important: false) {
+  $imp: null;
+  $background: transparent;
+  @if $important { $imp: !important; }
+  @if $bg { $background: var(--popout-color); }
+
+  @if $pseudo != null {
+    background-color: transparent $imp;
+    border-radius: var(--popout-radius) $imp;
+    box-shadow: none $imp;
+    overflow: hidden;
+
+    &:#{ $pseudo } {
+      position: absolute;
+      content: " ";
+      width: 100%;
+      height: 100%;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      background-color: $background;
+      border-radius: var(--popout-radius);
+      box-shadow: var(--popout-shadow);
+      @if $filter { backdrop-filter: blur(var(--popout-blur)); }
+      pointer-events: none;
+      z-index: -1;
+    }
+  } @else {
+    background-color: $background $imp;
+    border-radius: var(--popout-radius) $imp;
+    box-shadow: var(--popout-shadow) $imp;
+    border: none $imp;
+    @if $filter { backdrop-filter: blur(var(--popout-blur)); }
+  }
+}
+
+@mixin card-format($important: false, $hover: false) {
+  $imp: null;
+  @if $important { $imp: !important; }
+
+  background-color: var(--card-color) $imp;
+  border-radius: var(--card-radius) $imp;
+  border: none $imp;
+
+  @if $hover {
+    &:hover {
+      background-color: var(--card-color-hover) $imp;
+      border: none;
+    }
+  }
+}
+
+@mixin card-format--header($important: false) {
+  $imp: null;
+  @if $important { $imp: !important; }
+
+  background-color: transparent $imp;
+  box-shadow: var(--card-header-shadow);
+  border: none $imp;
+}
+
+@mixin input-format($height: var(--input-height), $radius: var(--input-radius), $important: false) {
+  $imp: null;
+  @if $important { $imp: !important; }
+
+  min-height: $height;
+  height: $height;
+  border-radius: $radius;
+  background-color: rgba(var(--textarea-color), var(--textarea-alpha)) $imp;
+  border: none $imp;
+  color: var(--textarea-text-color);
+  transition: var(--transition-time) var(--transition-type);
+
+  &:has(input:focus, textarea:focus) {
+    background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus)) $imp;
+    outline: none !important;
+  }
+}
+
+@mixin app-accents($hasText: true, $important: false) {
+  $imp: null;
+  @if $important { $imp: !important; }
+
+  background-color: hsla(var(--accent-hsl), var(--accent-opacity)) $imp;
+  @if $hasText { color: var(--accent-text-color) $imp; }
+}

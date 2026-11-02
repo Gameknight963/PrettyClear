@@ -1,25 +1,28 @@
+@use '../classes' as *;
+
 /*
  *
  *	MARKUP
  *
  */
-.markup__75297 pre {
+#{ $markup } pre {
   border-radius: var(--card-radius);
 }
-.markup__75297 code {
+#{ $markup } code {
   background-color: var(--textarea-block-color);
   border-radius: var(--card-radius);
   border: none;
 }
-.markup__75297 .wrapper_f61d60 {
+#{ $markup } #{ $mentionWrapper } {
   background-color: hsla(var(--mention-hsl), 0.25);
   color: hsl(var(--mention-hsl));
-}
-.markup__75297 .wrapper_f61d60:hover {
-  background-color: hsla(var(--mention-hsl), 0.475);
-  color: hsl(var(--mention-hsl));
+
+  &:hover {
+    background-color: hsla(var(--mention-hsl), 0.475);
+    color: hsl(var(--mention-hsl));
+  }
 }
 
-.spoilerMarkdownContent__299eb {
+#{ $spoilerMarkdownContent } {
   background-color: var(--textarea-block-color);
 }

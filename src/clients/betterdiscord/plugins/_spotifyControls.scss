@@ -1,12 +1,14 @@
+@use '../../../classes' as *;
+
 /*
  *
  *  BETTERDISCORD PLUGIN -> SpotifyControls
  *
  */
-.container_791eb8 .text-sm\/normal_cf4812 {
+#{ $spotifyPanel } #{ $textSmNormal } {
   color: var(--text-subtle);
 }
 
-#vc-spotify-player {
+#{ $vencordSpotifyPlayer } {
   background-color: transparent !important;
 }

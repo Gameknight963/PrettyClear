@@ -1,9 +1,11 @@
+@use '../../classes' as *;
+
 /*
  *
  *  USER SETTINGS VOICE & VIDEO
  *
  */
-.cameraWrapper__92346 {
+#{ $cameraWrapper } {
   background: var(--card-color);
   border-radius: var(--card-radius);
   border-color: hsla(var(--accent-hsl), var(--accent-opacity));

@@ -1,26 +1,29 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  DISCORD SHOP
  *
  */
-.shop__08415 {
+#{ $shopContainer } {
   background-color: var(--main-content-color);
 }
 
-.heroBanner_d6d601 {
+#{ $shopHeroBanner } {
   border-radius: var(--card-radius);
 }
 
-.productCardContainer_fcbddd {
-  background-color: var(--card-color) !important;
-  border-radius: var(--card-radius) !important;
-  border: none !important;
-}
-.productCardContainer_fcbddd:hover {
-  background-color: var(--card-color-hover) !important;
-  border: none;
-}
-.productCardContainer_fcbddd:hover {
-  top: unset;
-  box-shadow: none !important;
+#{ $shopCard } {
+  @include card-format($important: true);
+
+  &:hover {
+    background-color: var(--card-color-hover) !important;
+    border: none;
+  }
+
+  &:hover {
+    top: unset;
+    box-shadow: none !important;
+  }
 }

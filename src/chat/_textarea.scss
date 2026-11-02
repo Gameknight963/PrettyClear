@@ -1,24 +1,26 @@
+@use '../classes' as *;
+
 /*
  *
  *	MAIN TEXTAREA
  *
  */
-.form_f75fb0 {
+#{ $chatForm } {
   margin-block-start: 0;
+
+  &:before {
+    display: none;
+  }
 }
 
-.form_f75fb0:before {
-  display: none;
-}
-
-.channelBottomBarArea_f75fb0 {
+#{ $channelBottomBarArea } {
   margin-block: 12px;
   margin-inline: 0;
   gap: var(--space-16);
 }
 
-.channelTextArea__74017,
-.wrapper__44df5 {
+#{ $channelTextArea },
+#{ $channelInfo } {
   --textarea-alpha: 0.1;
   background: rgba(var(--textarea-color), var(--textarea-alpha));
   border-radius: var(--textarea-radius);
@@ -26,45 +28,42 @@
   margin-inline: 0 auto; /* center align */
   width: calc(100% - 15px) !important;
   box-sizing: border-box;
+
+  #{ $channelTextAreaScrollable } {
+    background-color: transparent;
+  }
+
+  #{ $textAreaPlaceholder } {
+    color: var(--textarea-placeholder-color);
+  }
+
+  #{ $textAreaEditor } {
+    color: var(--textarea-text-color);
+  }
 }
 
-.channelTextArea__74017 .scrollableContainer__74017,
-.wrapper__44df5 .scrollableContainer__74017 {
-  background-color: transparent;
-}
-
-.channelTextArea__74017 .placeholder__1b31f,
-.wrapper__44df5 .placeholder__1b31f {
-  color: var(--textarea-placeholder-color);
-}
-
-.channelTextArea__74017 .editor__1b31f,
-.wrapper__44df5 .editor__1b31f {
-  color: var(--textarea-text-color);
-}
-
-.channelTextArea__74017 {
+#{ $channelTextArea } {
   margin: 0 auto;
 }
 
-.wrapper__44df5 {
+#{ $channelInfo } {
   margin-block: 12px;
   margin-inline: 0;
   padding-block: 11px;
   padding-inline: 0;
 }
 
-.channelTextAreaDisabled__74017 .scrollableContainer__74017 {
+#{ $channelTextAreaDisabled } #{ $channelTextAreaScrollable } {
   opacity: 1;
 }
 
-.upload_aa605f {
+#{ $channelTextAreaUpload } {
   background-color: var(--message-color);
   border-radius: calc(var(--textarea-radius) / 1.4);
   border: none;
 }
 
-.typing_b88801 {
+#{ $channelTextAreaTyping } {
   position: absolute;
   width: calc(100% - 32px);
   height: 24px;
@@ -73,81 +72,81 @@
   inset-inline-end: unset;
   margin-block-start: 0;
   margin-inline-end: 0 !important;
+
+  &#{ $channelTextAreaInTextChannel } {
+    inset-block-start: -12px;
+  }
 }
 
-.typing_b88801.inTextChannel_b88801 {
-  inset-block-start: -12px;
-}
-
-.stackedBars__74017 {
+#{ $channelTextAreaStackedBars } {
   background-color: transparent;
   border-bottom: 1px solid var(--background-modifier-accent);
+
+  #{ $replyBar } {
+    background: transparent;
+  }
 }
 
-.stackedBars__74017 .replyBar__841c8 {
-  background: transparent;
-}
-
-.mentionButton__841c8 {
+#{ $replyMentionButton } {
   --text-link: hsl(var(--accent-hsl));
 }
 
-.threadSuggestionBar__841c8 {
+#{ $replySuggestion } {
   background-color: transparent;
 }
 
-.colorLink__201d5 {
+#{ $colorLink } {
   color: hsl(var(--accent-hsl));
 }
 
-.fakeLink_ada32f {
+#{ $fakeLink } {
   color: hsl(var(--accent-hsl));
 }
 
-.before_inlineCode_ada32f,
-.after_inlineCode_ada32f {
+#{ $channelTextAreaInlineCode },
+#{ $channelTextAreaInlineCodeAfter } {
   background-color: var(--textarea-block-color);
 }
 
-.before_inlineCode_ada32f {
+#{ $channelTextAreaInlineCode } {
   color: var(--textarea-block-text-color);
 }
 
-.attachWrapper__0923f {
+#{ $channelTextAreaAttachWrapper } {
   padding: 0;
 }
 
-.attachButton__0923f {
+#{ $channelTextAreaAttachButton } {
   padding-block: var(--space-12);
   padding-inline: var(--space-md) var(--space-xs);
+
+  &:not(#{ $channelTextAreaButtonInnerNoHover }):hover {
+    background-color: transparent;
+  }
 }
 
-.attachButton__0923f:not(.noHover__24af7):hover {
-  background-color: transparent;
-}
-
-.button__24af7:not(.noHover__24af7),
-.attachButtonInner__0923f,
-.emojiButton__04eed {
+#{ $channelTextAreaButtonInner }:not(#{ $channelTextAreaButtonInnerNoHover }),
+#{ $channelTextAreaAttachButtonInner },
+#{ $channelTextAreaEmojiButton } {
   border-radius: 16px;
 }
 
 /* MAIN TEXTAREA -> APPS AND COMMANDS BUTTON */
-.channelAppLauncher_e6e74f {
+#{ $channelAppLauncher } {
   margin: 0;
+
+  #{ $channelAppLauncherButton } {
+    background: rgba(var(--textarea-color), var(--textarea-alpha));
+    border-radius: var(--textarea-radius) !important;
+  }
 }
 
-.channelAppLauncher_e6e74f .button_e6e74f {
-  background: rgba(var(--textarea-color), var(--textarea-alpha));
-  border-radius: var(--textarea-radius) !important;
-}
-
-.buttonContainer_e6e74f {
+#{ $channelAppLauncherButtonContainer } {
   background-color: transparent;
 }
 
 /* MAIN TEXTAREA -> SPAM FILTER */
-.spamBanner_a2eac3 {
+#{ $timeoutBar } {
   --textarea-alpha: 0.1;
   background-color: rgba(var(--textarea-color), var(--textarea-alpha));
   border-radius: var(--textarea-radius);

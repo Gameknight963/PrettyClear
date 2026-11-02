@@ -1,128 +1,120 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  MESSAGES POPOUT
  *
  */
-.messagesPopoutWrap__432f4 {
+#{ $messagesPopoutWrap } {
   max-height: 80vh !important;
   background-color: transparent;
   border-radius: var(--popout-radius);
   box-shadow: none;
   overflow: hidden;
   background-color: transparent;
-}
-.messagesPopoutWrap__432f4:before {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 100%;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  backdrop-filter: blur(var(--popout-blur));
-  pointer-events: none;
-  z-index: -1;
+
+  &:before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    background-color: var(--popout-color);
+    border-radius: var(--popout-radius);
+    box-shadow: var(--popout-shadow);
+    backdrop-filter: blur(var(--popout-blur));
+    pointer-events: none;
+    z-index: -1;
+  }
 }
 
-.header__432f4 {
+#{ $messagesPopoutHeader } {
   background-color: transparent;
   border: none;
   box-shadow: var(--popout-header-shadow);
 }
 
-.messagesPopout__432f4 {
+#{ $messagesPopoutInner } {
   padding-block: 16px 0;
   padding-inline: 8px 0;
 }
 
-.footer__432f4 {
+#{ $messagesPopoutFooter } {
   background-color: transparent;
 }
 
 /* MESSAGES POPOUT -> PINNED MESSAGES */
-.messageGroupWrapper__432f4 {
+#{ $pinnedMessageGroupWrapper } {
   margin-block-end: 16px;
   background-color: transparent;
   border: none;
-}
-.messageGroupWrapper__432f4 .wrapper_c19a55 {
-  margin-inline-start: 56px !important;
-  margin-inline-end: 0 !important;
-  background-color: var(--message-color);
-  border-radius: var(--message-radius);
-}
-.messageGroupWrapper__432f4 .wrapper_c19a55 .contents_c19a55,
-.messageGroupWrapper__432f4 .wrapper_c19a55 .container_b7e1cb {
-  overflow: hidden;
-}
-.messageGroupWrapper__432f4 .actionButtons__432f4 {
-  inset-inline-end: calc(16px + var(--message-padding-side));
+
+  #{ $messageWrapper } {
+    margin-inline-start: 56px !important;
+    margin-inline-end: 0 !important;
+    background-color: var(--message-color);
+    border-radius: var(--message-radius);
+
+    #{ $messageContent },
+    #{ $embedContainer } {
+      overflow: hidden;
+    }
+  }
+
+  #{ $pinnedActionButtons } {
+    inset-inline-end: calc(16px + var(--message-padding-side));
+  }
 }
 
 /* MESSAGES POPOUT -> FOR YOU */
-.friendRequestsButton_c7a32c {
+#{ $messagesPopoutHeaderFriendRequestButton } {
   background-color: var(--background-modifier-hover);
-}
-.friendRequestsButton_c7a32c:hover {
-  background-color: var(--background-modifier-active);
+
+  &:hover {
+    background-color: var(--background-modifier-active);
+  }
 }
 
 /* MESSAGES POPOUT -> MENTIONS */
-.channelHeader__5d903 {
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  border: none;
-  backdrop-filter: blur(var(--popout-blur));
-}
-.channelHeader__5d903:before {
-  background-color: var(--message-color);
-  border-radius: var(--message-radius);
+#{ $messagesPopoutChannelHeader } {
+  @include add-translucence($filter: true);
+
+  &:before {
+    background-color: var(--message-color);
+    border-radius: var(--message-radius);
+  }
 }
 
-.button__06eda {
+#{ $messagesPopoutChannelHeaderButton } {
   background-color: var(--background-modifier-hover);
-}
-.button__06eda:hover {
-  background-color: var(--background-modifier-selected) !important;
+
+  &:hover {
+    background-color: var(--background-modifier-selected) !important;
+  }
 }
 
-.singleMessage__376cb {
+#{ $messagesPopoutSingleMessage } {
   background-color: transparent;
   border: none;
-}
-.singleMessage__376cb .wrapper_c19a55 {
-  margin-inline-start: 60px;
-  margin-inline-end: 0;
-  overflow: visible;
+
+  #{ $messageWrapper } {
+    margin-inline-start: 60px;
+    margin-inline-end: 0;
+    overflow: visible;
+  }
 }
 
 /* MESSAGES POPOUT -> INBOX */
-.container__8cb2e {
-  background-color: transparent;
-  border-radius: var(--popout-radius);
-  box-shadow: none;
-  overflow: hidden;
-}
-.container__8cb2e:before {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 100%;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  backdrop-filter: blur(var(--popout-blur));
-  pointer-events: none;
-  z-index: -1;
-}
-.container__8cb2e .messagesPopoutWrap__432f4:before {
-  background-color: transparent;
-}
-.container__8cb2e .wrapper_c19a55 {
-  overflow: visible;
+#{ $inboxContainer } {
+  @include add-translucence(before, true);
+
+  #{ $messagesPopoutWrap }:before {
+    background-color: transparent;
+  }
+
+  #{ $messageWrapper } {
+    overflow: visible;
+  }
 }

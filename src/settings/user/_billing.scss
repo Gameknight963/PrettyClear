@@ -1,32 +1,31 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  USER SETTINGS BILLING
  *
  */
-.paymentPane__01014 {
-  background-color: var(--card-color) !important;
-  border-radius: var(--card-radius) !important;
-  border: none !important;
-}
-.paymentPane__01014 > .paymentRow__01014 {
-  background-color: transparent;
-  box-shadow: var(--card-header-shadow);
-  border: none;
+#{ $paymentPane } {
+  @include card-format($important: true);
+
+  & > #{ $paymentRow } {
+    @include card-format--header();
+  }
+
+  #{ $paymentBottomDivider }#{ $scroller } {
+    border-bottom: none;
+  }
 }
 
-.paymentPane__01014 .bottomDivider__01014.scrollerBase_d125d2 {
-  border-bottom: none;
-}
-
-.payment_e9cb00 {
+#{ $payment } {
   background-color: transparent !important;
-}
-.payment_e9cb00.bottomDivider__01014 {
-  border-bottom-color: hsla(0, 0%, 100%, 0.1);
+
+  &#{ $paymentBottomDivider } {
+    border-bottom-color: hsla(0, 0%, 100%, 0.1);
+  }
 }
 
-.expandedInfo_e9cb00 {
-  background-color: var(--card-color) !important;
-  border-radius: var(--card-radius) !important;
-  border: none !important;
+#{ $paymentExpandedInfo } {
+  @include card-format($important: true);
 }

@@ -1,22 +1,22 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  MESSAGES ACTIONS
  *
  */
-.wrapper_f7ecac {
-  background-color: var(--popout-color) !important;
-  border-radius: var(--popout-radius) !important;
-  box-shadow: var(--popout-shadow) !important;
-  border: none !important;
-  backdrop-filter: blur(var(--popout-blur));
+#{ $messageButtonWrapper } {
+  @include add-translucence($filter: true, $important: true);
 }
 
-.message_fd14e0 {
+#{ $messageAlt } {
   padding: 0;
   background-color: transparent !important;
   box-shadow: none !important;
-}
-.message_fd14e0 .wrapper_c19a55 {
-  margin-inline-start: 48px;
-  margin-inline-end: 0;
+
+  #{ $messageWrapper } {
+    margin-inline-start: 48px;
+    margin-inline-end: 0;
+  }
 }

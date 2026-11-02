@@ -1,8 +1,10 @@
+@use '../../../classes' as *;
+
 /*
  *
  *  VENCORD PLUGIN - Oneko
  *
  */
-#oneko {
+#{ $vencordOneko } {
   z-index: 2;
 }

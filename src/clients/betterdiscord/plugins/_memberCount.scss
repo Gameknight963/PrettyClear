@@ -1,12 +1,14 @@
+@use '../../../classes' as *;
+
 /*
  *
  *  BETTERDISCORD PLUGIN -> MemberCount
  *
  */
-#MemberCount {
+#{ $memberCount } {
   background-color: transparent !important;
 }
 
-.membersWrap_c8ffbb.hasCounter .members_c8ffbb {
+#{ $membersWrap }#{ $membersWrapHasCounter } #{ $members } {
   margin-block-start: 41px !important;
 }

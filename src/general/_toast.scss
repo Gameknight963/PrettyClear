@@ -1,22 +1,21 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  TOASTS
  *
  */
-.bd-toast {
+#{ $bdToast } {
   inset-block-start: -56px;
   margin-block-start: 8px;
   padding: 10px !important;
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  border: none;
-  backdrop-filter: blur(var(--popout-blur));
+  @include add-translucence($filter: true);
   border-radius: 16px;
   color: var(--text-normal);
-}
 
-.bd-toast:before {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 17px;
+  &:before {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 17px;
+  }
 }

@@ -1,9 +1,11 @@
+@use '../classes' as *;
+
 /*
  *
  *  CHECKBOXES
  *
  */
-.checkboxIndicator__714a9 {
+#{ $checkboxIndicator } {
   background-color: transparent;
   border-width: 2px;
   border-radius: 4px;
@@ -11,17 +13,17 @@
   transition: var(--transition-time) var(--transition-type) border-color, var(--transition-time) var(--transition-type) background-color;
 }
 
-.checkboxOption__714a9[data-selected]:hover:not([data-disabled]) .checkboxIndicator__714a9 {
+#{ $checkboxOption }[data-selected]:hover:not([data-disabled]) #{ $checkboxIndicator } {
   background-color: hsla(var(--accent-hsl), var(--accent-opacity));
 }
 
-.checkboxOption__714a9[data-selected] .checkboxIndicator__714a9 {
+#{ $checkboxOption }[data-selected] #{ $checkboxIndicator } {
   background-color: hsla(var(--accent-hsl), var(--accent-opacity));
   background-color: hsla(var(--accent-hsl), var(--accent-opacity));
 }
 
-.checkboxOption__714a9[data-selected] .checkmark__714a9,
-.checkboxOption__714a9[data-selected] .checkStroke__714a9 {
+#{ $checkboxOption }[data-selected] #{ $checkboxCheckmark },
+#{ $checkboxOption }[data-selected] #{ $checkboxCheckStroke } {
   color: var(--accent-text-color);
   filter: none;
 }

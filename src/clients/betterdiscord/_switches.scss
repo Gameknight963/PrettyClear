@@ -1,26 +1,29 @@
+@use '../../classes' as *;
+
 /*
  *
  *  BETTERDISCORD SWITCHES
  *
  */
-.bd-switch .bd-switch-body {
+#{ $bdSwitchContainer } #{ $bdSwitchBody } {
+  --switch-color: var(--switch-slider-color);
+
+  #{ $bdSwitchHandle } {
+    fill: var(--switch-knob-color);
+  }
+}
+#{ $bdSwitchContainer } input:active + #{ $bdSwitchBody } {
   --switch-color: var(--switch-slider-color);
 }
-.bd-switch .bd-switch-body .bd-switch-handle {
-  fill: var(--switch-knob-color);
-}
-.bd-switch input:active + .bd-switch-body {
-  --switch-color: var(--switch-slider-color);
-}
-.bd-switch input:checked + .bd-switch-body {
+#{ $bdSwitchContainer } input:checked + #{ $bdSwitchBody } {
   --switch-color: hsla(var(--accent-hsl),var(--accent-opacity));
   --switch-knob-color: var(--accent-text-color);
 }
-.bd-switch input:checked:active + .bd-switch-body {
+#{ $bdSwitchContainer } input:checked:active + #{ $bdSwitchBody } {
   --switch-color: hsla(var(--accent-hsl),var(--accent-opacity));
 }
 
-.bd-switch-disabled {
+#{ $bdSwitchDisabled } {
   opacity: 0.3;
   filter: none;
 }

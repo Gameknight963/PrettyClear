@@ -1,25 +1,29 @@
+@use '../classes' as *;
+
 /*
  *
  *  APP ELEMENTS
  *
  */
 body,
-.app__160d8,
-.bg__960e4 {
+#{ $shakeable },
+#{ $bg } {
   background-color: transparent;
 }
 
-.appMount__51fd7 {
+#{ $appMount } {
   background: var(--app-bg) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: cover !important;
-}
-.appMount__51fd7 * {
-  text-shadow: none;
-}
-.appMount__51fd7 svg {
-  filter: none;
+
+  & * {
+    text-shadow: none;
+  }
+
+  & svg {
+    filter: none;
+  }
 }
 
 ::selection {
@@ -28,7 +32,7 @@ body,
   text-shadow: none;
 }
 
-.layers__160d8 {
+#{ $layers } {
   margin-block: 0 var(--app-margin);
   margin-inline: var(--app-margin);
   overflow: hidden;
@@ -36,26 +40,27 @@ body,
   backdrop-filter: none;
 }
 
-.typeMacOS__421ed + .app_a3002d .layers__160d8 {
+#{ $titlebarMac } + #{ $app } #{ $layers } {
   margin: var(--app-margin);
 }
 
-.container_a2f514 {
+#{ $loadingScreen } {
   background: var(--app-bg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-.container_a2f514 .content_a2f514 {
-  padding: 16px;
-  background-color: transparent;
-  border-radius: var(--popout-radius);
-  box-shadow: none;
-  border: none;
-  backdrop-filter: blur(var(--popout-blur));
+
+  #{ $loadingScreenContent } {
+    padding: 16px;
+    background-color: transparent;
+    border-radius: var(--popout-radius);
+    box-shadow: none;
+    border: none;
+    backdrop-filter: blur(var(--popout-blur));
+  }
 }
 
-.content_a2f514 {
+#{ $loadingScreenContent } {
   border-radius: 0;
   overflow: hidden;
   backdrop-filter: blur(var(--app-blur));

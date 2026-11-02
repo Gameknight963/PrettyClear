@@ -1,113 +1,122 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  FORUM
  *
  */
-.container_f369db {
+#{ $forumContainer } {
   background: transparent;
 }
 
-.header_f369db {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.header_f369db.headerWithMatchingPosts_f369db {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+#{ $forumHeader } {
+  @include card-format();
+
+  &#{ $forumHeaderWithMatchingPosts } {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
-.matchingPostsRow_f369db {
+#{ $forumHeaderMatchingPostsRow } {
   background-color: var(--card-color);
   border-radius: 0 0 var(--card-radius) var(--card-radius);
   border: none;
 }
 
-.container_ca49a1, .descriptionContainer_ca49a1 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $forumGuidelinesContainer }, #{ $forumGuidelinesDescriptionContainer } {
+  @include card-format();
 }
 
-.tagsContainer_f369db {
+#{ $forumTagsContainer } {
   padding-block: 16px 0;
   padding-inline: 0;
 }
 
-.sortDropdown_f369db .contents__201d5 {
+#{ $forumSortDropdown } #{ $buttonContents } {
   color: var(--accent-text-color);
 }
 
-.sortDropdownText_f369db {
+#{ $forumSortDropdownText } {
   color: inherit !important;
 }
 
-.container_f8b2d2 {
+#{ $forumSortContainer } {
   padding: 0;
   background-color: transparent;
   border-radius: 0;
   box-shadow: none;
-}
-.container_f8b2d2 .menu_c1e9c4 {
-  min-width: unset;
-}
-.container_f8b2d2 .menu_c1e9c4 .groupLabel_c1e9c4 {
-  padding-block-start: 0;
+
+  #{ $menuPopout } {
+    min-width: unset;
+
+    #{ $menuPopoutGroupLabel } {
+      padding-block-start: 0;
+    }
+  }
 }
 
-.tagsButton_f369db {
+#{ $forumTagsButton } {
   --button-padding: 0 8px 0 12px;
-}
-.tagsButton_f369db.tagsButtonWithCount_f369db {
-  --button-padding: 0 8px;
-}
-.tagsButton_f369db .tagsButtonInner_f369db {
-  color: inherit;
-}
-.tagsButton_f369db svg {
-  color: var(--accent-text-color);
+
+  &#{ $forumTagsButtonWithCount } {
+    --button-padding: 0 8px;
+  }
+
+  #{ $forumTagsButtonInner } {
+    color: inherit;
+  }
+
+  & svg {
+    color: var(--accent-text-color);
+  }
 }
 
-.countContainer_f369db {
+#{ $forumTagsCountContainer } {
   background-color: var(--accent-text-color);
-}
-.countContainer_f369db .countText_f369db {
-  color: hsl(var(--accent-hsl));
+
+  #{ $forumTagsCountText } {
+    color: hsl(var(--accent-hsl));
+  }
 }
 
-.container__5808f {
+#{ $forumFilterContainer } {
   padding-block: 16px 8px;
   padding-inline: 16px;
-  background-color: var(--popout-color) !important;
-  border-radius: var(--popout-radius) !important;
-  box-shadow: var(--popout-shadow) !important;
-  border: none !important;
-  backdrop-filter: blur(var(--popout-blur));
-}
-.container__5808f .header__5808f {
-  padding: 0;
-}
-.container__5808f .countContainer__5808f {
-  background-color: hsl(var(--accent-hsl));
-}
-.container__5808f .countContainer__5808f .countText__5808f {
-  color: var(--accent-text-color);
+  @include add-translucence($filter: true, $important: true);
+
+  #{ $forumFilterHeader } {
+    padding: 0;
+  }
+
+  #{ $forumFilterCountContainer } {
+    background-color: hsl(var(--accent-hsl));
+
+    #{ $forumFilterCountText } {
+      color: var(--accent-text-color);
+    }
+  }
 }
 
 /* FORUM -> PILLS */
-.pill_a2c9e8 {
+#{ $postPill } {
   background-color: var(--card-color) !important;
   border: none;
-}
-.pill_a2c9e8.clickable_a2c9e8:hover {
-  background-color: var(--card-color-hover) !important;
-}
-.pill_a2c9e8.selected_a2c9e8 {
-  background-color: hsl(var(--accent-hsl), 0.3) !important;
-}
-.pill_a2c9e8.selected_a2c9e8:hover {
-  background-color: hsl(var(--accent-hsl), 0.4) !important;
-}
-.pill_a2c9e8.selected_a2c9e8 .lineClamp1__4bd52 {
-  color: hsl(var(--accent-hsl));
+
+  &#{ $postPillClickable }:hover {
+    background-color: var(--card-color-hover) !important;
+  }
+
+  &#{ $postPillSelected } {
+    background-color: hsl(var(--accent-hsl), 0.3) !important;
+
+    &:hover {
+      background-color: hsl(var(--accent-hsl), 0.4) !important;
+    }
+
+    #{ $postPillText } {
+      color: hsl(var(--accent-hsl));
+    }
+  }
 }

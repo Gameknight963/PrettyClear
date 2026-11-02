@@ -1,30 +1,31 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  SERVER SETTINGS MEMBERSHIP SCREENING
  *
  */
 
-.backgroundContainer_eaaeee {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $rulesScreeningBackgroundContainer } {
+  @include card-format();
 }
 
-.requirementContainer__0a749 {
+#{ $rulesRequirementContainer } {
   background-color: rgba(var(--textarea-color), var(--textarea-alpha));
   border-radius: var(--input-radius);
 }
 
-.containerFooter_eaaeee {
+#{ $rulesScreeningContainerFooter } {
   background-color: transparent;
 }
 
-.fieldFooterContainer_eaaeee {
+#{ $rulesScreeningFieldFooterContainer } {
   background-color: var(--card-color);
   border-radius: 0 0 var(--card-radius) var(--card-radius);
 }
 
 /* SERVER SETTINGS MEMBERSHIP SCREENING -> PREVIEW */
-.guildSidebar_b962dc {
+#{ $rulesGuildSidebar } {
   background-color: var(--sidebar-color);
 }

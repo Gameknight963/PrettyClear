@@ -1,16 +1,15 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  SERVER SETTINGS DISCOVERY
  *
  */
-.container__99871 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $checklist } {
+  @include card-format();
 }
 
-.header__99871 {
-  background-color: transparent;
-  box-shadow: var(--card-header-shadow);
-  border: none;
+#{ $checklistHeader } {
+  @include card-format--header();
 }

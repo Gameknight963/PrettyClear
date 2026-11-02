@@ -1,17 +1,19 @@
+@use '../classes' as *;
+
 /*
  *
  *	DISCORD SHOP HOME VIEW
  *
  */
-.shop__6db1d {
+#{ $shopOuterContainer } {
   background-color: var(--main-content-color);
 }
 
-.page__1feb0,
-.shop__08415 {
+#{ $shopPage },
+#{ $shopContainer } {
   background-color: transparent;
 }
 
-.shopViewWrapper__6db1d .scrollerBase_d125d2 {
+#{ $shopViewWrapper } #{ $scroller } {
   background-color: transparent;
 }

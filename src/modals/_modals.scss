@@ -1,72 +1,78 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  MODALS
  *
  */
-.root__49fc1 {
+#{ $modalRoot } {
   background-color: transparent !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   border: none !important;
-}
-.root__49fc1.small__49fc1 {
-  min-height: 75px;
-}
-.root__49fc1.carouselModal_d3a6f0 {
-  background-color: transparent !important;
-  box-shadow: none !important;
+
+  &#{ $modalSmall } {
+    min-height: 75px;
+  }
+
+  &#{ $carouselModal } {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  #{ $modalHeader } {
+    background-color: transparent;
+    box-shadow: var(--popout-header-shadow);
+
+    #{ $modalTitle } {
+      margin-block-end: 0;
+    }
+
+    #{ $modalCloseButton } {
+      --button-height: 32px;
+      position: absolute;
+      width: var(--button-height);
+      height: var(--button-height);
+      inset-block-start: 12px;
+      inset-inline-end: 12px;
+      margin: 0;
+      padding: 0;
+
+      #{ $buttonContents } {
+        height: 24px;
+      }
+
+      & svg {
+        height: 24px !important;
+        transform: scale(0.85);
+      }
+    }
+  }
+
+  #{ $modalContent } {
+    padding: 16px;
+  }
+
+  #{ $modalFooter } {
+    background-color: transparent !important;
+    box-shadow: none;
+  }
 }
 
-.root__49fc1 .header__49fc1 {
-  background-color: transparent;
-  box-shadow: var(--popout-header-shadow);
-}
-.root__49fc1 .header__49fc1 .modalTitle_f061f6 {
-  margin-block-end: 0;
-}
-.root__49fc1 .header__49fc1 .close__49fc1 {
-  --button-height: 32px;
-  position: absolute;
-  width: var(--button-height);
-  height: var(--button-height);
-  inset-block-start: 12px;
-  inset-inline-end: 12px;
-  margin: 0;
-  padding: 0;
-}
-.root__49fc1 .header__49fc1 .close__49fc1 .contents__201d5 {
-  height: 24px;
-}
-.root__49fc1 .header__49fc1 .close__49fc1 svg {
-  height: 24px !important;
-  transform: scale(0.85);
-}
-
-.root__49fc1 .content__49fc1 {
-  padding: 16px;
-}
-
-.root__49fc1 .footer__49fc1 {
-  background-color: transparent !important;
-  box-shadow: none;
-}
-
-.backdrop_bc663c {
+#{ $backdrop } {
   background-color: rgba(0, 0, 0, 0.3) !important;
   backdrop-filter: blur(calc(var(--popout-blur) * 1.4)) !important;
   opacity: 1 !important;
 }
 
 /* MODALS -> V2 MODALS */
-.container__8a031 {
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  border: none;
-  backdrop-filter: blur(var(--popout-blur));
-}
-.container__8a031 .header__8a031 .button_a22cb0 {
-  --button-padding: 0;
-  --button-background: transparent;
-  --button-text-color: var(--icon-secondary);
+#{ $modalV2Container } {
+  @include add-translucence($filter: true);
+
+  #{ $modalV2Header } #{ $buttonV2 } {
+    --button-padding: 0;
+    --button-background: transparent;
+    --button-text-color: var(--icon-secondary);
+  }
 }

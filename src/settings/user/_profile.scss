@@ -1,22 +1,24 @@
+@use '../../classes' as *;
+
 /*
  *
  *  USER SETTINGS PROFILE
  *
  */
-.upsellOverlayContainer__0f7dc {
+#{ $settingsUpsellOverlayContainer } {
   border-radius: var(--card-radius);
   overflow: hidden;
 }
 
-.upsellOverlay__0f7dc {
+#{ $settingsUpsellOverlay } {
   border-radius: 0;
 }
 
-.swatch__2d060 {
+#{ $colorSwatch } {
   border-radius: var(--card-radius);
 }
 
-.bioTextArea__6a919 {
+#{ $settingsProfileBioTextArea } {
   background-color: rgba(var(--textarea-color), var(--textarea-alpha));
   border-radius: var(--textarea-radius);
   border: none;

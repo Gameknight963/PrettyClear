@@ -1,51 +1,27 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  USER SETTINGS PARYT MODE
  *
  */
-.achievementContainer_f8824b {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.achievementContainer_f8824b:hover {
-  background-color: var(--card-color-hover);
-  border: none;
+#{ $achievementContainer } {
+  @include card-format($hover: true);
 }
 
-.container__8e75f {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.container__8e75f:hover {
-  background-color: var(--card-color-hover);
-  border: none;
-}
-.container__8e75f .container_e6b065 {
-  background-color: var(--card-color);
+#{ $achievmentCardContainer } {
+  @include card-format($hover: true);
+
+  #{ $achievementIcon } {
+    background-color: var(--card-color);
+  }
 }
 
-.comboNameplate__257af {
-  background-color: transparent;
-  border-radius: var(--popout-radius);
-  box-shadow: none;
-  overflow: hidden;
-}
-.comboNameplate__257af:before {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 100%;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  backdrop-filter: blur(var(--popout-blur));
-  pointer-events: none;
-  z-index: -1;
-}
-.comboNameplate__257af .comboMultiplier__257af {
-  color: hsl(var(--accent-hsl)) !important;
+#{ $comboNameplate } {
+  @include add-translucence(before, true);
+
+  #{ $comboMultiplier } {
+    color: hsl(var(--accent-hsl)) !important;
+  }
 }

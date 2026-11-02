@@ -1,32 +1,30 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  USER SETTINGS CONNECTIONS
  *
  */
-.connection__41de9 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $connectionCard } {
+  @include card-format();
   padding: 0;
-}
-.connection__41de9 .connectionHeader__41de9 {
-  background-color: transparent;
-  box-shadow: var(--card-header-shadow);
-  border: none;
-  padding: var(--space-16);
+
+  #{ $connectionCardHeader } {
+    @include card-format--header();
+    padding: var(--space-16);
+  }
 }
 
-.connectionOptions__41de9,
-.metadataContainer__41de9 {
+#{ $connectionCardOptions },
+#{ $connectionCardMetadataContainer } {
   margin-inline: var(--space-16);
 }
 
-.connectionOptions__41de9:last-child {
+#{ $connectionCardOptions }:last-child {
   margin-block-end: var(--space-16);
 }
 
-.metadataContainer__41de9 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $connectionCardMetadataContainer } {
+  @include card-format();
 }

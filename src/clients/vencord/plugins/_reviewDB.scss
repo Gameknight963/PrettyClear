@@ -1,47 +1,54 @@
+@use '../../../classes' as *;
+
 /*
  *
  *  VENCORD PLUGIN - ReviewDB
  *
  */
-.vc-rdb-modal-footer > div {
+#{ $reviewDBModalFooter } > div {
   margin: 16px;
 }
-.vc-rdb-modal-footer .vc-rdb-review {
+#{ $reviewDBModalFooter } #{ $reviewDBReview } {
   margin-block-start: 0 !important;
   margin-inline-end: 0 !important;
 }
 
-.vc-rdb-review {
+#{ $reviewDBReview } {
   --message-color: var(--card-color);
   --message-color-hover: var(--card-color-hover);
   margin-block-start: 4px !important;
   margin-inline-start: 52px !important;
-}
-.vc-rdb-review:hover {
-  background-color: var(--message-color-hover) !important;
-}
-.vc-rdb-review .avatar_c19a55 {
-  inset-inline-start: -52px !important;
+
+  &:hover {
+    background-color: var(--message-color-hover) !important;
+  }
+
+  #{ $avatarLarge } {
+    inset-inline-start: -52px !important;
+  }
 }
 
-.vc-rdb-review-comment {
+#{ $reviewDBReviewComment } {
   margin-block-end: 0;
 }
 
-.vc-rdb-input {
+#{ $reviewDBInput } {
   --textarea-background: rgba(var(--textarea-color), var(--textarea-alpha));
   margin-block-start: 12px !important;
   background-color: var(--textarea-background) !important;
   border-radius: 22px !important;
   border: none !important;
   box-shadow: none !important;
-}
-.vc-rdb-input .placeholder__1b31f {
-  color: var(--textarea-placeholder-color);
-}
-.vc-rdb-input .editor__1b31f {
-  color: var(--textarea-text-color);
-}
-.vc-rdb-input .buttons__74017 {
-  margin-inline-end: 0 !important;
+
+  #{ $textAreaPlaceholder } {
+    color: var(--textarea-placeholder-color);
+  }
+
+  #{ $textAreaEditor } {
+    color: var(--textarea-text-color);
+  }
+
+  #{ $channelTextAreaButtonsContainer } {
+    margin-inline-end: 0 !important;
+  }
 }

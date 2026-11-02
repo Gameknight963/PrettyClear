@@ -1,55 +1,63 @@
+@use '../../classes' as *;
+
 /*
  *
  *  VENCORD SETTINGS
  *
  */
-.vc-settings-tab-bar {
+#{ $vencordSettingsTabBar } {
   margin-block-start: 24px;
   margin-block-end: 0 !important;
   padding-block-start: 10px;
   border-bottom: 1px solid var(--background-modifier-accent) !important;
-}
-.vc-settings-tab-bar .item_aa8da2 {
-  margin: 8px;
-  padding-block: 2px;
-  padding-inline: 8px;
-  border-radius: var(--button-radius);
-  border-bottom: none;
-  line-height: 20px;
-  font-size: 16px;
-  color: var(--interactive-normal) !important;
-}
-.vc-settings-tab-bar .item_aa8da2:hover {
-  background-color: var(--background-modifier-hover) !important;
-  color: var(--interactive-hover) !important;
-}
-.vc-settings-tab-bar .item_aa8da2.selected_aa8da2 {
-  background-color: var(--background-modifier-selected) !important;
-  color: var(--interactive-active) !important;
-}
-.vc-settings-tab-bar .item_aa8da2:first-child {
-  margin-inline-start: 0;
-}
-.vc-settings-tab-bar .item_aa8da2:last-child {
-  margin-inline-end: 0;
+
+  #{ $item } {
+    margin: 8px;
+    padding-block: 2px;
+    padding-inline: 8px;
+    border-radius: var(--button-radius);
+    border-bottom: none;
+    line-height: 20px;
+    font-size: 16px;
+    color: var(--interactive-normal) !important;
+
+    &:hover {
+      background-color: var(--background-modifier-hover) !important;
+      color: var(--interactive-hover) !important;
+    }
+
+    &#{ $itemSelected } {
+      background-color: var(--background-modifier-selected) !important;
+      color: var(--interactive-active) !important;
+    }
+
+    &:first-child {
+      margin-inline-start: 0;
+    }
+
+    &:last-child {
+      margin-inline-end: 0;
+    }
+  }
 }
 
-.vc-h3, .vc-h4, .vc-h5 {
+#{ $vencordH3 }, #{ $vencordH4 }, #{ $vencordH5 } {
   color: var(--header-primary);
 }
 
 /* VENCORD SETTINGS -> PLUGINS */
-.vc-addon-card {
+#{ $vencordAddonCard } {
   background-color: var(--card-color) !important;
   border-radius: var(--card-radius) !important;
-}
-.vc-addon-card:hover {
-  box-shadow: none !important;
-  transform: none !important;
+
+  &:hover {
+    box-shadow: none !important;
+    transform: none !important;
+  }
 }
 
 /* VENCORD SETTINGS -> NOTIFICATION */
-.vc-notification-root {
+#{ $vencordNotificationRoot } {
   inset-block-start: calc(var(--custom-app-top-bar-height) + var(--space-8));
   inset-inline-end: calc(var(--app-margin) + var(--space-8)) !important;
   bottom: unset !important;
@@ -57,18 +65,19 @@
   border-radius: var(--popout-radius) !important;
   box-shadow: none !important;
   overflow: hidden;
-}
-.vc-notification-root:before {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 100%;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  backdrop-filter: blur(var(--popout-blur));
-  pointer-events: none;
-  z-index: -1;
+
+  &:before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    background-color: var(--popout-color);
+    border-radius: var(--popout-radius);
+    box-shadow: var(--popout-shadow);
+    backdrop-filter: blur(var(--popout-blur));
+    pointer-events: none;
+    z-index: -1;
+  }
 }

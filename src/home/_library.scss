@@ -1,8 +1,10 @@
+@use '../classes' as *;
+
 /*
  *
  *  LIBRARY
  *
  */
-.container__8a529 {
+#{ $libraryContainer } {
   background-color: var(--main-content-color);
 }

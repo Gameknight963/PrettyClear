@@ -1,92 +1,108 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  MESSAGES
  *
  */
-.message__5126c {
+#{ $message } {
   border-radius: var(--message-radius);
 }
 
-.backgroundFlash__5126c[style="background-color: rgba(148, 156, 247, 0);"] {
+#{ $messageBackgroundFlash }[style="background-color: rgba(148, 156, 247, 0);"] {
   background-color: hsla(var(--accent-hsl), 0) !important;
   transition: 400ms background-color;
 }
 
-.mouse-mode.full-motion .wrapper_c19a55:hover {
+#{ $mouseMode }#{ $fullMotion } #{ $messageWrapper }:hover {
   background-color: var(--message-color-hover) !important;
 }
 
-.wrapper_c19a55 {
+#{ $messageWrapper } {
   margin-inline-start: 68px;
   margin-inline-end: 16px;
   background-color: var(--message-color) !important;
   border-radius: var(--message-radius);
   transition: 300ms ease background-color;
-}
-.wrapper_c19a55:not(.groupStart__5126c), .wrapper_c19a55.compact_c19a55 {
-  margin-block-start: 2px;
-}
-.wrapper_c19a55.cozy_c19a55, .wrapper_c19a55.compact_c19a55 {
-  padding-block: var(--message-padding-top) !important;
-  padding-inline: var(--message-padding-side) !important;
-  border: 2px solid transparent;
-}
-.wrapper_c19a55.cozy_c19a55 .timestamp_c19a55.alt_c19a55 {
-  inset-inline-start: -62px;
-}
-.wrapper_c19a55.compact_c19a55 {
-  padding: 4px;
-  padding-inline-start: 6px;
-}
-.wrapper_c19a55.compact_c19a55 .timestamp_c19a55 {
-  margin-inline-end: 0.75rem;
-}
-.wrapper_c19a55.hasReply_c19a55 .avatar_c19a55 {
-  inset-block-start: 28px;
-}
-.wrapper_c19a55.hasReply_c19a55 .avatarDecoration_c19a55 {
-  inset-block-start: 26px;
-}
-.wrapper_c19a55 .timestamp_c19a55 {
-  color: var(--text-normal);
-}
-.wrapper_c19a55 .timestamp_c19a55.alt_c19a55 {
-  color: var(--text-normal);
-}
-.wrapper_c19a55 .channelTextArea__74017 {
-  margin: 2px 0;
-}
-.wrapper_c19a55.mentioned__5126c {
-  border-color: transparent;
-  box-shadow: none;
+
+  &:not(#{ $messageGroupStart }),
+  &#{ $messageCompact } {
+    margin-block-start: 2px;
+  }
+
+  &#{ $messageCozy },
+  &#{ $messageCompact } {
+    padding-block: var(--message-padding-top) !important;
+    padding-inline: var(--message-padding-side) !important;
+    border: 2px solid transparent;
+  }
+
+  &#{ $messageCozy } #{ $messageTimestamp }#{ $messageTimestampAlt } {
+    inset-inline-start: -62px;
+  }
+
+  &#{ $messageCompact } {
+    padding: 4px;
+    padding-inline-start: 6px;
+
+    #{ $messageTimestamp } {
+      margin-inline-end: 0.75rem;
+    }
+  }
+
+  &#{ $hasReply } #{ $avatarLarge } {
+    inset-block-start: 28px;
+  }
+
+  &#{ $hasReply } #{ $avatarDecoration } {
+    inset-block-start: 26px;
+  }
+
+  #{ $messageTimestamp } {
+    color: var(--text-normal);
+
+    &#{ $messageTimestampAlt } {
+      color: var(--text-normal);
+    }
+  }
+
+  #{ $channelTextArea } {
+    margin: 2px 0;
+  }
+
+  &#{ $mentioned } {
+    border-color: transparent;
+    box-shadow: none;
+  }
 }  /* mention messages get a light red background */
-.wrapper_c19a55.mentioned__5126c:before {
+#{ $messageWrapper }#{ $mentioned }:before {
   display: none;
 }
-.wrapper_c19a55.mentioned__5126c .repliedMessage_c19a55:before {
+#{ $messageWrapper }#{ $mentioned } #{ $messageReplied }:before {
   border-color: hsl(var(--mention-hsl));
 }
-.wrapper_c19a55.mentioned__5126c .repliedMessageClickableSpine_c19a55 {
+#{ $messageWrapper }#{ $mentioned } #{ $messageRepliedSpine } {
   --message-color: hsl(var(--mention-hsl));
   --message-color-hover: hsl(var(--mention-hsl));
 }
-.wrapper_c19a55.replying__5126c {
+#{ $messageWrapper }#{ $replyingToIndicator } {
   border-color: transparent;
   box-shadow: none;
 }  /* reply messages lightly tinted */
-.wrapper_c19a55.replying__5126c:before {
+#{ $messageWrapper }#{ $replyingToIndicator }:before {
   display: none;
 }
 
-.scrollerSpacer__36d07 {
+#{ $messagesScrollerSpacer } {
   height: var(--space-16);
 }
 
-.hasThread_c19a55:after {
+#{ $messageHasThread }:after {
   display: none;
 }
 
-.avatar_c19a55 {
+#{ $avatarLarge } {
   width: 40px;
   height: 40px;
   inset-block-start: 0;
@@ -94,55 +110,59 @@
   margin-block-start: 0;
 }
 
-.avatarDecoration_c19a55 {
+#{ $avatarDecoration } {
   inset-block-start: -2px;
   inset-inline-start: -54px;
 }
 
-.a11y-font-scaled-down .cozy_c19a55 .repliedMessageClickableSpine_c19a55 {
+#{ $a11yFontScaledDown } #{ $messageCozy } #{ $messageRepliedSpine } {
   --gutter: var(--custom-message-margin-horizontal);
 }
-.a11y-font-scaled-down .avatar_c19a55:not(.compact_c19a55) {
+#{ $a11yFontScaledDown } #{ $avatarLarge }:not(#{ $messageCompact }) {
   inset-block-start: 0;
   inset-inline-start: -50px;
 }
-.a11y-font-scaled-down .avatarDecoration_c19a55:not(.compact_c19a55) {
+#{ $a11yFontScaledDown } #{ $avatarDecoration }:not(#{ $messageCompact }) {
   inset-block-start: 0;
   inset-inline-start: -54px;
 }
-.a11y-font-scaled-down .hasReply_c19a55 .avatar_c19a55:not(.compact_c19a55) {
+#{ $a11yFontScaledDown } #{ $hasReply } #{ $avatarLarge }:not(#{ $messageCompact }) {
   inset-block-start: 28px;
 }
-.a11y-font-scaled-down .hasReply_c19a55 .avatarDecoration_c19a55:not(.compact_c19a55) {
+#{ $a11yFontScaledDown } #{ $hasReply } #{ $avatarDecoration }:not(#{ $messageCompact }) {
   inset-block-start: 28px;
 }
 
-.messageListItem__5126c + .wrapper_c19a55,
-.divider__908e2 + .wrapper_c19a55 {
+#{ $messageListItem } + #{ $messageWrapper },
+#{ $divider } + #{ $messageWrapper } {
   margin-block-start: 2px;
 }
 
-.divider__908e2.hasContent__5126c {
+#{ $divider }#{ $hasContent } {
   border-top: none;
-}
-.divider__908e2.hasContent__5126c:before, .divider__908e2.hasContent__5126c:after {
-  position: absolute;
-  content: " ";
-  width: calc(50% - 60px);
-  height: 1px;
-  inset-block-start: 0;
-  inset-block-end: 0;
-  margin: auto 0;
-  background-color: var(--background-modifier-accent);
-}
-.divider__908e2.hasContent__5126c:before {
-  inset-inline-start: 0;
-}
-.divider__908e2.hasContent__5126c:after {
-  inset-inline-end: 0;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: " ";
+    width: calc(50% - 60px);
+    height: 1px;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    margin: auto 0;
+    background-color: var(--background-modifier-accent);
+  }
+
+  &:before {
+    inset-inline-start: 0;
+  }
+
+  &:after {
+    inset-inline-end: 0;
+  }
 }
 
-.content__908e2 {
+#{ $dividerDate } {
   width: 120px;
   padding-block: 2px;
   padding-inline: 0;
@@ -150,53 +170,40 @@
   text-align: center;
 }
 
-.isUnread__908e2 {
+#{ $dividerUnread } {
   border-color: var(--notification-badge-color);
-}
-.isUnread__908e2 .unreadPill__908e2 {
-  background-color: var(--notification-badge-color);
-  color: var(--notification-badge-text-color);
-  text-shadow: none;
-}
-.isUnread__908e2 .unreadPillCap__908e2 {
-  filter: none;
-}
-.isUnread__908e2 .unreadPillCapStroke__908e2 {
-  color: var(--notification-badge-color);
-  fill: var(--notification-badge-color);
+
+  #{ $unreadPill } {
+    background-color: var(--notification-badge-color);
+    color: var(--notification-badge-text-color);
+    text-shadow: none;
+  }
+
+  #{ $unreadPillCap } {
+    filter: none;
+  }
+
+  #{ $unreadPillCapStroke } {
+    color: var(--notification-badge-color);
+    fill: var(--notification-badge-color);
+  }
 }
 
-.repliedMessage_c19a55:before {
+#{ $messageReplied }:before {
   border-color: var(--message-color);
   transform: translateX(-6px);
 }
 
-.repliedMessageClickableSpine_c19a55 {
+#{ $messageRepliedSpine } {
   margin-inline: calc(var(--spine-width) * -1 / 2) calc(var(--reply-spacing) * 2.3);
   border-color: var(--message-color);
   transition: 300ms ease border-color;
-}
-.repliedMessageClickableSpine_c19a55.repliedMessageContentHovered_c19a55 {
-  border-color: var(--message-color-hover);
+
+  &#{ $messageRepliedSpineHovered } {
+    border-color: var(--message-color-hover);
+  }
 }
 
-.popoutContainer__0f481 {
-  background-color: transparent;
-  border-radius: var(--popout-radius);
-  box-shadow: none;
-  overflow: hidden;
-}
-.popoutContainer__0f481:before {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 100%;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  backdrop-filter: blur(var(--popout-blur));
-  pointer-events: none;
-  z-index: -1;
+#{ $messageEmojiPopout } {
+  @include add-translucence(before, true);
 }

@@ -1,11 +1,12 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  SERVER SETTINGS BANNED USERS
  *
  */
-.scrollerContainer__4b8d8 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $bannedUsersScrollerContainer } {
+  @include card-format();
   box-shadow: none !important;
 }

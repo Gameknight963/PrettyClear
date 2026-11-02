@@ -1,42 +1,41 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  SETTINGS CONTENT AREA
  *
  */
-.contentRegion__23e6b {
+#{ $settingsContentRegion } {
   background-color: var(--main-content-color);
 }
 
-.container__9a9f9 {
-  background-color: var(--popout-color) !important;
-  border-radius: var(--popout-radius) !important;
-  box-shadow: var(--popout-shadow) !important;
-  border: none !important;
-  backdrop-filter: blur(var(--popout-blur));
+#{ $settingsNoticeContainer } {
+  @include add-translucence($filter: true, $important: true);
 }
 
-.contentRegionScroller__23e6b {
+#{ $settingsContentScroller } {
   background-color: transparent;
 }
 
 /* SETTINGS CONTENT AREA V2 */
-.layer__960e4 {
+#{ $layer } {
   background-color: transparent;
 }
 
-.modal_e44912 {
+#{ $settingsModal } {
   backdrop-filter: none;
 }
 
-.modalContentInner_e44912 {
+#{ $settingsModalContentInner } {
   background-color: var(--main-content-color);
 }
 
-.content_e9e3ed,
-.contentHeader_e9e3ed {
+#{ $settingsV2Content },
+#{ $settingsV2ContentHeader } {
   background-color: transparent;
 }
 
-.scrim__40128 {
+#{ $scrim } {
   backdrop-filter: blur(var(--app-blur));
 }

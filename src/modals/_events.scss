@@ -1,44 +1,43 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  EVENTS
  *
  */
 
-.eventStatusBrand__29021 {
+#{ $eventStatusBrand } {
   color: hsl(var(--accent-hsl));
 }
 
-.card__88264 {
+#{ $eventCard } {
   padding: 0;
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.card__88264:hover {
-  background-color: var(--card-color-hover);
-  border: none;
-}
-.card__88264 .container_b5010b,
-.card__88264 .footer__88264 {
-  padding: 16px;
-}
-.card__88264 .container_b5010b {
-  box-shadow: var(--card-header-shadow);
-}
-.card__88264 .rsvpCount_b5010b {
-  background-color: var(--background-modifier-selected);
-}
-.card__88264 .divider__88264 {
-  display: none;
+  @include card-format($hover: true);
+
+  #{ $eventCardContent },
+  #{ $eventCardFooter } {
+    padding: 16px;
+  }
+
+  #{ $eventCardContent } {
+    box-shadow: var(--card-header-shadow);
+  }
+
+  #{ $eventCardRsvpCount } {
+    background-color: var(--background-modifier-selected);
+  }
+
+  #{ $eventCardDivider } {
+    display: none;
+  }
 }
 
 /* EVENTS -> CREATE EVENT */
-.selectedProgressBar__5537c {
+#{ $eventCreateSelectedProgressBar } {
   background-color: hsla(var(--accent-hsl), var(--accent-opacity));
 }
 
-.previewCard_f70348 {
-  background-color: var(--card-color) !important;
-  border-radius: var(--card-radius) !important;
-  border: none !important;
+#{ $eventPreviewCard } {
+  @include card-format($important: true);
 }

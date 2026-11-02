@@ -1,46 +1,45 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  SERVER SETTINGS PERMISSIONS
  *
  */
-.settingCard__1a4ef {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.settingCard__1a4ef.active__1a4ef {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-  overflow: hidden;
-}
-.settingCard__1a4ef.active__1a4ef .cardContent_f62fce {
-  box-shadow: var(--card-header-shadow);
+#{ $permissionsSettingCard } {
+  @include card-format();
+
+  &#{ $permissionsSettingCardActive } {
+    @include card-format();
+    overflow: hidden;
+
+    #{ $permissionsCardContent } {
+      box-shadow: var(--card-header-shadow);
+    }
+  }
 }
 
-.cardFolder__1a4ef {
+#{ $permissionsCardFolder } {
   background-color: transparent;
 }
 
-.group__344e6 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $radioPillGroup } {
+  @include card-format();
   overflow: hidden;
 }
 
-.item__344e6 {
+#{ $radioPillItem } {
   cursor: pointer;
 }
 
-.selected__344e6.deny__344e6 {
+#{ $radioPillItemSelected }#{ $radioPillItemDeny } {
   background-color: hsla(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%, 0.65);
   border-radius: var(--card-radius) 0 0 var(--card-radius);
 }
-.selected__344e6.passthrough__344e6 {
+#{ $radioPillItemSelected }#{ $radioPillItemPassthrough } {
   background-color: hsla(217, 8%, 41%, 0.65);
 }
-.selected__344e6.allow__344e6 {
+#{ $radioPillItemSelected }#{ $radioPillItemAllow } {
   background-color: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%, 0.65);
   border-radius: 0 var(--card-radius) var(--card-radius) 0;
 }

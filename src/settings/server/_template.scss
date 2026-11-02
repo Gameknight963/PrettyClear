@@ -1,40 +1,35 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  SERVER SETTINGS SERVER TEMPLATE
  *
  */
-.descriptionBox__981f7 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $settingsCardDescriptionBox } {
+  @include card-format();
 }
 
-.enableContainer__5ea8c {
+#{ $welcomeEnableContainer } {
   background-color: var(--card-color);
   border-radius: var(--card-radius) var(--card-radius) 0 0;
   box-shadow: var(--card-header-shadow);
 }
 
-.previewContainer__74a6a {
+#{ $welcomePreviewContainer } {
   background-color: var(--card-color);
   border-radius: 0 0 var(--card-radius) var(--card-radius);
-}
-.previewContainer__74a6a .welcomeChannel__74a6a {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.previewContainer__74a6a .welcomeChannel__74a6a .channelIcon__74a6a {
-  background-color: var(--background-modifier-selected);
-  border-radius: 50%;
+
+  #{ $welcomeChannel } {
+    @include card-format();
+
+    #{ $welcomeChannelIcon } {
+      background-color: var(--background-modifier-selected);
+      border-radius: 50%;
+    }
+  }
 }
 
-.optionContainer__949ab {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.optionContainer__949ab:hover {
-  background-color: var(--card-color-hover);
-  border: none;
+#{ $welcomeOptionContainer } {
+  @include card-format($hover: true);
 }

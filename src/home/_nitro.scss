@@ -1,8 +1,10 @@
+@use '../classes' as *;
+
 /*
  *
  *  NITRO
  *
  */
-.applicationStore_f07d62 {
+#{ $nitroHomePage } {
   background-color: var(--main-content-color);
 }

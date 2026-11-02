@@ -1,57 +1,65 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  MEMBERS LIST
  *
  */
-.membersWrap_c8ffbb {
+#{ $membersWrap } {
   background-color: transparent;
   border-left: none;
 }
 
-.container_c8ffbb {
+#{ $membersContainer } {
   background-color: transparent;
 }
 
-.members_c8ffbb, .members_c8ffbb > div {
+#{ $members }, #{ $members } > div {
   background-color: transparent;
 }
 
-.member__5d473 {
+#{ $member } {
   background-color: transparent;
 }
 
-.memberInner__5d473 {
+#{ $memberInner } {
   height: 100%;
 }
 
-.layout__91a9d {
+#{ $listItemLayout } {
   border-radius: var(--list-item-radius);
 }
 
-.botTag__82f07 {
+#{ $botTag } {
   border-radius: 5px !important;
-}
-.botTag__82f07.botTagRegular__82f07 {
-  background-color: hsla(var(--accent-hsl), var(--accent-opacity));
-  color: var(--accent-text-color);
-}
-.botTag__82f07 .botText__82f07 {
-  text-shadow: none;
-}
-.botTag__82f07 svg {
-  filter: none !important;
-}
-.botTag__82f07 path {
-  fill: var(--accent-text-color);
+
+  &#{ $botTagRegular } {
+    @include app-accents();
+  }
+
+  #{ $botText } {
+    text-shadow: none;
+  }
+
+  & svg {
+    filter: none !important;
+  }
+
+  & path {
+    fill: var(--accent-text-color);
+  }
 }
 
 /* MEMBERS LIST -> ACTIVITIES */
-.container__0f2e8 {
+#{ $memberActivityContainer } {
   background-color: var(--background-modifier-hover);
-}
-.container__0f2e8:hover {
-  background-color: var(--background-modifier-active);
-}
-.container__0f2e8.selected__0f2e8 {
-  background-color: var(--background-modifier-selected);
+
+  &:hover {
+    background-color: var(--background-modifier-active);
+  }
+
+  &#{ $memberActivityContainerSelected } {
+    background-color: var(--background-modifier-selected);
+  }
 }

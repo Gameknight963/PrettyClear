@@ -1,9 +1,11 @@
+@use '../../classes' as *;
+
 /*
  *
  *  HEADER SEARCH BAR
  *
  */
-.searchBar_c322aa {
+#{ $chatSearchBar } {
   height: var(--chat-search-size);
   padding-block: 0;
   padding-inline: 4px;
@@ -12,7 +14,7 @@
   border: none;
 }
 
-.searchToken_bd8186 {
+#{ $chatSearchToken } {
   --chat-search-size: var(--chat-search-pill-size);
   display: flex;
   height: var(--chat-search-pill-size);
@@ -21,13 +23,14 @@
   background-color: var(--textarea-block-color);
   border: none;
   color: var(--textarea-block-text-color);
-}
 
-.searchToken_bd8186.searchFilter_bd8186 {
-  padding-block: 0;
-  padding-inline: 8px 4px;
-  border-radius: calc(var(--chat-search-pill-size) / 2) 0 0 calc(var(--chat-search-pill-size) / 2);
-}
-.searchToken_bd8186.searchAnswer_bd8186 {
-  border-radius: 0 calc(var(--chat-search-pill-size) / 2) calc(var(--chat-search-pill-size) / 2) 0;
+  &#{ $chatSearchFilter } {
+    padding-block: 0;
+    padding-inline: 8px 4px;
+    border-radius: calc(var(--chat-search-pill-size) / 2) 0 0 calc(var(--chat-search-pill-size) / 2);
+  }
+
+  &#{ $chatSearchAnswer } {
+    border-radius: 0 calc(var(--chat-search-pill-size) / 2) calc(var(--chat-search-pill-size) / 2) 0;
+  }
 }

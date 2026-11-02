@@ -1,33 +1,28 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  USER SETTINGS FAMILY CENTER
  *
  */
-.container__5dbf8 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $familyCenterGetStartedContainer } {
+  @include card-format();
 }
 
-.container__8cc9a {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $familyCenterFeatureCard } {
+  @include card-format();
 }
 
-.box_f8c98c,
-.box_d9914b {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.box_f8c98c .stepNumber_d9914b,
-.box_d9914b .stepNumber_d9914b {
-  background-color: var(--background-modifier-hover);
+#{ $familyCenterBox },
+#{ $familyCenterMyFamilyBox } {
+  @include card-format();
+
+  #{ $familyCenterBoxStepNumber } {
+    background-color: var(--background-modifier-hover);
+  }
 }
 
-.enableCard__74f90 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $familyCenterEnableCard } {
+  @include card-format();
 }

@@ -1,143 +1,129 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  EMOJI PICKER
  *
  */
-div.wrapper__4e6ce.categoryList_c0e32c {
+div#{ $emojiCategoryWrapper }#{ $emojiPickerCategoryList } {
   background-color: var(--popout-color);
 }
 
-.contentWrapper__08434,
-.emojiPicker_c0e32c {
+#{ $emojiContentWrapper },
+#{ $emojiPicker } {
   background-color: transparent;
 }
 
-.contentWrapper__08434 {
+#{ $emojiContentWrapper } {
   background-color: transparent;
   border-radius: var(--popout-radius);
   box-shadow: none;
   overflow: hidden;
   border: none;
   box-shadow: none;
-}
-.contentWrapper__08434:before {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 100%;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  backdrop-filter: blur(var(--popout-blur));
-  pointer-events: none;
-  z-index: -1;
+
+  &:before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    background-color: var(--popout-color);
+    border-radius: var(--popout-radius);
+    box-shadow: var(--popout-shadow);
+    backdrop-filter: blur(var(--popout-blur));
+    pointer-events: none;
+    z-index: -1;
+  }
 }
 
-.wrapper_c0e32c:not(.emojiPickerHasTabWrapper_c0e32c) {
-  background-color: transparent;
-  border-radius: var(--popout-radius);
-  box-shadow: none;
-  overflow: hidden;
-}
-.wrapper_c0e32c:not(.emojiPickerHasTabWrapper_c0e32c):before {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 100%;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  backdrop-filter: blur(var(--popout-blur));
-  pointer-events: none;
-  z-index: -1;
+#{ $emojiWrapper }:not(#{ $emojiWrapperHasTabWrapper }) {
+  @include add-translucence(before, true);
 }
 
 /* EMOJI PICKER -> HEADER */
-.navButton__08434:hover {
+#{ $emojiPickerNavButton }:hover {
   background-color: var(--background-modifier-hover);
 }
-.navButton__08434.navButtonActive__08434 {
+#{ $emojiPickerNavButton }#{ $emojiPickerNavButtonActive } {
   background-color: var(--background-modifier-selected);
 }
 
-.header_fed6d3,
-.header__8ef02,
-.header_c0e32c {
+#{ $emojiPickerHeaderGif },
+#{ $emojiPickerHeaderSticker },
+#{ $emojiPickerHeader } {
   background-color: transparent;
   box-shadow: var(--popout-header-shadow) !important;
 }
 
-.diversitySelectorOptions_a45a2a {
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  border: none;
-  backdrop-filter: blur(var(--popout-blur));
+#{ $emojiPickerDiversitySelectorPopout } {
+  @include add-translucence($filter: true);
   border: none;
   overflow: hidden;
 }
 
 /* EMOJI PICKER -> EMOJIS */
-.container_fed6d3 {
+#{ $emojiGifContainer } {
   background-color: transparent;
 }
 
-.wrapper__14245 {
+#{ $emojiPickerCategoryHeaderWrapper } {
   position: sticky;
   background-color: transparent;
   backdrop-filter: blur(var(--popout-blur));
 }
 
-.inspector_aeaaeb {
+#{ $emojiPickerInspector } {
   background-color: transparent;
 }
 
-.wrapper__4106a {
+#{ $emojiPickerListViewport } {
   inset-block-start: 60px;
   background-color: var(--sidebar-color);
-}
-.wrapper__4106a .unicodeShortcut_b9ee0c {
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  border: none;
-  backdrop-filter: blur(var(--popout-blur));
-  border-radius: 0;
+
+  #{ $emojiCategoryUnicodeShortcut } {
+    @include add-translucence($filter: true);
+    border-radius: 0;
+  }
 }
 
-.emojiPickerHasTabWrapper_c0e32c .wrapper__4106a {
+#{ $emojiWrapperHasTabWrapper } #{ $emojiPickerListViewport } {
   inset-block-start: 52px;
 }
 
-.emojiItem_fc7141 {
+#{ $emojiPickerItem } {
   border-radius: var(--card-radius);
-}
-.emojiItem_fc7141.emojiItemSelected_fc7141 {
-  background-color: var(--background-modifier-hover);
+
+  &#{ $emojiPickerItemSelected } {
+    background-color: var(--background-modifier-hover);
+  }
 }
 
 /* EMOJI PICKER -> GIFS */
 
-.result__2dc39 {
+#{ $gifPickerResult } {
   border-radius: var(--card-radius);
-}
-.result__2dc39:after {
-  border-radius: inherit;
-}
-.result__2dc39:hover:after {
-  box-shadow: inset 0 0 0 2px hsl(var(--accent-hsl)), inset 0 0 0 3px #2f3136 !important;
-}
-.result__2dc39 .gif__2dc39 {
-  border-radius: inherit;
-}
-.result__2dc39 .categoryFade_d02962,
-.result__2dc39 .categoryFadeBlurple_d02962 {
-  border-radius: inherit;
-}
-.result__2dc39 .categoryFadeBlurple_d02962 {
-  background-color: hsla(var(--accent-hsl), 0.8) !important;
+
+  &:after {
+    border-radius: inherit;
+  }
+
+  &:hover:after {
+    box-shadow: inset 0 0 0 2px hsl(var(--accent-hsl)), inset 0 0 0 3px #2f3136 !important;
+  }
+
+  #{ $gifPickerGif } {
+    border-radius: inherit;
+  }
+
+  #{ $gifPickerCategoryFade },
+  #{ $gifPickerCategoryFadeBlurple } {
+    border-radius: inherit;
+  }
+
+  #{ $gifPickerCategoryFadeBlurple } {
+    background-color: hsla(var(--accent-hsl), 0.8) !important;
+  }
 }

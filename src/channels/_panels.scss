@@ -1,58 +1,60 @@
+@use '../classes' as *;
+
 /*
  *
  *  PANELS
  *
  */
-.panels__5e434 {
+#{ $panels } {
   background-color: transparent;
   border: none;
   box-shadow: var(--popout-header-shadow);
 }
 
-.actionButtons_e131a9 .button__201d5 path[fill] {
+#{ $connectionPanelActionButtons } #{ $button } path[fill] {
   fill: currentColor !important;
 }
 
-.actionButtons_e131a9 .button__201d5 path[stroke] {
+#{ $connectionPanelActionButtons } #{ $button } path[stroke] {
   stroke: currentColor !important;
 }
 
-.container_e131a9,
-.container__37e49,
-.activityPanel__5e434 {
+#{ $connectionPanel },
+#{ $accountPanel },
+#{ $activityPanel } {
   background: transparent !important;
 }
 
-.container_e131a9 .disabledButtonWrapper__201d5 {
+#{ $connectionPanel } #{ $disabledButtonWrapper } {
   --button-padding: 0;
   border-radius: var(--button-radius);
 }
 
-.accountPopoutButtonWrapper__37e49 {
+#{ $accountPanelAvatarWrapper } {
   margin-inline-start: -4px;
   padding-inline-start: 4px;
+
+  &:hover {
+    border-radius: 20px;
+  }
 }
 
-.accountPopoutButtonWrapper__37e49:hover {
-  border-radius: 20px;
-}
-
-.listeningAlong_e0cf27 {
+#{ $listeningAlongPanel } {
   border-top: none;
   border-bottom-color: var(--background-modifier-accent);
 }
 
 /* PANELS -> QUEST */
-.wrapper__0d616 {
+#{ $questPanelWrapper } {
   background-color: transparent !important;
   border-radius: 0;
 }
 
-.contentWrapper__0d616 {
+#{ $questPanelContentWrapper } {
   background-color: transparent !important;
   border-radius: 0;
-}
 
-.contentWrapper__0d616:after {
-  box-shadow: none !important;
+  &:after {
+    box-shadow: none !important;
+  }
 }

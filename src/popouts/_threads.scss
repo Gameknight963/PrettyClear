@@ -1,53 +1,35 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  THREADS POPOUT
  *
  */
-.container_d9c882 {
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  border: none;
-  backdrop-filter: blur(var(--popout-blur));
-}
-.container_d9c882 .header_d9c882 {
-  background-color: transparent;
-  box-shadow: var(--card-header-shadow);
-  border: none;
-}
-.container_d9c882 .searchBox_d9c882 {
-  min-height: auto;
-  height: auto;
-  border-radius: var(--input-radius);
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha));
-  border: none;
-  color: var(--textarea-text-color);
-  transition: var(--transition-time) var(--transition-type);
-}
-.container_d9c882 .searchBox_d9c882:has(input:focus, textarea:focus) {
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
-  outline: none !important;
-}
-.container_d9c882 .container__6764b {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.container_d9c882 .container__6764b:hover {
-  background-color: var(--card-color-hover);
-  border: none;
+#{ $threadsPopoutContainer } {
+  @include add-translucence($filter: true);
+
+  #{ $threadsPopoutHeader } {
+    @include card-format--header();
+  }
+
+  #{ $threadsPopoutSearchBar } {
+    @include input-format($height: auto);
+  }
+
+  #{ $threadPreview } {
+    @include card-format($hover: true);
+  }
 }
 
-.popout__76f04 {
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  border: none;
-  backdrop-filter: blur(var(--popout-blur));
-}
-.popout__76f04 .row__76f04 {
-  border-radius: var(--list-item-radius);
-}
-.popout__76f04 .row__76f04:hover {
-  background-color: var(--background-modifier-hover);
+#{ $channelThreadPopout } {
+  @include add-translucence($filter: true);
+
+  #{ $channelThreadPopoutRow } {
+    border-radius: var(--list-item-radius);
+
+    &:hover {
+      background-color: var(--background-modifier-hover);
+    }
+  }
 }

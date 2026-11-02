@@ -1,72 +1,72 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  SERVER SETTINGS ROLES
  *
  */
-.container_d8f25b {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.container_d8f25b:hover {
-  background-color: var(--card-color-hover);
-  border: none;
+#{ $guildSettingsRoleDefaultPermissions } {
+  @include card-format($hover: true);
 }
 
-.roleRow__5f97b .circleButton__5f97b {
+#{ $guildSettingsRoleRow } #{ $guildSettingsRoleCircleButton } {
   background-color: var(--background-modifier-active);
 }
-.roleRow__5f97b:hover .circleButton__5f97b {
+#{ $guildSettingsRoleRow }:hover #{ $guildSettingsRoleCircleButton } {
   background-color: var(--background-modifier-active) !important;
-}
-.roleRow__5f97b:hover .circleButton__5f97b:hover {
-  background-color: var(--background-modifier-hover) !important;
+
+  &:hover {
+    background-color: var(--background-modifier-hover) !important;
+  }
 }
 
 /* SERVER SETTINGS ROLES -> EDIT ROLE */
-.titleContainer_e29cd7 {
+#{ $guildSettingsRoleBackContainer } {
   position: sticky;
   overflow: hidden;
-}
-.titleContainer_e29cd7:before {
-  content: " ";
-  position: absolute;
-  width: calc(100% + var(--app-margin) * 2);
-  height: calc(100% + var(--app-margin) * 2 + 24px);
-  inset-block-start: calc((var(--app-margin) + 24px) * -1);
-  inset-inline-start: calc(var(--app-margin) * -1);
-  background-color: transparent;
-  background-image: var(--app-bg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  box-shadow: inset 0 0 0 100vmax var(--main-content-color);
-  filter: blur(var(--app-blur));
-  z-index: -1;
-  pointer-events: none;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    width: calc(100% + var(--app-margin) * 2);
+    height: calc(100% + var(--app-margin) * 2 + 24px);
+    inset-block-start: calc((var(--app-margin) + 24px) * -1);
+    inset-inline-start: calc(var(--app-margin) * -1);
+    background-color: transparent;
+    background-image: var(--app-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 100vmax var(--main-content-color);
+    filter: blur(var(--app-blur));
+    z-index: -1;
+    pointer-events: none;
+  }
 }
 
-.header_c6bf1b {
+#{ $guildSettingsRoleHeader } {
   padding-block: 60px 0;
   padding-inline: 8px;
   overflow: hidden;
-}
-.header_c6bf1b:before {
-  content: " ";
-  position: absolute;
-  width: calc(100% + var(--app-margin) * 2);
-  height: calc(100% + var(--app-margin) * 2 + 24px);
-  inset-block-start: calc((var(--app-margin) + 24px) * -1);
-  inset-inline-start: calc(var(--app-margin) * -1);
-  background-color: transparent;
-  background-image: var(--app-bg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  box-shadow: inset 0 0 0 100vmax var(--main-content-color);
-  filter: blur(var(--app-blur));
-  z-index: -1;
-  pointer-events: none;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    width: calc(100% + var(--app-margin) * 2);
+    height: calc(100% + var(--app-margin) * 2 + 24px);
+    inset-block-start: calc((var(--app-margin) + 24px) * -1);
+    inset-inline-start: calc(var(--app-margin) * -1);
+    background-color: transparent;
+    background-image: var(--app-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 100vmax var(--main-content-color);
+    filter: blur(var(--app-blur));
+    z-index: -1;
+    pointer-events: none;
+  }
 }

@@ -1,22 +1,24 @@
+@use '../../../classes' as *;
+
 /*
  *
  *  BETTERDISCORD PLUGIN -> CharCounter
  *
  */
-.charCounter-7fw40k {
+#{ $charCounterPlugin } {
   position: relative;
   z-index: 1;
 }
 
-.chatCounter-XOMPsh {
+#{ $charChatCounter } {
   bottom: auto;
 }
 
-.charCounterAdded-zz9O4t {
+#{ $charCounterAdded } {
   margin-block-end: 24px;
 }
 
-.counter-uAzbKp {
+#{ $charCounter } {
   position: absolute !important;
   width: auto;
   height: 24px;

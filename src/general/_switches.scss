@@ -1,21 +1,25 @@
+@use '../classes' as *;
+
 /*
  *
  *  SWITCHES
  *
  */
-.switchIndicator_a28278 {
+#{ $switchIndicator } {
   background-color: var(--switch-slider-color) !important;
 }
-.container_a28278:has(input[role="switch"]:checked) .switchIndicator_a28278 {
+#{ $switchContainer }:has(input[role="switch"]:checked) #{ $switchIndicator } {
   --switch-slider-color: hsla(var(--accent-hsl),var(--accent-opacity));
   --switch-knob-color: var(--accent-text-color);
 }
-.switchIndicator_a28278 .thumb_a28278 {
+#{ $switchIndicator } #{ $switchThumb } {
   filter: none;
-}
-.switchIndicator_a28278 .thumb_a28278 rect {
-  fill: var(--switch-knob-color) !important;
-}
-.switchIndicator_a28278 .thumb_a28278 svg path {
-  fill: var(--switch-slider-color);
+
+  & rect {
+    fill: var(--switch-knob-color) !important;
+  }
+
+  & svg path {
+    fill: var(--switch-slider-color);
+  }
 }

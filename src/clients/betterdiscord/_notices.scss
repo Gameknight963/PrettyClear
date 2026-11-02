@@ -1,24 +1,28 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  BETTERDISCORD NOTICES
  *
  */
-#bd-notices {
+#{ $bdNotices } {
   position: absolute;
   inset-block-start: var(--space-8);
   inset-inline-end: var(--space-8);
   z-index: 1001;
-}
-#bd-notices:has(.bd-notice) {
-  width: auto;
-  inset-inline-start: unset;
+
+  &:has(#{ $bdNotice }) {
+    width: auto;
+    inset-inline-start: unset;
+  }
 }
 
-.base__5e434:has(#bd-notices .bd-notice) {
+#{ $base }:has(#{ $bdNotices } #{ $bdNotice }) {
   margin-block-start: 0;
 }
 
-.bd-notice {
+#{ $bdNotice } {
   display: flex;
   max-width: 25vw;
   height: auto;
@@ -30,57 +34,57 @@
   border-radius: var(--popout-radius);
   backdrop-filter: blur(var(--popout-blur));
   box-shadow: var(--popout-shadow);
-}
-.bd-notice:first-child {
-  border-radius: var(--popout-radius);
-}
-.bd-notice .bd-notice-close {
-  width: 18px;
-  height: 18px;
-  inset-block-start: 20px;
-  inset-inline-end: 20px;
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/close.svg);
-  -webkit-mask-repeat: no-repeat;
-  background-color: var(--header-secondary);
-  background-image: none;
-  -webkit-mask-position: center;
-  mask-position: center;
-  opacity: 0.75;
-}
-.bd-notice .bd-notice-content {
-  margin-inline-end: 30px;
-  font-size: 1.25em;
-  font-weight: 400;
-  color: var(--header-primary) !important;
-  text-align: left;
-}
-.bd-notice .bd-notice-button {
-  display: flex;
-  height: var(--button-height);
-  line-height: var(--button-height);
-  inset-block-start: 0;
-  margin: 0;
-  justify-content: center;
-  background-color: hsl(var(--accent-hsl)) !important;
-  border-radius: var(--button-radius);
-  border: none;
-  color: var(--accent-text-color);
-  font-size: 1em;
-  font-weight: 500;
+
+  &:first-child {
+    border-radius: var(--popout-radius);
+  }
+
+  #{ $bdNoticeClose } {
+    width: 18px;
+    height: 18px;
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+    -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/close.svg);
+    -webkit-mask-repeat: no-repeat;
+    background-color: var(--header-secondary);
+    background-image: none;
+    -webkit-mask-position: center;
+    mask-position: center;
+    opacity: 0.75;
+  }
+
+  #{ $bdNoticeContent } {
+    margin-inline-end: 30px;
+    font-size: 1.25em;
+    font-weight: 400;
+    color: var(--header-primary) !important;
+    text-align: left;
+  }
+
+  #{ $bdNoticeButton } {
+    display: flex;
+    height: var(--button-height);
+    line-height: var(--button-height);
+    inset-block-start: 0;
+    margin: 0;
+    justify-content: center;
+    background-color: hsl(var(--accent-hsl)) !important;
+    border-radius: var(--button-radius);
+    border: none;
+    color: var(--accent-text-color);
+    font-size: 1em;
+    font-weight: 500;
+  }
 }
 
-.bd-notification {
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  border: none;
-  backdrop-filter: blur(var(--popout-blur));
+#{ $bdNotification } {
+  @include add-translucence($filter: true);
 }
 
-.bd-notification-footer {
+#{ $bdNotificationFooter } {
   background-color: transparent;
 }
 
-.bd-notification-progress[style*="background-color: var(--bd-brand)"] {
+#{ $bdNotificationProgress }[style*="background-color: var(--bd-brand)"] {
   background-color: hsl(var(--accent-hsl)) !important;
 }

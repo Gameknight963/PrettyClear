@@ -1,65 +1,70 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  FORUM POSTS
  *
  */
-.container__9a337, .container_faa96b {
+#{ $postGridContainer }, #{ $postListContainer } {
   background-color: var(--card-color);
   border-radius: var(--card-radius);
   border: none !important;
+
+  &:hover {
+    background-color: var(--card-color-hover);
+    box-shadow: none;
+    transform: none;
+  }
 }
-.container__9a337:hover, .container_faa96b:hover {
-  background-color: var(--card-color-hover);
-  box-shadow: none;
-  transform: none;
-}
-.container__9a337.isOpen__9a337,
-.container_faa96b.isOpen_faa96b {
+#{ $postGridContainer }#{ $postGridContainerIsOpen },
+#{ $postListContainer }#{ $postListContainerIsOpen } {
   background-color: var(--card-color-select) !important;
 }
 
-.pinIcon__08166 {
+#{ $postPinIcon } {
   background-color: hsl(var(--accent-hsl));
-}
-.pinIcon__08166 svg {
-  filter: none;
-}
-.pinIcon__08166 path {
-  fill: var(--accent-text-color);
+
+  & svg {
+    filter: none;
+  }
+
+  & path {
+    fill: var(--accent-text-color);
+  }
 }
 
-.contentPreview__9a337,
-.textContentFooter__9a337 {
+#{ $postContentPreview },
+#{ $postTextContentFooter } {
   background-color: var(--card-color-hover);
 }
 
-.contentPreview__9a337 {
+#{ $postContentPreview } {
   border-radius: var(--card-radius);
   border: none;
 }
 
-.textContentFooter__9a337 {
+#{ $postTextContentFooter } {
   background: transparent !important;
 }
 
-.container__9a337:not(.isOpen__9a337):hover .contentPreview__9a337 {
+#{ $postGridContainer }:not(#{ $postGridContainerIsOpen }):hover #{ $postContentPreview } {
   background-color: var(--card-color);
 }
 
-.box_ee23ac {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.box_ee23ac:after {
-  inset-inline-start: 50px;
+#{ $postThreadStartConversationBox } {
+  @include card-format();
+
+  &:after {
+    inset-inline-start: 50px;
+  }
 }
 
-.container__34c2c {
+#{ $postThreadButtonContainer } {
   background-color: var(--card-color);
   border-top: none;
 }
 
-.buttons__34c2c .button__201d5 {
+#{ $postThreadButtons } #{ $button } {
   --button-padding: 0;
 }

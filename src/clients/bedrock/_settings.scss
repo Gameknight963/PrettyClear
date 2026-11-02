@@ -1,20 +1,22 @@
+@use '../../classes' as *;
+
 /* Bedrock plugin/theme lists, plugin settings, and detail pages. */
-.bedrock-page {
+#{ $bedrockPage } {
   color: var(--text-normal);
 
-  .bedrock-card {
+  #{ $bedrockCard } {
     background-color: var(--card-color);
     border-color: transparent;
     border-radius: var(--card-radius);
     box-shadow: var(--card-header-shadow);
   }
 
-  .bedrock-button {
+  #{ $bedrockButton } {
     border-radius: var(--app-radius);
     font-family: inherit;
   }
 
-  .bedrock-button:not(.bedrock-danger, .bedrock-confirm-remove) {
+  #{ $bedrockButton }:not(#{ $bedrockDanger }, #{ $bedrockConfirmRemove }) {
     background-color: var(--background-modifier-hover);
     color: var(--text-normal);
 
@@ -27,27 +29,27 @@
     }
   }
 
-  .bedrock-danger,
-  .bedrock-error {
+  #{ $bedrockDanger },
+  #{ $bedrockError } {
     color: hsl(var(--alert-hsl)) !important;
   }
 
-  .bedrock-tab[aria-selected="true"] {
+  #{ $bedrockTab }[aria-selected="true"] {
     border-bottom-color: hsl(var(--accent-hsl));
   }
 
-  .bedrock-tab:hover:not(:disabled) {
+  #{ $bedrockTab }:hover:not(:disabled) {
     color: var(--interactive-hover);
   }
 
-  .bedrock-badge {
+  #{ $bedrockBadge } {
     background-color: var(--background-modifier-selected);
   }
 
-  .bedrock-toolbar input[type="search"],
-  .bedrock-setting input:not([type="range"], [type="checkbox"], [type="radio"], [type="hidden"]),
-  .bedrock-setting textarea,
-  .bedrock-setting select {
+  #{ $bedrockToolbar } input[type="search"],
+  #{ $bedrockSetting } input:not([type="range"], [type="checkbox"], [type="radio"], [type="hidden"]),
+  #{ $bedrockSetting } textarea,
+  #{ $bedrockSetting } select {
     background-color: rgba(var(--textarea-color), var(--textarea-alpha));
     color: var(--textarea-text-color);
     border-color: var(--border-subtle);
@@ -64,22 +66,22 @@
     }
   }
 
-  .bedrock-toolbar input[type="search"] {
+  #{ $bedrockToolbar } input[type="search"] {
     height: var(--input-height);
     border-radius: var(--input-radius);
   }
 
-  .bedrock-setting select option {
+  #{ $bedrockSetting } select option {
     // Native select popups need an opaque surface for readable option text.
     background-color: var(--background-floating, #18191c);
     color: var(--text-normal);
   }
 
-  .bedrock-setting input[type="range"] {
+  #{ $bedrockSetting } input[type="range"] {
     accent-color: hsl(var(--accent-hsl));
   }
 
-  .bedrock-switch {
+  #{ $bedrockSwitch } {
     background-color: var(--switch-slider-color);
 
     span {
@@ -95,33 +97,33 @@
     }
   }
 
-  :is(.bedrock-button, .bedrock-name, .bedrock-switch, .bedrock-tab, input, textarea, select):focus-visible {
+  :is(#{ $bedrockButton }, #{ $bedrockName }, #{ $bedrockSwitch }, #{ $bedrockTab }, input, textarea, select):focus-visible {
     outline: 2px solid hsl(var(--accent-hsl));
     outline-offset: 3px;
   }
 
-  .bedrock-readme pre {
+  #{ $bedrockReadme } pre {
     background-color: var(--textarea-block-color);
     color: var(--textarea-block-text-color);
     border-radius: var(--card-radius);
   }
 
-  .bedrock-readme :not(pre) > code {
+  #{ $bedrockReadme } :not(pre) > code {
     background-color: var(--textarea-block-color);
     color: var(--textarea-block-text-color);
     border-radius: 4px;
     padding: 2px 4px;
   }
 
-  .bedrock-restart-banner {
+  #{ $bedrockRestartBanner } {
     background-color: var(--card-color);
     border-radius: var(--card-radius);
   }
 }
 
 /* These surfaces may render outside the settings page, in the top layer. */
-dialog.bedrock-remove-dialog,
-div.bedrock-tasks {
+dialog#{ $bedrockRemoveDialog },
+div#{ $bedrockTasks } {
   background-color: var(--popout-color);
   color: var(--text-normal);
   border-radius: var(--popout-radius);
@@ -129,16 +131,16 @@ div.bedrock-tasks {
   backdrop-filter: blur(var(--popout-blur));
 }
 
-dialog.bedrock-remove-dialog {
-  .bedrock-dialog-actions {
+dialog#{ $bedrockRemoveDialog } {
+  #{ $bedrockDialogActions } {
     background-color: var(--card-color);
   }
 
-  .bedrock-remove-option input {
+  #{ $bedrockRemoveOption } input {
     accent-color: hsl(var(--accent-hsl));
   }
 
-  .bedrock-confirm-remove {
+  #{ $bedrockConfirmRemove } {
     background-color: hsl(var(--alert-hsl));
     color: var(--alert-text-color);
 

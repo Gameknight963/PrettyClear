@@ -1,70 +1,64 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  SERVER SETTINGS AUTOMOD
  *
  */
-.editCard_a25a68 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.editCard_a25a68:before {
-  display: none;
-}
-.editCard_a25a68.active_a25a68 {
-  background-color: var(--card-color) !important;
-}
-.editCard_a25a68 .ruleIconContainer_c5e6a1 {
-  background-color: var(--card-color);
-}
-.editCard_a25a68 .actionContainer_bc4513 {
-  background-color: var(--card-color);
+#{ $automodEditCard } {
+  @include card-format();
+
+  &:before {
+    display: none;
+  }
+
+  &#{ $automodEditCardActive } {
+    background-color: var(--card-color) !important;
+  }
+
+  #{ $automodRuleIconContainer } {
+    background-color: var(--card-color);
+  }
+
+  #{ $actionRuleContainer } {
+    background-color: var(--card-color);
+  }
 }
 
-:is(.collapseable_fc46b1, .collapseable__4546e) {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-:is(.collapseable_fc46b1, .collapseable__4546e):active {
-  background-color: var(--card-color) !important;
-}
-:is(.collapseable_fc46b1, .collapseable__4546e):before {
-  display: none;
+:is(#{ $triggerCollapseableLegacy }, #{ $triggerCollapseable }) {
+  @include card-format();
+
+  &:active {
+    background-color: var(--card-color) !important;
+  }
+
+  &:before {
+    display: none;
+  }
 }
 
-.actionContainer_c5e6a1 {
+#{ $automodEditActionContainer } {
   margin-block-start: 28px;
 }
 
-.stepCountIcon_b6c6eb {
+#{ $automodStepCountIcon } {
   background-color: var(--card-color);
 }
 
-.mentionLimitContainer_ed9c90 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $mentionLimitContainer } {
+  @include card-format();
 }
 
-.stepperContainer_ed9c90 {
+#{ $stepperContainer } {
   padding: 0;
-  min-height: var(--input-height);
-  height: var(--input-height);
-  border-radius: var(--input-radius);
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha));
-  border: none;
-  color: var(--textarea-text-color);
-  transition: var(--transition-time) var(--transition-type);
-}
-.stepperContainer_ed9c90:has(input:focus, textarea:focus) {
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
-  outline: none !important;
-}
-.stepperContainer_ed9c90 .stepper_ed9c90 {
-  border-radius: var(--input-radius);
-}
+  @include input-format();
 
-.stepperContainer_ed9c90 input {
-  background-color: transparent;
+  #{ $stepper } {
+    border-radius: var(--input-radius);
+  }
+
+  & input {
+    background-color: transparent;
+  }
 }

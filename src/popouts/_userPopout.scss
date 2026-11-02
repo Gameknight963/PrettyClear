@@ -1,9 +1,11 @@
+@use '../classes' as *;
+
 /*
  *
  *  USER POPOUT
  *
  */
-.outer_c0bea0:not(.custom-user-profile-theme) {
+#{ $userProfileOuter }:not(#{ $userProfileOuterThemed }) {
   --background-surface-high: var(--popout-color) !important;
   --user-profile-overlay-background: var(--profile-gradient-primary-color) !important;
   --profile-gradient-primary-color: var(--popout-color) !important;
@@ -12,110 +14,122 @@
   --profile-body-background-color: var(--popout-color) !important;
   --bg-surface-overlay: var(--profile-gradient-primary-color) !important;
   --bg-mod-faint: var(--profile-body-background-color) !important;
-}
-.outer_c0bea0:not(.custom-user-profile-theme).theme-light {
-  --textarea-color: 0,0,0;
-  --textarea-text-color: hsl(0,0%,30%);
-  --textarea-placeholder-color: hsl(0,0%,40%);
-  --background-modifier-selected: hsl(0,0%,0%,0.125);
-}
-.outer_c0bea0:not(.custom-user-profile-theme):before {
-  background-color: var(--profile-gradient-primary-color);
+
+  &#{ $themeLight } {
+    --textarea-color: 0,0,0;
+    --textarea-text-color: hsl(0,0%,30%);
+    --textarea-placeholder-color: hsl(0,0%,40%);
+    --background-modifier-selected: hsl(0,0%,0%,0.125);
+  }
+
+  &:before {
+    background-color: var(--profile-gradient-primary-color);
+  }
 }
 
-.custom-user-profile-theme {
+#{ $userProfileOuterThemed } {
   --card-color: rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-6));
-}
-.custom-user-profile-theme .lookFilled__201d5 {
-  --button-background: var(--profile-gradient-button-color);
-  --button-text-color: var(--white-500);
-  --accent-button-action: var(--white-500);
+
+  #{ $buttonFilled } {
+    --button-background: var(--profile-gradient-button-color);
+    --button-text-color: var(--white-500);
+    --accent-button-action: var(--white-500);
+  }
 }
 
-.outer_c0bea0 {
+#{ $userProfileOuter } {
   background-color: transparent;
   border-radius: var(--popout-radius);
   box-shadow: none;
   overflow: hidden;
   border-radius: var(--popout-radius);
   overflow: initial;
-}
-.outer_c0bea0:before {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 100%;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  background-color: transparent;
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  backdrop-filter: blur(var(--popout-blur));
-  pointer-events: none;
-  z-index: -1;
-}
-.outer_c0bea0 * {
-  text-shadow: none;
-}
-.outer_c0bea0 svg {
-  filter: none;
-}
-.outer_c0bea0 .menus_ce8328 > .menu_c1e9c4:before {
-  display: none;
+
+  &:before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    background-color: transparent;
+    border-radius: var(--popout-radius);
+    box-shadow: var(--popout-shadow);
+    backdrop-filter: blur(var(--popout-blur));
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  & * {
+    text-shadow: none;
+  }
+
+  & svg {
+    filter: none;
+  }
+
+  #{ $userProfileMenus } > #{ $menuPopout }:before {
+    display: none;
+  }
 }
 
-.inner_c0bea0 {
+#{ $userProfileInner } {
   border-radius: calc(var(--popout-radius) / 1.25);
-}
-.inner_c0bea0:before {
-  border-radius: inherit;
-}
-.inner_c0bea0 .wrapper__44b0c circle {
-  fill: var(--profile-avatar-border-color);
-}
-.inner_c0bea0 .wrapper__72c38 {
-  border-radius: 18px;
-  border: none;
-}
-.inner_c0bea0 .input__75098::-webkit-input-placeholder {
-  color: var(--textarea-placeholder-color);
+
+  &:before {
+    border-radius: inherit;
+  }
+
+  #{ $avatarWrapper } circle {
+    fill: var(--profile-avatar-border-color);
+  }
+
+  #{ $inputWrapper } {
+    border-radius: 18px;
+    border: none;
+  }
+
+  #{ $input }::-webkit-input-placeholder {
+    color: var(--textarea-placeholder-color);
+  }
 }
 
-.banner__68edb {
+#{ $userProfileBanner } {
   border-radius: calc(var(--popout-radius) / 1.25) calc(var(--popout-radius) / 1.25) 0 0;
 }
 
-.container__8061a {
+#{ $badgeListContainer } {
   padding: 2px;
   background-color: var(--card-color) !important;
   border-radius: 12px;
   border: none;
 }
 
-.outer_ab8609,
-.inner_ab8609 {
+#{ $statusBubbleOuter },
+#{ $statusBubbleInner } {
   background-color: var(--card-color);
   border-radius: var(--popout-radius);
 }
 
-.outer_ab8609 {
+#{ $statusBubbleOuter } {
   border: none !important;
-}
-.outer_ab8609:before,
-.outer_ab8609:after {
-  border: inherit !important;
+
+  &:before,
+  &:after {
+    border: inherit !important;
+  }
 }
 
-.inner_ab8609 {
+#{ $statusBubbleInner } {
   backdrop-filter: blur(var(--popout-blur));
 }
 
-.role__5d7c9 {
+#{ $role } {
   background-color: var(--background-modifier-selected);
   border-radius: 11px;
   border: none;
 }
 
-.custom-theme-background .menu_c1e9c4 {
+#{ $customThemeBackground } #{ $menuPopout } {
   border: none;
 }

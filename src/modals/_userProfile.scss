@@ -1,15 +1,12 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  USER PROFILE
  *
  */
 
-.connectedAccountContainer_e6abe8 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.connectedAccountContainer_e6abe8:hover {
-  background-color: var(--card-color-hover);
-  border: none;
+#{ $userProfileModalConnectedAccount } {
+  @include card-format($hover: true);
 }

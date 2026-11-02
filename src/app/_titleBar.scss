@@ -1,26 +1,32 @@
+@use '../classes' as *;
+
 /*
  *
  *  TITLE BAR
  *
  */
-.titleBar__421ed {
+#{ $titlebar } {
   height: 24px;
-}
-.titleBar__421ed.withFrame__421ed {
-  margin-block-start: 0;
-}
-.titleBar__421ed.typeMacOS__421ed {
-  inset-block-start: var(--app-margin);
-  inset-inline-start: var(--app-margin);
-}
-.titleBar__421ed.typeMacOS__421ed .macButtons__421ed {
-  width: 72px;
-  border-top-left-radius: var(--app-radius);
-}
-.titleBar__421ed.typeMacOS__421ed .macButtons__421ed .macButton__421ed {
-  cursor: pointer;
+
+  &#{ $titlebarWithFrame } {
+    margin-block-start: 0;
+  }
+
+  &#{ $titlebarMac } {
+    inset-block-start: var(--app-margin);
+    inset-inline-start: var(--app-margin);
+
+    #{ $titlebarMacButtons } {
+      width: 72px;
+      border-top-left-radius: var(--app-radius);
+
+      #{ $titlebarMacButton } {
+        cursor: pointer;
+      }
+    }
+  }
 }
 
-.wordmarkWindows__421ed {
+#{ $titlebarWordmarkWindows } {
   color: hsl(0, 0%, 100%);
 }

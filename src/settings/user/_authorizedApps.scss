@@ -1,24 +1,25 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  USER SETTINGS AUTHORIZED APPS
  *
  */
-.authedAppV2__92059 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.authedAppV2__92059 .headerV2__92059 {
-  background-color: transparent;
-  box-shadow: var(--card-header-shadow);
-  border: none;
+#{ $authedAppV2 } {
+  @include card-format();
+
+  #{ $authedAppHeaderV2 } {
+    @include card-format--header();
+  }
 }
 
-.actionMenuButton__8dc78 {
+#{ $authedAppActionMenuButton } {
   background-color: var(--card-color-hover);
   border-radius: 16px;
-}
-.actionMenuButton__8dc78:hover,
-.actionMenuButton__8dc78[aria-expanded=true] {
-  background-color: var(--card-color-select);
+
+  &:hover,
+  &[aria-expanded=true] {
+    background-color: var(--card-color-select);
+  }
 }

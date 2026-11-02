@@ -1,18 +1,20 @@
+@use '../../classes' as *;
+
 /*
  *
  *  SERVER SETTINGS EMOJI
  *
  */
-.emojiRow_e7d73e:before,
-.emojiRow_f53c21:before {
+#{ $emojiRow }:before,
+#{ $emojiRowLegacy }:before {
   background-color: var(--background-modifier-hover);
 }
-.emojiRow_e7d73e input,
-.emojiRow_f53c21 .input__75098 {
+#{ $emojiRow } input,
+#{ $emojiRowLegacy } #{ $input } {
   padding-block: 0;
   padding-inline: 12px;
 }
-.emojiRow_e7d73e .emojiAliasPlaceholder_e7d73e {
+#{ $emojiRow } #{ $emojiAliasPlaceholder } {
   height: var(--input-height);
   line-height: var(--input-height);
   padding-block: 1px 0;

@@ -1,9 +1,11 @@
+@use '../../classes' as *;
+
 /*
  *
  *  SERVER SETTINGS SERVER INSIGHTS
  *
  */
 
-.developerPortalCtaWrapper__540ed {
+#{ $insightsDeveloperPortalCtaWrapper } {
   background-color: var(--card-color);
 }

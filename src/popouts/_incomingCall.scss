@@ -1,12 +1,11 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  INCOMING CALL
  *
  */
-.root__2dbe1 {
-  background-color: var(--popout-color) !important;
-  border-radius: var(--popout-radius) !important;
-  box-shadow: var(--popout-shadow) !important;
-  border: none !important;
-  backdrop-filter: blur(var(--popout-blur));
+#{ $incomingCallPopout } {
+  @include add-translucence($filter: true, $important: true);
 }

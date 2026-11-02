@@ -1,41 +1,42 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  RECENT MEMBERS
  *
  */
-.container_c791b2 {
+#{ $membersPageContainer } {
   background-color: transparent !important;
 }
 
-.mainTableContainer__09a38 {
+#{ $membersPageMainTableContainer } {
   box-shadow: none;
 }
 
-.searchHeaderContainer__98d1c {
+#{ $membersPageSearchHeaderContainer } {
   padding-block: 8px 16px;
   padding-inline: 0;
 }
 
-.table_b4ec0b {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $membersPageTable } {
+  @include card-format();
 }
 
-.memberRowContainer__71c22 td:first-child {
+#{ $membersPageMemberRowContainer } td:first-child {
   border-top-left-radius: var(--list-item-radius);
   border-bottom-left-radius: var(--list-item-radius);
 }
-.memberRowContainer__71c22 td:last-child {
+#{ $membersPageMemberRowContainer } td:last-child {
   border-top-right-radius: var(--list-item-radius);
   border-bottom-right-radius: var(--list-item-radius);
 }
-.memberRowContainer__71c22 .otherRoles__71c22,
-.memberRowContainer__71c22 .button__71c22 {
+#{ $membersPageMemberRowContainer } #{ $membersPageMemberOtherRoles },
+#{ $membersPageMemberRowContainer } #{ $membersPageMemberButton } {
   background-color: var(--background-modifier-active);
 }
 
-.paginationContainer_e8f197 {
+#{ $membersPagePaginationContainer } {
   margin-block-start: 16px;
   padding: 0;
   border-top: none;

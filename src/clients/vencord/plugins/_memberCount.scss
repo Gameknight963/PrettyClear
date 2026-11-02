@@ -1,9 +1,11 @@
+@use '../../../classes' as *;
+
 /*
  *
  *  VENCORD PLUGIN - MemberCount
  *
  */
-.vc-membercount-online,
-.vc-membercount-total {
+#{ $vencordMembercountOnline },
+#{ $vencordMembercountTotal } {
   text-shadow: none;
 }

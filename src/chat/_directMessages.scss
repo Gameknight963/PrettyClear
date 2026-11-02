@@ -1,55 +1,62 @@
+@use '../classes' as *;
+
 /*
  *
  *  DIRECT MESSAGES
  *
  */
-.wrapper_cb9592.minimum_cb9592, .wrapper_cb9592.video_cb9592 {
+#{ $callWrapper }#{ $callMinimum }, #{ $callWrapper }#{ $callWrapperVideo } {
   background-color: transparent;
   box-shadow: var(--popout-header-shadow);
 }
-.wrapper_cb9592 .root_bfe55a,
-.wrapper_cb9592 .callContainer_cb9592 {
+#{ $callWrapper } #{ $callRoot },
+#{ $callWrapper } #{ $callContainer } {
   background-color: transparent;
 }
-.wrapper_cb9592 .callContainer_cb9592 {
+#{ $callWrapper } #{ $callContainer } {
   border: none;
 }
-.wrapper_cb9592 .container__9293f {
+#{ $callWrapper } #{ $headerBar } {
   box-shadow: none;
 }
-.wrapper_cb9592 .tile__90dc5 {
+#{ $callWrapper } #{ $callTile } {
   border-radius: var(--card-radius);
 }
 
-.controlButton__1405b svg {
+#{ $callControlButton } svg {
   filter: none;
 }
 
-.border__2f4f7 {
+#{ $callTileBorder } {
   border-radius: var(--card-radius);
 }
 
 /* DIRECT MESSAGES -> SIDEBAR PROFILE */
-.user-profile-sidebar {
+#{ $dmProfilePanel } {
   border-radius: 0;
-}
-.user-profile-sidebar:not(.custom-user-profile-theme) {
-  background-color: var(--sidebar-color);
-}
-.user-profile-sidebar .inner_c0bea0 {
-  border-radius: 0;
-}
-.user-profile-sidebar .inner_c0bea0 .banner__68edb {
-  border-radius: 0;
-}
-.user-profile-sidebar .inner_c0bea0 * {
-  text-shadow: none;
-}
-.user-profile-sidebar .inner_c0bea0 svg {
-  filter: none;
+
+  &:not(#{ $userProfileOuterThemed }) {
+    background-color: var(--sidebar-color);
+  }
+
+  #{ $userProfileInner } {
+    border-radius: 0;
+
+    #{ $userProfileBanner } {
+      border-radius: 0;
+    }
+
+    & * {
+      text-shadow: none;
+    }
+
+    & svg {
+      filter: none;
+    }
+  }
 }
 
-.overlay__3b260 .button__201d5 {
+#{ $dmProfilePanelConnections } #{ $button } {
   --button-height: 36px !important;
   --button-padding: 0 12px;
   --button-background: transparent !important;

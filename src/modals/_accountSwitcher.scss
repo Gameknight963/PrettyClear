@@ -1,15 +1,16 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  ACCOUNT SWITCHER
  *
  */
-.list__920b8 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $accountSwitcherList } {
+  @include card-format();
 }
 
 /* ACCOUNT SWITCHER -> ADD ACCOUNT */
-.authBox__921c5 {
+#{ $authBox } {
   background-color: transparent !important;
 }

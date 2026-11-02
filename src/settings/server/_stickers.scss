@@ -1,51 +1,47 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *	SERVER SETTINGS STICKERS
  *
  */
-.tier_a36dee {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.tier_a36dee .grid_d87d30 {
-  padding-block: 0 16px;
-  padding-inline: 16px;
+#{ $stickersTier } {
+  @include card-format();
+
+  #{ $stickersGrid } {
+    padding-block: 0 16px;
+    padding-inline: 16px;
+  }
 }
 
-.tierHeaderLocked_a36dee,
-.tierHeaderUnlocked_a36dee {
+#{ $stickersTierHeaderLocked },
+#{ $stickersTierHeaderUnlocked } {
   background-color: transparent !important;
   box-shadow: var(--popout-header-shadow);
 }
 
-.tierBody_a36dee {
+#{ $stickersTeirBody } {
   background-color: transparent !important;
 }
 
-.wrapper__83b1d {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.wrapper__83b1d:hover {
-  background-color: var(--card-color-hover);
-  border: none;
+#{ $stickersUploadCard } {
+  @include card-format($hover: true);
 }
 
-.background_c44edb {
+#{ $stickersProgressBackground } {
   color: var(--card-color) !important;
 }
 
-.foreground_c44edb {
+#{ $stickersProgressForground } {
   color: hsla(var(--accent-hsl), var(--accent-opacity));
 }
 
-.theme-dark .tierInProgress_c44edb {
+#{ $themeDark } #{ $stickersTierInProgress } {
   background-color: var(--card-color);
 }
-.theme-dark .tierAccomplished_c44edb,
-.theme-dark .tierCurrent_c44edb,
-.theme-dark .tierFirst_c44edb {
+#{ $themeDark } #{ $stickersTierAccomplished },
+#{ $themeDark } #{ $stickersTierCurrent },
+#{ $themeDark } #{ $stickersTierFirst } {
   background: hsla(var(--accent-hsl), var(--accent-opacity));
 }

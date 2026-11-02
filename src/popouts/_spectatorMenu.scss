@@ -1,18 +1,19 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  SPECTATOR MENU
  *
  */
-.scroller_d6b206 {
-  background-color: var(--popout-color) !important;
-  border-radius: var(--popout-radius) !important;
-  box-shadow: var(--popout-shadow) !important;
-  border: none !important;
-  backdrop-filter: blur(var(--popout-blur));
-}
-.scroller_d6b206 .memberListItem_d6b206 {
-  border-radius: var(--popout-radius);
-}
-.scroller_d6b206 .memberListItem_d6b206:not(.popoutDisabled_d6b206):hover {
-  background-color: var(--background-modifier-hover) !important;
+#{ $spectatorMenuScroller } {
+  @include add-translucence($filter: true, $important: true);
+
+  #{ $spectatorMenuItem } {
+    border-radius: var(--popout-radius);
+
+    &:not(#{ $popoutDisabled }):hover {
+      background-color: var(--background-modifier-hover) !important;
+    }
+  }
 }

@@ -1,45 +1,37 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  CARDS
  *
  */
 
-.button__9a406 {
+#{ $settingsLongCardButton } {
   background-color: var(--card-color) !important;
+
+  &:hover {
+    background-color: var(--card-color-hover) !important;
+  }
 }
 
-.button__9a406:hover {
-  background-color: var(--card-color-hover) !important;
+#{ $settingsCardWrapper } {
+  @include card-format($hover: true);
 }
 
-.cardWrapper_aae012 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-
-.cardWrapper_aae012:hover {
-  background-color: var(--card-color-hover);
-  border: none;
-}
-
-.card_aae012:hover {
+#{ $settingsCardWrapperInner }:hover {
   background-color: transparent;
 }
 
-.upsellContainer__73000 {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $communityUpsellContainer } {
+  @include card-format();
+
+  #{ $communityUpsellFooter } {
+    background-color: transparent;
+  }
 }
 
-.upsellContainer__73000 .upsellFooter__73000 {
-  background-color: transparent;
-}
-
-.dropsHelpText_f5f9ed,
-.promotionCard_f5f9ed {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $dropsHelpText },
+#{ $promotionCard } {
+  @include card-format();
 }

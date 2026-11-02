@@ -1,25 +1,27 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  NOTICES
  *
  */
-.notice__6e2b9 {
+#{ $notice } {
   box-shadow: none;
-}
 
-.notice__6e2b9.colorInfo__6e2b9 {
-  background-color: hsla(var(--accent-hsl), var(--accent-opacity));
-  color: var(--accent-text-color);
-}
+  &#{ $noticeColorInfo } {
+    @include app-accents();
 
-.notice__6e2b9.colorInfo__6e2b9 .closeButton__6e2b9 {
-  opacity: 0.75;
-}
+    #{ $noticeClose } {
+      opacity: 0.75;
 
-.notice__6e2b9.colorInfo__6e2b9 .closeButton__6e2b9:hover {
-  opacity: 1;
-}
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 
-.notice__6e2b9.colorStreamerMode__6e2b9 {
-  border-radius: 0;
+  &#{ $noticeStreamerMode } {
+    border-radius: 0;
+  }
 }

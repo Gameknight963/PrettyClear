@@ -1,52 +1,44 @@
+@use '../../../classes' as *;
+@use '../../../mixins' as *;
+
 /*
  *
  *  BETTERDISCORD PLUGIN -> ChannelDms
  *
  */
-.ChannelDms-channelmembers-wrap {
+#{ $channelDmsChannelmembersWrap } {
   width: 240px !important;
-}
-.ChannelDms-channelmembers-wrap .ChannelDms-channelmembers-header {
-  background-color: transparent !important;
+
+  #{ $channelDmsChannelmembersHeader } {
+    background-color: transparent !important;
+  }
 }
 
-.ChannelDms-channelpopout-popout {
-  background-color: transparent;
-  border-radius: var(--popout-radius);
-  box-shadow: none;
-  overflow: hidden;
-}
-.ChannelDms-channelpopout-popout:before {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 100%;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  backdrop-filter: blur(var(--popout-blur));
-  pointer-events: none;
-  z-index: -1;
-}
-.ChannelDms-channelpopout-popout .ChannelDms-channelpopout-collapseButton {
-  width: 24px;
-  height: 24px;
-  inset-block-start: 6px !important;
-  inset-inline-start: 6px !important;
-}
-.ChannelDms-channelpopout-popout .ChannelDms-channelpopout-removeButton {
-  inset-block-start: 6px !important;
-  inset-inline-end: 6px !important;
-}
-.ChannelDms-channelpopout-popout .ChannelDms-channelpopout-header {
-  background-color: transparent !important;
-  box-shadow: var(--popout-header-shadow) !important;
-}
-.ChannelDms-channelpopout-popout .ChannelDms-channelpopout-header .ChannelDms-channelpopout-headerTag {
-  margin-inline-start: 24px;
-}
-.ChannelDms-channelpopout-popout .ChannelDms-channelpopout-header .ChannelDms-channelpopout-buttons {
-  margin-inline-end: 30px;
+#{ $channelDmsChannelpopoutPopout } {
+  @include add-translucence(before, true);
+
+  #{ $channelDmsChannelpopoutCollapseButton } {
+    width: 24px;
+    height: 24px;
+    inset-block-start: 6px !important;
+    inset-inline-start: 6px !important;
+  }
+
+  #{ $channelDmsChannelpopoutRemoveButton } {
+    inset-block-start: 6px !important;
+    inset-inline-end: 6px !important;
+  }
+
+  #{ $channelDmsChannelpopoutHeader } {
+    background-color: transparent !important;
+    box-shadow: var(--popout-header-shadow) !important;
+
+    #{ $channelDmsChannelpopoutHeaderTag } {
+      margin-inline-start: 24px;
+    }
+
+    #{ $channelDmsChannelpopoutButtons } {
+      margin-inline-end: 30px;
+    }
+  }
 }

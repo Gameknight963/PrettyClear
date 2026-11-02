@@ -1,9 +1,12 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  SELECT MENUS
  *
  */
-.wrapper_a16aea.wrapper__72c38 {
+#{ $selectMenuWrapper }#{ $inputWrapper } {
   min-height: var(--input-height);
   height: var(--input-height);
   background-color: rgba(var(--textarea-color), var(--textarea-alpha));
@@ -11,32 +14,28 @@
   border: none;
 }
 
-.select_a16aea {
+#{ $selectMenu } {
   padding-block: 6px;
   padding-inline: 12px 6px;
 }
-.popout_a16aea {
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
+#{ $selectMenuPopout } {
+  @include add-translucence($filter: true);
   border: none;
-  backdrop-filter: blur(var(--popout-blur));
-  border: none;
-}
 
-.popout_a16aea:not(.popoutPositionTop_a16aea) {
-  margin-block-start: 8px;
-}
+  &:not(#{ $selectMenuPopoutPositionTop }) {
+    margin-block-start: 8px;
+  }
 
-.popout_a16aea.popoutPositionTop_a16aea {
-  margin-block-end: 8px;
-  border-radius: var(--popout-radius);
-}
+  &#{ $selectMenuPopoutPositionTop } {
+    margin-block-end: 8px;
+    border-radius: var(--popout-radius);
+  }
 
-.popout_a16aea .option_a16aea:hover {
-  background-color: var(--background-modifier-hover);
-}
+  #{ $selectMenuOption }:hover {
+    background-color: var(--background-modifier-hover);
+  }
 
-.popout_a16aea .option_a16aea[aria-selected=true] {
-  background-color: var(--background-modifier-selected) !important;
+  #{ $selectMenuOption }[aria-selected=true] {
+    background-color: var(--background-modifier-selected) !important;
+  }
 }

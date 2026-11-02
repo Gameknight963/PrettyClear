@@ -1,21 +1,25 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *	SERVER SETTING AUDIT LOG
  *
  */
-.auditLog__43dab {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $auditLog } {
+  @include card-format();
   overflow: hidden;
-}
-.auditLog__43dab .header__43dab,
-.auditLog__43dab .changeDetails__43dab {
-  background-color: transparent;
-}
-.auditLog__43dab .headerExpanded__43dab {
-  box-shadow: var(--popout-header-shadow);
-}
-.auditLog__43dab .divider__43dab {
-  display: none;
+
+  #{ $auditLogHeader },
+  #{ $auditLogChangeDetails } {
+    background-color: transparent;
+  }
+
+  #{ $auditLogHeaderExpanded } {
+    box-shadow: var(--popout-header-shadow);
+  }
+
+  #{ $auditLogDivider } {
+    display: none;
+  }
 }

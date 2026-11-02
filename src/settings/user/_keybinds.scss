@@ -1,9 +1,11 @@
+@use '../../classes' as *;
+
 /*
  *
  *  USER SETTINGS KEYBINDS
  *
  */
-.keybindInput__2636e {
+#{ $keybindInput } {
   min-height: var(--input-height);
   height: var(--input-height);
   border-radius: var(--input-radius);
@@ -11,8 +13,9 @@
   border: none !important;
   color: var(--textarea-text-color);
   transition: var(--transition-time) var(--transition-type);
-}
-.keybindInput__2636e:has(input:focus, textarea:focus) {
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus)) !important;
-  outline: none !important;
+
+  &:has(input:focus, textarea:focus) {
+    background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus)) !important;
+    outline: none !important;
+  }
 }

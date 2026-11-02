@@ -1,43 +1,49 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  SEARCH RESULTS
  *
  */
-.searchResultsWrap_a98f3b {
+#{ $searchResultsWrap } {
   background-color: var(--sidebar-color);
 }
 
 /* SEARCH RESULTS -> HEADER */
-.searchHeader_ae7890 {
+#{ $searchHeader } {
   background-color: transparent;
   border-bottom: none;
   box-shadow: var(--popout-header-shadow);
 }
 
 /* SEARCH RESULTS -> MESSAGES */
-.searchResult__80bf8 {
+#{ $searchResult } {
   background-color: transparent;
   border: none;
-}
-.searchResult__80bf8:before, .searchResult__80bf8:after {
-  display: none;
-}
-.searchResult__80bf8 .wrapper_c19a55 {
-  margin-inline-start: 50px;
-  margin-inline-end: 0;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  #{ $messageWrapper } {
+    margin-inline-start: 50px;
+    margin-inline-end: 0;
+  }
 }
 
-.buttonsContainer__80bf8 {
+#{ $searchResultsButtonsContainer } {
   inset-block-start: 16px;
   inset-inline-end: 8px;
-}
-.buttonsContainer__80bf8 .button__80bf8 {
-  background-color: var(--card-color);
-  border-radius: var(--button-radius);
+
+  #{ $searchResultJumpButton } {
+    background-color: var(--card-color);
+    border-radius: var(--button-radius);
+  }
 }
 
 /* SEARCH RESULTS -> PAGINATION */
-.activeButton_c15210 {
-  background-color: hsla(var(--accent-hsl), var(--accent-opacity)) !important;
-  color: var(--accent-text-color) !important;
+#{ $pageButtonActive } {
+  @include app-accents($important: true);
 }

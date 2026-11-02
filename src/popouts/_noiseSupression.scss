@@ -1,25 +1,11 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  NOISE SUPPRESSION
  *
  */
-.noiseCancellationPopout_e131a9 {
-  background-color: transparent;
-  border-radius: var(--popout-radius);
-  box-shadow: none;
-  overflow: hidden;
-}
-.noiseCancellationPopout_e131a9:before {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 100%;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  background-color: var(--popout-color);
-  border-radius: var(--popout-radius);
-  box-shadow: var(--popout-shadow);
-  backdrop-filter: blur(var(--popout-blur));
-  pointer-events: none;
-  z-index: -1;
+#{ $noiseCancellationPopout } {
+  @include add-translucence(before, true);
 }

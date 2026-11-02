@@ -1,30 +1,32 @@
+@use '../classes' as *;
+
 /*
  *
  *  MESSAGE REQUESTS
  *
  */
-.list_f391e3 .sectionTitle_f391e3 {
+#{ $messageRequestContainer } #{ $messageRequestsSectionTitle } {
   color: var(--header-secondary);
 }
 
-.messageRequestItem_abb9ad:hover,
-.messageRequestItem_abb9ad.selected_f391e3,
-.messageRequestItem_abb9ad .selected_dcc822 {
+#{ $messageRequestItem }:hover,
+#{ $messageRequestItem }#{ $messageRequestPageSelected },
+#{ $messageRequestItem } #{ $messageRequestItemSelected } {
   border-radius: var(--card-radius);
 }
-.messageRequestItem_abb9ad:hover {
+#{ $messageRequestItem }:hover {
   background-color: var(--card-color-hover);
 }
-.messageRequestItem_abb9ad.selected_f391e3,
-.messageRequestItem_abb9ad .selected_dcc822 {
+#{ $messageRequestItem }#{ $messageRequestPageSelected },
+#{ $messageRequestItem } #{ $messageRequestItemSelected } {
   background-color: var(--card-color-select);
 }
 
 /* MESSAGE REQUESTS -> PREVIEW */
-.container__01ae2 {
+#{ $dmContainer } {
   background-color: var(--main-content-color);
 }
 
-.chat_a44415:before {
+#{ $dmChat }:before {
   display: none;
 }

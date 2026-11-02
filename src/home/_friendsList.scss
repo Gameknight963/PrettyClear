@@ -1,32 +1,35 @@
+@use '../classes' as *;
+
 /*
  *
  *  FRIENDS LIST
  *
  */
-.container__133bf {
+#{ $friends } {
   background-color: var(--main-content-color) !important;
   border-top: none;
 }
 
-.tabBody__133bf {
+#{ $friendsTabBody } {
   background-color: transparent;
-}
-.tabBody__133bf:before {
-  display: none;
+
+  &:before {
+    display: none;
+  }
 }
 
-.blockedIgnoredSettingsNotice__6811a {
+#{ $friendsBlockedIgnoredSettingsNotice } {
   background-color: var(--card-color);
   border-radius: var(--card-radius);
 }
 
-.peopleListItem_cc6179:hover {
+#{ $friendsItem }:hover {
   background-color: var(--card-color-hover);
   border-radius: var(--list-item-radius);
 }
-.peopleListItem_cc6179.active_cc6179 {
+#{ $friendsItem }#{ $friendsItemActive } {
   background-color: var(--card-color-select);
 }
-.peopleListItem_cc6179 .actionButton_f8fa06 {
+#{ $friendsItem } #{ $friendActionButton } {
   background-color: var(--background-modifier-active);
 }

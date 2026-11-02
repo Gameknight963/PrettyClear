@@ -1,11 +1,14 @@
+@use '../classes' as *;
+
 /*
  *
  *  CHANNELS AND ROLES
  *
  */
-.container__0b563 {
+#{ $channelsAndRolesContainer } {
   background-color: transparent !important;
-}
-.container__0b563 .chat_f75fb0 {
-  background-color: transparent !important;
+
+  #{ $chat } {
+    background-color: transparent !important;
+  }
 }

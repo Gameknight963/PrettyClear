@@ -1,3 +1,5 @@
+@use 'classes' as *;
+
 :root {
 	/* APP ELEMENTS */
 	--app-bg: transparent;
@@ -140,7 +142,7 @@
 @supports (color: color-mix(in lch, red, blue)) {
 	.visual-refresh .theme-dark,
 	.visual-refresh.theme-dark,
-	.theme-dark {
+	#{ $themeDark } {
 		/* TEXT COLOR SETTINGS */
 		--text-primary: hsl(0,0%,100%);
 		--text-secondary: hsl(0,0%,77%);

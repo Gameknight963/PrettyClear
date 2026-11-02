@@ -1,52 +1,44 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  INPUTS
  *
  */
-.wrapper__72c38 {
-  min-height: var(--input-height);
-  height: var(--input-height);
-  border-radius: var(--input-radius);
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha));
-  border: none;
-  color: var(--textarea-text-color);
-  transition: var(--transition-time) var(--transition-type);
+#{ $inputWrapper } {
+  @include input-format();
+
+  & :is(input, textarea) {
+    background-color: transparent;
+
+    &::-webkit-input-placeholder {
+      color: var(--textarea-placeholder-color);
+    }
+  }
 }
 
-.wrapper__72c38:has(input:focus, textarea:focus) {
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
-  outline: none !important;
-}
-
-.wrapper__72c38 :is(input, textarea) {
-  background-color: transparent;
-}
-
-.wrapper__72c38 :is(input, textarea)::-webkit-input-placeholder {
-  color: var(--textarea-placeholder-color);
-}
-
-.fileUploadInput__8b203 {
+#{ $fileUploadInput } {
   width: auto;
 }
 
 /* INPUTS -> OPTION PILLS */
-.optionPill_a16aea,
-.optionPill__1464f {
+#{ $optionPill },
+#{ $optionPillV2 } {
   background-color: var(--textarea-block-color) !important;
   border-radius: var(--button-radius);
   border-color: transparent !important;
 }
 
-.optionPill__1464f.selectedPill__1464f {
+#{ $optionPillV2 }#{ $optionPillV2Selected } {
   border-color: hsl(var(--accent-hsl)) !important;
 }
 
-.optionPill__1464f.erroredPill__1464f {
+#{ $optionPillV2 }#{ $optionPillV2Errored } {
   border-color: hsl(var(--alert-hsl)) !important;
 }
 
-.optionPill__1464f .optionPillKey__1464f {
+#{ $optionPillV2 } #{ $optionPillV2Key } {
   background-color: var(--textarea-block-color) !important;
   border-top-left-radius: inherit;
   border-bottom-left-radius: inherit;

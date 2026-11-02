@@ -1,22 +1,25 @@
+@use '../classes' as *;
+@use '../mixins' as *;
+
 /*
  *
  *  BOT ACTIONS
  *
  */
-.cardHeader_b44011.inModal_b44011,
-.noItemsSelected__3f339 {
+#{ $applicationPermissionsCardHeader }#{ $applicationPermissionsCardHeaderInModal },
+#{ $applicationPermissionsCardNoItemsSelected } {
   padding: 8px;
 }
 
-.requiredPermissionsBanner__9c74b {
+#{ $requiredPermissionsBanner } {
   gap: 16px;
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
-}
-.requiredPermissionsBanner__9c74b .message__9c74b {
-  margin: 0;
-}
-.requiredPermissionsBanner__9c74b .button__201d5 {
-  width: 78px;
+  @include card-format();
+
+  #{ $requiredPermissionsBannerMessage } {
+    margin: 0;
+  }
+
+  #{ $button } {
+    width: 78px;
+  }
 }

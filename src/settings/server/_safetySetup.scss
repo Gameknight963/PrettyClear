@@ -1,16 +1,15 @@
+@use '../../classes' as *;
+@use '../../mixins' as *;
+
 /*
  *
  *  SERVER SETTINGS SAFETY SETUP
  *
  */
-.changelog_eae0ef {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $safetySetupChangelog } {
+  @include card-format();
 }
 
-.safetyChecklist_eae0ef {
-  background-color: var(--card-color);
-  border-radius: var(--card-radius);
-  border: none;
+#{ $safetySetupChecklist } {
+  @include card-format();
 }
