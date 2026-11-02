@@ -151,19 +151,19 @@
 }
 
 .isUnread__908e2 {
-  border-color: hsla(var(--accent-hsl), var(--accent-opacity));
+  border-color: var(--notification-badge-color);
 }
 .isUnread__908e2 .unreadPill__908e2 {
-  background-color: hsla(var(--accent-hsl), var(--accent-opacity));
-  color: var(--accent-text-color);
+  background-color: var(--notification-badge-color);
+  color: var(--notification-badge-text-color);
   text-shadow: none;
 }
 .isUnread__908e2 .unreadPillCap__908e2 {
   filter: none;
 }
 .isUnread__908e2 .unreadPillCapStroke__908e2 {
-  color: hsla(var(--accent-hsl), var(--accent-opacity));
-  fill: hsla(var(--accent-hsl), var(--accent-opacity));
+  color: var(--notification-badge-color);
+  fill: var(--notification-badge-color);
 }
 
 .repliedMessage_c19a55:before {

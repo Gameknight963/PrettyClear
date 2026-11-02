@@ -31,6 +31,10 @@
 	--alert-action-color: hsl(0,0%,100%);
 	--alert-text-color: hsl(0,0%,100%);
 
+	/* NOTIFICATION BADGE COLORS */
+	--notification-badge-color: var(--status-danger, #f23f43);
+	--notification-badge-text-color: #fff;
+
 	/* MENTION HSL COLOR SETTINGS */
 	--mention-hue: var(--accent-hue);
 	--mention-saturation: var(--accent-saturation);

@@ -26,14 +26,14 @@
 }
 
 .mention__3b95d {
-  background-color: hsla(var(--accent-hsl), var(--accent-opacity));
-  color: var(--accent-text-color);
+  background-color: var(--notification-badge-color);
+  color: var(--notification-badge-text-color);
 }
 
 .numberBadge__463b7 {
-  background-color: hsla(var(--reply-hsl), var(--reply-opacity)) !important;
-  color: var(--accent-text-color) !important;
-}  /* use reply hue for mention badges */
+  background-color: var(--notification-badge-color) !important;
+  color: var(--notification-badge-text-color) !important;
+}
 
 .iconBadge__650eb.isCurrentUserConnected__650eb {
   background-color: hsla(var(--accent-hsl), var(--accent-opacity));
