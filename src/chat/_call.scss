@@ -1,0 +1,46 @@
+/*
+ *
+ *	VOICE & VIDEO CALL
+ *
+ */
+.wrapper__1405b .buttonSection__1405b:first-child > .attachedCaretButtonContainer_f1ceac > div:first-child .colorable_f1ceac {
+  --button-radius: calc(var(--popout-radius) / 1.2) 4px 4px calc(var(--popout-radius) / 1.2);
+}
+
+.buttonSection__1405b {
+  position: relative;
+  padding: 5px;
+  background-color: var(--popout-color);
+  backdrop-filter: blur(var(--popout-blur));
+  border: none;
+}
+.buttonSection__1405b .colorable_f1ceac {
+  --button-background: var(--background-modifier-active);
+  --button-radius: calc(var(--popout-radius) / 1.2);
+  height: 42px;
+  padding-block: 0;
+  padding-inline: 10px;
+}
+.buttonSection__1405b .colorable_f1ceac svg {
+  filter: none;
+}
+.buttonSection__1405b .contextMenuNub_f1ceac {
+  padding-block: 0;
+  padding-inline: 2px;
+  border-radius: 4px calc(var(--popout-radius) / 1.2) calc(var(--popout-radius) / 1.2) 4px;
+}
+
+.colorable_f1ceac.disconnect_f1ceac {
+  --button-background: hsl(var(--alert-hsl));
+  --button-radius: var(--popout-radius);
+  --button-text-color: var(--alert-text-color);
+  height: 52px;
+  padding-block: 0;
+  padding-inline: 10px;
+}
+.colorable_f1ceac.disconnect_f1ceac:after {
+  border-radius: inherit;
+}
+.colorable_f1ceac svg {
+  filter: none;
+}

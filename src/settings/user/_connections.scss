@@ -1,0 +1,38 @@
+/*
+ *
+ *  USER SETTINGS CONNECTIONS
+ *
+ */
+.connection_c7f964 {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+  padding: 0;
+}
+.connection_c7f964 .connectionHeader_c7f964 {
+  background-color: transparent;
+  box-shadow: var(--card-header-shadow);
+  border: none;
+  padding: var(--space-16);
+}
+.connection_c7f964 .container__35859 {
+  width: auto;
+  margin-block-end: var(--space-16);
+  margin-inline: var(--space-16);
+}
+
+.connectionOptions_c7f964,
+.metadataContainer_c7f964,
+.container__0d793 {
+  margin-inline: var(--space-16);
+}
+
+.connectionOptions_c7f964:last-child {
+  margin-block-end: var(--space-16);
+}
+
+.metadataContainer_c7f964 {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}

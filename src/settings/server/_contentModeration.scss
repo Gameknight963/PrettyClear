@@ -1,0 +1,51 @@
+/*
+ *
+ *  SERVER SETTINGS CONTENT MODERATION
+ *
+ */
+.triggerMainContainer_b6c6eb {
+  margin-block: 8px;
+  margin-inline: 0;
+  padding: 0;
+  border: none;
+}
+
+.keywordListContainer__09e76,
+.actionContainer__6446f {
+  padding-block: 12px;
+  padding-inline: 16px;
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+.keywordListContainer__09e76:hover,
+.actionContainer__6446f:hover {
+  background-color: var(--card-color-hover);
+  border: none;
+}
+
+.actionContainer__6446f .actionContainer__6446f {
+  padding: 0;
+  background-color: transparent;
+}
+
+.keywordsTextArea__6a631 {
+  background-color: rgba(var(--textarea-color), var(--textarea-alpha));
+  border-radius: 18px;
+  border: none;
+  transition: var(--transition-time) var(--transition-type);
+}
+.keywordsTextArea__6a631:focus {
+  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
+}
+.keywordsTextArea__6a631::-webkit-input-placeholder {
+  color: var(--textarea-placeholder-color);
+}
+
+.dividerContainer__1abf5 {
+  margin-block: 6px 0;
+  margin-inline: auto;
+}
+.dividerContainer__1abf5 .dividierIcon__1abf5 {
+  color: var(--text-muted);
+}

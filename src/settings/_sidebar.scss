@@ -1,0 +1,33 @@
+/*
+ *
+ *  SETTINGS SIDEBAR
+ *
+ */
+.standardSidebarView__23e6b {
+  margin-block-start: var(--custom-app-top-bar-height);
+  background-color: transparent;
+  border-radius: var(--app-radius);
+  backdrop-filter: blur(var(--app-blur));
+  overflow: hidden;
+}
+
+.sidebarRegionScroller__23e6b {
+  background-color: var(--sidebar-color);
+}
+
+.platform-win .contentRegionScroller__23e6b {
+  margin-block-start: 0;
+}
+
+.side_aa8da2 .item_aa8da2 {
+  border-radius: var(--list-item-radius);
+}
+
+.selectedBackground_e681d1 {
+  display: none;
+}
+
+/* SETTINGS SIDEBAR V2 */
+.fixedContent__409aa:after {
+  display: none;
+}

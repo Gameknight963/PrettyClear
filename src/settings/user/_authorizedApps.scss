@@ -1,0 +1,23 @@
+/*
+ *
+ *  USER SETTINGS AUTHORIZED APPS
+ *
+ */
+.authedAppV2__50a54 {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+.authedAppV2__50a54 .headerV2__50a54 {
+  background-color: transparent;
+  box-shadow: var(--card-header-shadow);
+  border: none;
+}
+
+.actionMenuButton_d84e0f {
+  background-color: var(--card-color-hover);
+  border-radius: 16px;
+}
+.actionMenuButton_d84e0f:hover, .actionMenuButton_d84e0f[aria-expanded=true] {
+  background-color: var(--card-color-select);
+}

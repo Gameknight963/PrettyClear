@@ -1,0 +1,30 @@
+/*
+ *
+ *  MESSAGE REQUESTS
+ *
+ */
+.list_f391e3 .sectionTitle_f391e3 {
+  color: var(--header-secondary);
+}
+
+.messageRequestItem_abb9ad:hover, .messageRequestItem_abb9ad.selected_f391e3, .messageRequestItem_abb9ad .selected_dcc822 {
+  border-radius: var(--card-radius);
+}
+.messageRequestItem_abb9ad:hover {
+  background-color: var(--card-color-hover);
+}
+.messageRequestItem_abb9ad.selected_f391e3, .messageRequestItem_abb9ad .selected_dcc822 {
+  background-color: var(--card-color-select);
+}
+.messageRequestItem_abb9ad .actionButton-3GQIiT {
+  background-color: var(--background-modifier-active);
+}
+
+/* MESSAGE REQUESTS -> PREVIEW */
+.container__01ae2 {
+  background-color: var(--main-content-color);
+}
+
+.chat_a44415:before {
+  display: none;
+}

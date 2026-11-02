@@ -1,0 +1,158 @@
+/*
+ *
+ *  MESSAGES POPOUT
+ *
+ */
+.messagesPopoutWrap_e8b59c {
+  max-height: 80vh !important;
+  background-color: transparent;
+  border-radius: var(--popout-radius);
+  box-shadow: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+.messagesPopoutWrap_e8b59c:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  background-color: var(--popout-color);
+  border-radius: var(--popout-radius);
+  box-shadow: var(--popout-shadow);
+  backdrop-filter: blur(var(--popout-blur));
+  pointer-events: none;
+  z-index: -1;
+}
+
+.header_e8b59c {
+  background-color: transparent;
+  border: none;
+  box-shadow: var(--popout-header-shadow);
+}
+
+.messagesPopout_e8b59c {
+  padding-block: 16px 0;
+  padding-inline: 8px 0;
+}
+
+.footer_e8b59c {
+  background-color: transparent;
+}
+
+/* MESSAGES POPOUT -> PINNED MESSAGES */
+.messageGroupWrapper_e8b59c {
+  margin-block-end: 16px;
+  background-color: transparent;
+  border: none;
+}
+.messageGroupWrapper_e8b59c .wrapper_c19a55 {
+  margin-inline-start: 56px !important;
+  margin-inline-end: 0 !important;
+  background-color: var(--message-color);
+  border-radius: var(--message-radius);
+}
+.messageGroupWrapper_e8b59c .wrapper_c19a55 .contents_c19a55,
+.messageGroupWrapper_e8b59c .wrapper_c19a55 .container_b7e1cb {
+  overflow: hidden;
+}
+.messageGroupWrapper_e8b59c .actionButtons_e8b59c {
+  inset-inline-end: calc(16px + var(--message-padding-side));
+}
+.messageGroupWrapper_e8b59c .jumpButton_e8b59c {
+  background-color: var(--card-color);
+  border-radius: var(--button-radius);
+}
+
+/* MESSAGES POPOUT -> FOR YOU */
+.friendRequestsButton__523aa {
+  background-color: var(--background-modifier-hover);
+}
+.friendRequestsButton__523aa:hover {
+  background-color: var(--background-modifier-active);
+}
+
+.container__0f711 {
+  background-color: transparent;
+  border: none;
+}
+
+.row__6fddf:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+/* MESSAGES POPOUT -> MENTIONS */
+.channelHeader__35a7e {
+  margin-block: 4px;
+  margin-inline: 0;
+  padding-block: 12px;
+  padding-inline: 28px 16px;
+  background-color: var(--popout-color);
+  background-color: var(--popout-color);
+  border-radius: var(--popout-radius);
+  box-shadow: var(--popout-shadow);
+  border: none;
+  backdrop-filter: blur(var(--popout-blur));
+}
+.channelHeader__35a7e:before {
+  background-color: var(--message-color);
+  border-radius: var(--message-radius);
+}
+
+.button__06eda {
+  background-color: var(--background-modifier-hover);
+}
+.button__06eda:hover {
+  background-color: var(--background-modifier-selected) !important;
+}
+
+.messageContainer__95796 {
+  padding-block: 16px;
+  padding-inline: 0;
+  background-color: transparent;
+  border: none;
+}
+.messageContainer__95796 .wrapper_c19a55 {
+  margin-inline-start: 60px;
+  margin-inline-end: 0;
+  overflow: visible;
+}
+
+/* MESSAGES POPOUT -> UNREADS */
+.recentMentionsPopout__95796 {
+  background-color: transparent;
+  border-radius: var(--popout-radius);
+  box-shadow: none;
+  overflow: hidden;
+}
+.recentMentionsPopout__95796:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  background-color: var(--popout-color);
+  border-radius: var(--popout-radius);
+  box-shadow: var(--popout-shadow);
+  backdrop-filter: blur(var(--popout-blur));
+  pointer-events: none;
+  z-index: -1;
+}
+.recentMentionsPopout__95796 .messagesPopoutWrap_e8b59c:before {
+  background-color: transparent;
+}
+.recentMentionsPopout__95796 .wrapper_c19a55 {
+  overflow: visible;
+}
+
+.tutorial__2692d {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+
+.messages__1ccd1 {
+  background-color: transparent;
+}

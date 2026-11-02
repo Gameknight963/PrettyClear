@@ -1,0 +1,39 @@
+/*
+ *
+ *  POLLS
+ *
+ */
+.pollContainer_b7e1cb {
+  background-color: var(--textarea-block-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+
+.answer__4c520.votedStyles_a1443c .answerInner__4c520 {
+  outline-color: hsl(var(--accent-hsl));
+}
+.answer__4c520:not(.votedStyles_a1443c) .answerInner__4c520 {
+  outline-color: transparent !important;
+}
+
+.answerInner__4c520 {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+}
+.answerInner__4c520.currentlyVoting__4c520:hover {
+  background-color: var(--card-color-hover);
+}
+.answerInner__4c520.currentlyVoting__4c520.selected__4c520 {
+  background-color: var(--card-color-select);
+}
+.answerInner__4c520.currentlyVoting__4c520.selected__4c520 circle,
+.answerInner__4c520.currentlyVoting__4c520.selected__4c520 path {
+  fill: hsl(var(--accent-hsl));
+}
+.answerInner__4c520.currentlyVoting__4c520 path {
+  fill: var(--text-normal);
+}
+
+.votePercentageBar__4c520 {
+  background-color: hsl(from hsl(var(--accent-hsl)) h calc(s * 1.5) l/0.25);
+}

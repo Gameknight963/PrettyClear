@@ -1,0 +1,19 @@
+/*
+ *
+ *  SERVER FOLDERS
+ *
+ */
+.hiddenVisually_b18fe2 {
+  background-color: transparent;
+}
+.hiddenVisually_b18fe2.hover__48112 {
+  background-color: var(--server-folder-color);
+}
+
+.unreadMentionsIndicatorTop_ef3116 + .itemsContainer_ef3116 .hiddenVisually_b18fe2 {
+  background-color: var(--server-folder-color);
+}
+
+.folderPreviewWrapper__48112[style*="background-color: rgba(88, 101, 242, 0.4)"] {
+  background-color: hsla(var(--accent-hsl), 0.4) !important;
+}

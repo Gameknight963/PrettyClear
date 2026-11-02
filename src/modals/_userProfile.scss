@@ -1,0 +1,47 @@
+/*
+ *
+ *  USER PROFILE
+ *
+ */
+.userProfileModalInner_c69a7b.userProfileInnerThemedNonPremium_c69a7b {
+  background: none;
+}
+
+.fullSizeOverlayBackground_c69a7b {
+  border: none;
+}
+
+.badgeList_ec3b75 {
+  height: var(--button-height);
+  padding-block: 0;
+  padding-inline: 4px;
+  border-radius: var(--button-radius);
+}
+
+.note_fcb628 {
+  margin: 0;
+}
+.note_fcb628 .textarea_dde0a8 {
+  border-radius: 11px;
+}
+.note_fcb628 .textarea_dde0a8:focus {
+  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
+}
+
+.connectedAccountContainer_e6abe8 {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+.connectedAccountContainer_e6abe8:hover {
+  background-color: var(--card-color-hover);
+  border: none;
+}
+
+/* USER PROFILE -> LISTS */
+.listRow__9d78f {
+  border-radius: var(--card-radius);
+}
+.listRow__9d78f:hover {
+  background-color: var(--card-color);
+}

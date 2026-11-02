@@ -1,0 +1,34 @@
+/*
+ *
+ *  QUICKSWITCHER
+ *
+ */
+.quickswitcher_ac6cb0 {
+  background-color: var(--popout-color);
+  border-radius: var(--popout-radius);
+  box-shadow: var(--popout-shadow);
+  border: none;
+  backdrop-filter: blur(var(--popout-blur));
+}
+.quickswitcher_ac6cb0 .input_ac6cb0 {
+  margin-block-end: 16px;
+  min-height: 42px;
+  height: 42px;
+  border-radius: 21px;
+  background-color: rgba(var(--textarea-color), var(--textarea-alpha));
+  border: none;
+  color: var(--textarea-text-color);
+  transition: var(--transition-time) var(--transition-type);
+  font-size: 1.1em;
+}
+.quickswitcher_ac6cb0 .input_ac6cb0:has(input:focus, textarea:focus) {
+  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
+  outline: none !important;
+}
+.quickswitcher_ac6cb0 .scroller_ac6cb0 {
+  margin-block-start: 0;
+  background-color: transparent;
+}
+.quickswitcher_ac6cb0 .result__71961 {
+  border-radius: var(--list-item-radius);
+}

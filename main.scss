@@ -1,0 +1,23 @@
+// Build: sass --no-source-map --style=expanded main.scss PrettyClear.theme.css
+// Watch: sass --watch --no-source-map --style=expanded main.scss PrettyClear.theme.css
+@use 'src/metadata';
+@use 'src/variables';
+
+@use 'src/app';
+@use 'src/channels';
+@use 'src/chat';
+@use 'src/clients';
+@use 'src/forum';
+@use 'src/general';
+@use 'src/home';
+@use 'src/messages';
+@use 'src/modals';
+@use 'src/pages';
+@use 'src/popouts';
+@use 'src/servers';
+@use 'src/settings';
+@use 'src/shop';
+@use 'src/beta';
+
+// Keep these final overrides after the component styles.
+@use 'src/overrides';

@@ -1,0 +1,17 @@
+/*
+ *
+ *  SLIDERS
+ *
+ */
+.bar_a562c8 {
+  background-color: var(--background-modifier-selected) !important;
+}
+.bar_a562c8 .barFill_a562c8 {
+  background-color: hsla(var(--accent-hsl), calc(var(--accent-opacity) * 0.8));
+}
+
+.grabber_a562c8 {
+  background-color: hsla(var(--accent-hsl), var(--accent-opacity));
+  border-color: hsla(var(--accent-hsl), var(--accent-opacity));
+  box-shadow: var(--popout-shadow);
+}

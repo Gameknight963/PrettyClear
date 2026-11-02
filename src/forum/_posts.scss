@@ -1,0 +1,70 @@
+/*
+ *
+ *  FORUM POSTS
+ *
+ */
+.container__9a337, .container_faa96b {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none !important;
+}
+.container__9a337:hover, .container_faa96b:hover {
+  background-color: var(--card-color-hover);
+  box-shadow: none;
+  transform: none;
+}
+.container__9a337.isOpen__9a337, .container__9a337 .isOpen_faa96b, .container_faa96b.isOpen__9a337, .container_faa96b .isOpen_faa96b {
+  background-color: var(--card-color-select) !important;
+}
+
+.pinIcon__08166 {
+  background-color: hsl(var(--accent-hsl));
+}
+.pinIcon__08166 svg {
+  filter: none;
+}
+.pinIcon__08166 path {
+  fill: var(--accent-text-color);
+}
+
+.contentPreview__9a337,
+.textContentFooter__9a337 {
+  background-color: var(--card-color-hover);
+}
+
+.contentPreview__9a337 {
+  border-radius: var(--card-radius);
+  border: none;
+}
+
+.textContentFooter__9a337 {
+  background: transparent !important;
+}
+
+.container__9a337, .container_faa96b {
+  background-color: var(--card-color);
+}
+.container__9a337:hover, .container_faa96b:hover {
+  background-color: var(--card-color-hover);
+}
+.container__9a337:not(.isOpen__9a337, .isOpen_faa96b):hover .contentPreview__9a337, .container_faa96b:not(.isOpen__9a337, .isOpen_faa96b):hover .contentPreview__9a337 {
+  background-color: var(--card-color);
+}
+
+.box_ee23ac {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+.box_ee23ac:after {
+  inset-inline-start: 50px;
+}
+
+.container__34c2c {
+  background-color: var(--card-color);
+  border-top: none;
+}
+
+.buttons__34c2c .button__201d5 {
+  --button-padding: 0;
+}

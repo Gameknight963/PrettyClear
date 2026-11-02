@@ -1,0 +1,34 @@
+/*
+ *
+ *  STREAM PREVIEW POPOUT
+ *
+ */
+.streamPreview__6da2d {
+  background-color: transparent !important;
+  border-radius: var(--popout-radius) !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+.streamPreview__6da2d:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  background-color: var(--popout-color);
+  border-radius: var(--popout-radius);
+  box-shadow: var(--popout-shadow);
+  backdrop-filter: blur(var(--popout-blur));
+  pointer-events: none;
+  z-index: -1;
+}
+.streamPreview__6da2d:before {
+  width: 252px;
+  inset-inline-start: 16px;
+}
+.streamPreview__6da2d .previewContainer__6da2d {
+  background-color: transparent !important;
+  box-shadow: var(--card-header-shadow);
+  border: none !important;
+}

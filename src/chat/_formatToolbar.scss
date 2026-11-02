@@ -1,0 +1,20 @@
+/*
+ *
+ *	FORMAT TOOLBAR
+ *
+ */
+.toolbar_bba883 {
+  background-color: var(--popout-color) !important;
+  border-radius: var(--popout-radius) !important;
+  box-shadow: var(--popout-shadow) !important;
+  border: none !important;
+  backdrop-filter: blur(var(--popout-blur));
+  overflow: hidden;
+}
+.toolbar_bba883 .button__201d5 {
+  --button-radius: 0;
+  --button-background: transparent;
+}
+.toolbar_bba883 .button__201d5:after {
+  --button-action-color: #fff;
+}

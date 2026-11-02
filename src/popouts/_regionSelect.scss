@@ -1,0 +1,22 @@
+/*
+ *
+ *  REGION SELECT POPOUT
+ *
+ */
+.regionSelectPopout__8de63 {
+  padding: 6px;
+  background-color: var(--popout-color) !important;
+  border-radius: var(--popout-radius) !important;
+  box-shadow: var(--popout-shadow) !important;
+  border: none !important;
+  backdrop-filter: blur(var(--popout-blur));
+}
+.regionSelectPopout__8de63 .quickSelectPopoutOption_b852b1 {
+  border-radius: var(--popout-radius);
+}
+.regionSelectPopout__8de63 .quickSelectPopoutOption_b852b1:hover {
+  background-color: var(--background-modifier-hover);
+}
+.regionSelectPopout__8de63 .quickSelectPopoutOption_b852b1:focus {
+  background-color: var(--background-modifier-selected);
+}

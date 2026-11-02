@@ -1,0 +1,32 @@
+/*
+ *
+ *  FRIENDS LIST
+ *
+ */
+.container__133bf {
+  background-color: var(--main-content-color) !important;
+  border-top: none;
+}
+
+.tabBody__133bf {
+  background-color: transparent;
+}
+.tabBody__133bf:before {
+  display: none;
+}
+
+.blockedIgnoredSettingsNotice__6811a {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+}
+
+.peopleListItem_cc6179:hover {
+  background-color: var(--card-color-hover);
+  border-radius: var(--list-item-radius);
+}
+.peopleListItem_cc6179.active_cc6179 {
+  background-color: var(--card-color-select);
+}
+.peopleListItem_cc6179 .actionButton_f8fa06 {
+  background-color: var(--background-modifier-active);
+}

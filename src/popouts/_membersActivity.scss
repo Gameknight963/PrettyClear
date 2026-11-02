@@ -1,0 +1,40 @@
+/*
+ *
+ *  MEMBERS LIST ACTIVITY POPOUT
+ *
+ */
+.popout_af3b89 {
+  background-color: transparent;
+  border-radius: var(--popout-radius);
+  box-shadow: none;
+  overflow: hidden;
+  filter: none;
+}
+.popout_af3b89:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  background-color: var(--popout-color);
+  border-radius: var(--popout-radius);
+  box-shadow: var(--popout-shadow);
+  backdrop-filter: blur(var(--popout-blur));
+  pointer-events: none;
+  z-index: -1;
+}
+.popout_af3b89 .lookFilled__201d5 path {
+  fill: currentColor !important;
+  color: currentColor !important;
+}
+
+.popoutContentWrapper_af3b89,
+.interactionsContainer_af3b89 {
+  background-color: transparent;
+}
+
+.shareToChannelButton_af3b89 {
+  padding-inline-end: 0;
+  border-right: none;
+}

@@ -1,0 +1,22 @@
+/*
+ *
+ *  SERVER LISTS
+ *
+ */
+.container__33507 {
+  height: auto;
+}
+
+.card__4bb93:before {
+  background-color: var(--card-color-hover);
+  border-radius: var(--card-radius);
+}
+.card__4bb93.active:before {
+  background-color: var(--card-color-hover);
+  opacity: 1;
+}
+
+/* SERVER LISTS -> MEMBERS LIST */
+.member-2cj2PI .role_dfa8b6, .member-2cj2PI .role__5d7c9 {
+  background-color: var(--background-modifier-active);
+}

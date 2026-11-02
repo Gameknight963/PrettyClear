@@ -1,0 +1,65 @@
+/*
+ *
+ *  CARDS
+ *
+ */
+.card__73069,
+.cardPrimary__73069,
+.backgroundAccent__4cd16 {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+.cardPrimary__73069 {
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-color: transparent !important;
+}
+.cardPrimary__73069 .cardHeader_b44011 {
+  background-color: unset;
+  border-bottom: 1px solid var(--card-color);
+}
+.cardPrimary__73069 .group_f5fff4 {
+  background-color: var(--card-color);
+  border-radius: var(--button-radius);
+  border: none;
+  overflow: hidden;
+}
+
+.button__9a406 {
+  background-color: var(--card-color) !important;
+}
+.button__9a406:hover {
+  background-color: var(--card-color-hover) !important;
+}
+
+.cardWrapper_aae012 {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+.cardWrapper_aae012:hover {
+  background-color: var(--card-color-hover);
+  border: none;
+}
+
+.card__11580:hover {
+  background-color: transparent;
+}
+
+.upsellContainer__73000 {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+.upsellContainer__73000 .upsellFooter__73000 {
+  background-color: transparent;
+}
+
+.dropsHelpText_e8af36,
+.promotionCard_d4883c {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}

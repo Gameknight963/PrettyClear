@@ -1,0 +1,31 @@
+/*
+ *
+ *  PRIVATE CHANNELS
+ *
+ */
+.privateChannels_e6b769,
+.scroller__99e7c {
+  background-color: transparent !important;
+}
+
+.privateChannels_e6b769 {
+  padding-block-end: calc(var(--custom-app-panels-height, 0) + 10px);
+}
+
+.scroller__99e7c {
+  margin-block-end: 0;
+}
+
+.searchBar_e6b769 {
+  height: 56px;
+  border-bottom: none;
+  box-shadow: var(--popout-header-shadow);
+}
+.searchBar_e6b769 .button_a22cb0 {
+  --button-background: rgba(var(--textarea-color),var(--textarea-alpha));
+  --button-text-color: var(--textarea-text-color);
+}
+
+.channel__972a0 {
+  border-radius: var(--list-item-radius);
+}

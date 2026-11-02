@@ -1,0 +1,43 @@
+/*
+ *
+ *  SELECT MENUS
+ *
+ */
+.wrapper_a16aea.wrapper__72c38 {
+  min-height: var(--input-height);
+  height: var(--input-height);
+  padding: var(--input-padding);
+  background-color: var(--input-color);
+  border-radius: var(--input-radius);
+  border: none;
+}
+
+.select_a16aea {
+  padding-block: 6px;
+  padding-inline: 12px 6px;
+}
+.select_a16aea .subtitle_e9c087 {
+  color: var(--text-muted);
+}
+
+.popout_a16aea {
+  background-color: var(--popout-color);
+  border-radius: var(--popout-radius);
+  box-shadow: var(--popout-shadow);
+  border: none;
+  backdrop-filter: blur(var(--popout-blur));
+  border: none;
+}
+.popout_a16aea:not(.popoutPositionTop_a16aea) {
+  margin-block-start: 8px;
+}
+.popout_a16aea.popoutPositionTop_a16aea {
+  margin-block-end: 8px;
+  border-radius: var(--popout-radius);
+}
+.popout_a16aea .option_a16aea:hover {
+  background-color: var(--background-modifier-hover);
+}
+.popout_a16aea .option_a16aea[aria-selected=true] {
+  background-color: var(--background-modifier-selected) !important;
+}

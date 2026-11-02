@@ -1,0 +1,16 @@
+/*
+ *
+ *  USER SETTINGS GAME OVERLAY
+ *
+ */
+.wrapper_e03935 {
+  border-radius: var(--card-radius);
+  border-color: hsla(var(--accent-hsl), var(--accent-opacity));
+}
+.wrapper_e03935 .option_e03935 {
+  border-radius: var(--card-radius);
+}
+.wrapper_e03935 .option_e03935:hover, .wrapper_e03935 .option_e03935.selected_e03935 {
+  background-color: hsla(var(--accent-hsl), var(--accent-opacity));
+  border-color: hsla(var(--accent-hsl), var(--accent-opacity));
+}

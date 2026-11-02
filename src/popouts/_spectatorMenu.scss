@@ -1,0 +1,18 @@
+/*
+ *
+ *  SPECTATOR MENU
+ *
+ */
+.scroller_d6b206 {
+  background-color: var(--popout-color) !important;
+  border-radius: var(--popout-radius) !important;
+  box-shadow: var(--popout-shadow) !important;
+  border: none !important;
+  backdrop-filter: blur(var(--popout-blur));
+}
+.scroller_d6b206 .memberListItem_ec58fe {
+  border-radius: var(--popout-radius);
+}
+.scroller_d6b206 .memberListItem_ec58fe:not(.popoutDisabled_ec58fe):hover {
+  background-color: var(--background-modifier-hover) !important;
+}

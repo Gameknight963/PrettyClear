@@ -1,0 +1,21 @@
+/*
+ *
+ *  LIBRARY
+ *
+ */
+.container__8a529 {
+  background-color: var(--main-content-color);
+}
+.container__8a529 .container__33507 {
+  min-height: auto;
+  height: auto;
+  border-radius: var(--input-radius);
+  background-color: rgba(var(--textarea-color), var(--textarea-alpha));
+  border: none;
+  color: var(--textarea-text-color);
+  transition: var(--transition-time) var(--transition-type);
+}
+.container__8a529 .container__33507:has(input:focus, textarea:focus) {
+  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
+  outline: none !important;
+}

@@ -1,0 +1,38 @@
+/*
+ *
+ *  SETTINGS CONTENT AREA
+ *
+ */
+.contentRegion__23e6b {
+  background-color: var(--main-content-color);
+}
+
+.container__9a9f9 {
+  background-color: var(--popout-color) !important;
+  border-radius: var(--popout-radius) !important;
+  box-shadow: var(--popout-shadow) !important;
+  border: none !important;
+  backdrop-filter: blur(var(--popout-blur));
+}
+
+.contentRegionScroller__23e6b {
+  background-color: transparent;
+}
+
+/* SETTINGS CONTENT AREA V2 */
+.layer__960e4 {
+  background-color: transparent;
+}
+
+.modal_e44912 {
+  backdrop-filter: none;
+}
+
+.content_e9e3ed,
+.contentHeader_e9e3ed {
+  background-color: transparent;
+}
+
+.scrim__40128 {
+  backdrop-filter: blur(var(--app-blur));
+}

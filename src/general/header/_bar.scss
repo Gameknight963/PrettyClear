@@ -1,0 +1,36 @@
+/*
+ *
+ *  HEADER BAR
+ *
+ */
+.container__9293f {
+  border-bottom: none;
+  box-shadow: var(--popout-header-shadow);
+}
+.container__9293f:before {
+  display: none;
+}
+.container__9293f.themed__9293f {
+  background-color: transparent;
+}
+
+.children__9293f:after {
+  display: none;
+}
+
+.akaBadge__27cd4 {
+  background-color: var(--card-color);
+}
+
+.returnButton__0b563, .returnButton_c791b2 {
+  --button-height: 32px;
+}
+
+.returnButtonText__0b563, .returnButtonText_c791b2 {
+  font-size: 1em;
+}
+.returnButtonText__0b563,
+.returnButtonText__0b563 *, .returnButtonText_c791b2,
+.returnButtonText_c791b2 * {
+  color: var(--accent-text-color) !important;
+}

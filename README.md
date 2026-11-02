@@ -1,8 +1,6 @@
 ## PrettyClear
 modified version of [Translucence](https://github.com/CapnKitten/Translucence) that looks less gamery
 
-i'm just modifiying the full css file right now, might switch to the scss files eventually
-
 you may want to use the included remove-titlebar.css theme to remove 
 discord's custom titlebar if you intend on using the native one.
 
@@ -25,10 +23,16 @@ shown with [DWMBlurGlass](https://github.com/Maplespe/DWMBlurGlass) and [Aero11]
 ## important
 
 all browsers seem to have this composition issue when backdrop filter blur
-is used on a transparent background. not much i can do about it
+is used on a transparent background. ~~not much i can do about it~~ actually there is something I can do about it! install [bedrock](https://github.com/Gameknight963/Bedrock) and use the Backdrop Blur Fix plugin
 
 <img width="356" height="86" alt="image" src="https://github.com/user-attachments/assets/856b8e20-462c-438b-8613-6e6ab051bb0d" />
 
 ~~## why is the commit history screwed??
 I learned too late that you're supposed to use a noreply on github. Why doesn't anyone tell you ts~~
 nevermind its fixed now thank you codex
+
+## build
+
+```
+sass --no-source-map --style=expanded main.scss PrettyClear.theme.css
+```

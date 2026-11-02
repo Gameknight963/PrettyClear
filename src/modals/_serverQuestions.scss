@@ -1,0 +1,64 @@
+/*
+ *
+ *  SERVER QUESTIONS
+ *
+ */
+.gradient_c08b38 {
+  background: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+.prompt_fe70ca {
+  background-color: var(--popout-color) !important;
+  border-radius: var(--popout-radius) !important;
+  box-shadow: var(--popout-shadow) !important;
+  border: none !important;
+  backdrop-filter: blur(var(--popout-blur));
+}
+.prompt_fe70ca .navButtons_fe70ca {
+  background-color: transparent;
+}
+
+.container__0b563 {
+  background-color: transparent !important;
+}
+
+.prompt__5d7c9 {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+
+.optionButtonWrapper__270d7 {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border-color: transparent;
+}
+.optionButtonWrapper__270d7:hover {
+  background-color: var(--card-color-hover);
+}
+.optionButtonWrapper__270d7.selected__270d7 {
+  background-color: var(--card-color-select);
+  border-color: hsl(var(--accent-hsl));
+}
+
+.optionButton__270d7 {
+  background-color: transparent;
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+.optionButton__270d7:hover {
+  background-color: var(--card-color-hover);
+  border: none;
+}
+
+.checkIcon__270d7, .memberCount__270d7 {
+  background-color: hsl(var(--accent-hsl));
+}
+.checkIcon__270d7 path, .memberCount__270d7 path {
+  fill: var(--accent-text-color);
+}
+
+.memberCount__270d7 .cf48127484dbde85-\/normal_cf4812 {
+  color: var(--accent-text-color) !important;
+}

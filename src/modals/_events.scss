@@ -1,0 +1,48 @@
+/*
+ *
+ *  EVENTS
+ *
+ */
+.container__4efb4 {
+  border: none;
+  box-shadow: var(--popout-header-shadow);
+}
+
+.eventStatusBrand__08773 {
+  color: hsl(var(--accent-hsl));
+}
+
+.card__88264 {
+  padding: 0;
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+.card__88264:hover {
+  background-color: var(--card-color-hover);
+  border: none;
+}
+.card__88264 .container_b5010b,
+.card__88264 .footer__88264 {
+  padding: 16px;
+}
+.card__88264 .container_b5010b {
+  box-shadow: var(--card-header-shadow);
+}
+.card__88264 .rsvpCount_b5010b {
+  background-color: var(--background-modifier-selected);
+}
+.card__88264 .divider__88264 {
+  display: none;
+}
+
+/* EVENTS -> CREATE EVENT */
+.selectedProgressBar__5537c {
+  background-color: hsla(var(--accent-hsl), var(--accent-opacity));
+}
+
+.previewCard_f70348 {
+  background-color: var(--card-color) !important;
+  border-radius: var(--card-radius) !important;
+  border: none !important;
+}

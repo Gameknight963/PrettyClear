@@ -1,0 +1,21 @@
+/*
+ *
+ *  SWITCHES
+ *
+ */
+.switchIndicator_a28278 {
+  background-color: var(--switch-slider-color) !important;
+}
+.switchIndicator_a28278:has(.thumb_a28278[style="left: 24px;"]) {
+  --switch-slider-color: hsla(var(--accent-hsl),var(--accent-opacity));
+  --switch-knob-color: var(--accent-text-color);
+}
+.switchIndicator_a28278 .thumb_a28278 {
+  filter: none;
+}
+.switchIndicator_a28278 .thumb_a28278 rect {
+  fill: var(--switch-knob-color) !important;
+}
+.switchIndicator_a28278 .thumb_a28278 svg path {
+  fill: var(--switch-slider-color);
+}

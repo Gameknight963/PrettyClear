@@ -1,0 +1,32 @@
+/*
+ *
+ *  MESSAGE REACTIONS
+ *
+ */
+.reaction__23977 {
+  background-color: var(--message-color);
+  border-radius: var(--message-radius);
+  border: none;
+}
+.reaction__23977:hover {
+  background-color: var(--message-color);
+}
+.reaction__23977.reactionMe__23977 {
+  background-color: hsla(var(--accent-hsl), 0.3);
+  border-color: transparent;
+}
+.reaction__23977.reactionMe__23977:hover {
+  background-color: hsla(var(--accent-hsl), 0.4);
+}
+.reaction__23977.reactionMe__23977 .reactionCount__23977 {
+  color: hsla(var(--accent-hsl), var(--accent-opacity));
+}
+.reaction__23977 .burstGlow__23977 {
+  border-radius: var(--message-radius);
+}
+
+/* MESSAGE REACTIONS -> REVERT BUTTONS TO REACTION STYLE */
+.container_b7e1cb .children__1647d .lookFilled__201d5 {
+  --button-height: 28px;
+  --button-padding: 0 8px;
+}

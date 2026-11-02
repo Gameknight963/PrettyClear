@@ -1,0 +1,162 @@
+/*
+ *
+ *  USER POPOUT
+ *
+ */
+.outer_c0bea0:not(.custom-user-profile-theme) {
+  --background-surface-high: var(--popout-color) !important;
+  --user-profile-overlay-background: var(--profile-gradient-primary-color) !important;
+  --profile-gradient-primary-color: var(--popout-color) !important;
+  --profile-gradient-secondary-color: var(--popout-color) !important;
+  --profile-avatar-border-color: var(--popout-color) !important;
+  --profile-body-background-color: var(--popout-color) !important;
+  --bg-surface-overlay: var(--profile-gradient-primary-color) !important;
+  --bg-mod-faint: var(--profile-body-background-color) !important;
+}
+.outer_c0bea0:not(.custom-user-profile-theme).theme-light {
+  --textarea-color: 0,0,0;
+  --textarea-text-color: hsl(0,0%,30%);
+  --textarea-placeholder-color: hsl(0,0%,40%);
+  --background-modifier-selected: hsl(0,0%,0%,0.125);
+}
+.outer_c0bea0:not(.custom-user-profile-theme):before {
+  background-color: var(--profile-gradient-primary-color);
+}
+
+.custom-user-profile-theme {
+  --card-color: rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-6));
+}
+.custom-user-profile-theme .lookFilled__201d5 {
+  --button-background: var(--profile-gradient-button-color);
+  --button-text-color: var(--white-500);
+  --accent-button-action: var(--white-500);
+}
+
+.outer_c0bea0 {
+  background-color: transparent;
+  border-radius: var(--popout-radius);
+  box-shadow: none;
+  overflow: hidden;
+  border-radius: var(--popout-radius);
+  overflow: initial;
+}
+.outer_c0bea0:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  background-color: transparent;
+  border-radius: var(--popout-radius);
+  box-shadow: var(--popout-shadow);
+  backdrop-filter: blur(var(--popout-blur));
+  pointer-events: none;
+  z-index: -1;
+}
+.outer_c0bea0 * {
+  text-shadow: none;
+}
+.outer_c0bea0 svg {
+  filter: none;
+}
+.outer_c0bea0 .menus_ce8328 > .menu_c1e9c4:before {
+  display: none;
+}
+
+.inner_c0bea0 {
+  border-radius: calc(var(--popout-radius) / 1.25);
+}
+.inner_c0bea0:before {
+  border-radius: inherit;
+}
+.inner_c0bea0 .wrapper__44b0c circle {
+  fill: var(--profile-avatar-border-color);
+}
+.inner_c0bea0 .wrapper__72c38 {
+  border-radius: 18px;
+  border: none;
+}
+.inner_c0bea0 .input__0f084::-webkit-input-placeholder {
+  color: var(--textarea-placeholder-color);
+}
+
+.wrapper-C1y4Sz {
+  border-radius: calc(var(--popout-radius) / 1.25) calc(var(--popout-radius) / 1.25) 0 0;
+}
+
+.banner__68edb {
+  border-radius: calc(var(--popout-radius) / 1.25) calc(var(--popout-radius) / 1.25) 0 0;
+}
+
+.container__8061a {
+  padding: 2px;
+  background-color: var(--card-color) !important;
+  border-radius: 12px;
+  border: none;
+}
+
+.overlayBackground_c69a7b {
+  border-radius: calc(var(--popout-radius) / 1.25);
+}
+
+.biteSizeInnerThemed_c69a7b {
+  padding-block-end: 0;
+}
+
+.statusBubbleOuter_a82ccc, .statusBubbleOuter_af9888, .outer_ab8609,
+.inner_ab8609 {
+  background-color: var(--card-color);
+  border-radius: var(--popout-radius);
+}
+
+.statusBubbleOuter_a82ccc, .statusBubbleOuter_af9888, .outer_ab8609 {
+  border: none !important;
+}
+.statusBubbleOuter_a82ccc:before, .statusBubbleOuter_a82ccc:after, .statusBubbleOuter_af9888:before, .statusBubbleOuter_af9888:after, .outer_ab8609:before, .outer_ab8609:after {
+  border: inherit !important;
+}
+
+.inner_ab8609 {
+  backdrop-filter: blur(var(--popout-blur));
+}
+
+.custom-theme-background .menu_c1e9c4 {
+  border: none;
+}
+
+.activity__5be3e {
+  border-radius: var(--popout-radius);
+}
+
+.role_dfa8b6, .role__5d7c9 {
+  background-color: var(--background-modifier-selected);
+  border-radius: 11px;
+  border: none;
+}
+
+.note_c90ad7 {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.note_c90ad7 .input__0f084 {
+  height: unset;
+  font-size: 14px;
+  line-height: 16px;
+}
+.note_c90ad7 .textarea_dde0a8 {
+  padding: 4px 10px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.note_c90ad7 .textarea_dde0a8::-webkit-input-placeholder {
+  color: var(--textarea-placeholder-color);
+}
+.note_c90ad7 .textarea_dde0a8:focus {
+  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
+}
+
+/* USER POPOUT -> STATUS AREA */
+.menu-KSaHL1:before {
+  display: none;
+}

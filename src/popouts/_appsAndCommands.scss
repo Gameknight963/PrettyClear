@@ -1,0 +1,96 @@
+/*
+ *
+ *  APPS AND COMMANDS
+ *
+ */
+.contentWrapper__9c62c {
+  background-color: transparent;
+  border-radius: var(--popout-radius);
+  box-shadow: none;
+  overflow: hidden;
+}
+.contentWrapper__9c62c:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  background-color: var(--popout-color);
+  border-radius: var(--popout-radius);
+  box-shadow: var(--popout-shadow);
+  backdrop-filter: blur(var(--popout-blur));
+  pointer-events: none;
+  z-index: -1;
+}
+
+.container_cb32c7 {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+.container_cb32c7:hover {
+  background-color: var(--card-color-hover);
+  border: none;
+}
+
+.rowContainer_cb32c7 {
+  border-radius: 0;
+}
+.rowContainer_cb32c7:first-child {
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
+}
+.rowContainer_cb32c7:last-child {
+  border-bottom-left-radius: var(--card-radius);
+  border-bottom-right-radius: var(--card-radius);
+}
+
+.container__19cf2 {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+
+/* APPS AND COMMANDS -> APP */
+.container__7bdb0 {
+  background-color: transparent;
+}
+
+.profileAndVideoContainer_e80fe9 {
+  border-radius: var(--card-radius);
+  border: none;
+}
+.profileAndVideoContainer_e80fe9 .overviewContainerNoVideo__95856 {
+  background-color: var(--card-color);
+  border-radius: inherit;
+}
+.profileAndVideoContainer_e80fe9 .overviewContainerWithVideo__95856 {
+  margin-block-start: -4px;
+  background-color: var(--card-color);
+  border-bottom-left-radius: var(--card-radius);
+  border-bottom-right-radius: var(--card-radius);
+}
+
+.videoCover__95856 {
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
+}
+
+.commandContainer_c94584 {
+  background-color: transparent;
+}
+.commandContainer_c94584 .command_c94584 {
+  background-color: var(--card-color);
+}
+.commandContainer_c94584 .command_c94584:hover {
+  background-color: var(--card-color-hover);
+}
+.commandContainer_c94584 .command_c94584:first-child {
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
+}
+.commandContainer_c94584 .command_c94584:last-child {
+  border-bottom-left-radius: var(--card-radius);
+  border-bottom-right-radius: var(--card-radius);
+}

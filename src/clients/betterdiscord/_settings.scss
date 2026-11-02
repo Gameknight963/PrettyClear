@@ -1,0 +1,83 @@
+/*
+ *
+ *  BETTERDISCORD ADDONS
+ *
+ */
+.bd-modal-root {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+}
+.bd-modal-root:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  background-color: var(--popout-color);
+  border-radius: var(--popout-radius);
+  box-shadow: var(--popout-shadow);
+  pointer-events: none;
+  z-index: -1;
+}
+.bd-modal-root .bd-modal-footer {
+  background-color: transparent;
+  box-shadow: none;
+  gap: 8px;
+}
+
+.bd-search-wrapper {
+  min-height: auto;
+  height: auto;
+  border-radius: var(--input-radius);
+  background-color: rgba(var(--textarea-color), var(--textarea-alpha));
+  border: none;
+  color: var(--textarea-text-color);
+  transition: var(--transition-time) var(--transition-type);
+}
+.bd-search-wrapper:has(input:focus, textarea:focus) {
+  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
+  outline: none !important;
+}
+.bd-search-wrapper .bd-search {
+  color: var(--input-text-color);
+}
+.bd-search-wrapper .bd-search::-webkit-input-placeholder {
+  color: var(--input-placeholder-color);
+}
+
+.bd-store-card {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+.bd-store-card:hover {
+  background-color: var(--card-color-hover);
+  border: none;
+}
+
+.bd-addon-list .bd-addon-card {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
+  border: none;
+}
+.bd-addon-list .bd-addon-header {
+  background-color: transparent;
+  box-shadow: var(--card-header-shadow);
+  border: none;
+}
+.bd-addon-list .bd-controls {
+  background-color: var(--card-color);
+  border-radius: var(--button-radius);
+  overflow: hidden;
+}
+.bd-addon-list .bd-controls .bd-button-filled {
+  --button-background: transparent;
+}
+
+.bd-addon-store-card {
+  background-color: var(--card-color) !important;
+  border-radius: var(--card-radius);
+}

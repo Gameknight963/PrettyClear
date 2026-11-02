@@ -1,0 +1,33 @@
+/*
+ *
+ *  USER SETTINGS ACTIVITY STATUS
+ *
+ */
+.notDetected_cc46f0 {
+  background-color: var(--card-color) !important;
+  border-radius: var(--card-radius) !important;
+  border: none !important;
+}
+
+.game_cc46f0 {
+  box-shadow: 0 1px 0 0 var(--background-modifier-accent) !important;
+}
+.game_cc46f0 .gameNameInput_cc46f0 {
+  border: none;
+}
+.game_cc46f0 .gameNameInput_cc46f0:hover, .game_cc46f0 .gameNameInput_cc46f0:focus {
+  min-height: auto;
+  height: auto;
+  border-radius: var(--input-radius);
+  background-color: rgba(var(--textarea-color), var(--textarea-alpha));
+  border: none;
+  color: var(--textarea-text-color);
+  transition: var(--transition-time) var(--transition-type);
+}
+.game_cc46f0 .gameNameInput_cc46f0:hover:has(input:focus, textarea:focus), .game_cc46f0 .gameNameInput_cc46f0:focus:has(input:focus, textarea:focus) {
+  background-color: rgba(var(--textarea-color), var(--textarea-alpha-focus));
+  outline: none !important;
+}
+.game_cc46f0 .lastPlayed_cc46f0 {
+  color: var(--text-muted);
+}

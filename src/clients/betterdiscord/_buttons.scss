@@ -1,0 +1,52 @@
+/*
+ *
+ *  BETTERDISCORD BUTTONS
+ *
+ */
+.bd-button {
+  --button-background: hsl(var(--accent-hsl));
+  --button-text-color: var(--accent-text-color);
+  background-color: var(--button-background) !important;
+  border-radius: var(--button-radius);
+  color: var(--button-text-color) !important;
+}
+.bd-button .bd-button-content {
+  background-image: none !important;
+}
+.bd-button .bd-button-content svg:not([fill]) .fill {
+  filter: none;
+}
+.bd-button .bd-button-content svg[fill] {
+  filter: none;
+}
+
+.bd-button-tiny,
+.bd-button-medium,
+.bd-button-large {
+  height: var(--button-height);
+  min-height: var(--button-height);
+  min-width: var(--button-height);
+  padding: var(--button-padding);
+}
+
+.bd-button-filled.bd-button-color-red, .bd-button-filled.bd-button-danger {
+  --button-background: hsl(var(--alert-hsl));
+  --button-text-color: var(--alert-text-color);
+}
+
+.bd-button-blank {
+  --button-background: transparent;
+  --button-text-color: var(--interactive-normal);
+}
+
+.bd-button-link {
+  --button-padding: 0 12px;
+  --button-background: transparent;
+  --button-shadow: none !important;
+}
+.bd-button-link:after {
+  --button-action-color: hsl(var(--accent-hsl--material-you));
+}
+.bd-button-link.bd-button-color-brand, .bd-button-link.bd-button-color-primary {
+  --button-text-color: hsl(var(--accent-hsl--material-you));
+}

@@ -1,0 +1,61 @@
+/*
+ *
+ *  DIRECT MESSAGES
+ *
+ */
+.wrapper_cb9592.minimum_cb9592, .wrapper_cb9592.video_cb9592 {
+  background-color: transparent;
+  box-shadow: var(--popout-header-shadow);
+}
+.wrapper_cb9592 .root_bfe55a,
+.wrapper_cb9592 .callContainer_cb9592 {
+  background-color: transparent;
+}
+.wrapper_cb9592 .callContainer_cb9592 {
+  border: none;
+}
+.wrapper_cb9592 .container__9293f {
+  box-shadow: none;
+}
+.wrapper_cb9592 .tile__90dc5 {
+  border-radius: var(--card-radius);
+}
+
+.controlButton__1405b svg {
+  filter: none;
+}
+
+.border__2f4f7 {
+  border-radius: var(--card-radius);
+}
+.border__2f4f7[style*="box-shadow: 0 0 0 0px var(--status-speaking), inset 0 0 0 2px var(--status-speaking), inset 0 0 0 3px var(--background-base-lower);"] {
+  box-shadow: 0 0 0 0px hsl(var(--accent-hsl)), inset 0 0 0 2px hsl(var(--accent-hsl)), inset 0 0 0 3px var(--background-base-lower) !important;
+}
+
+/* DIRECT MESSAGES -> SIDEBAR PROFILE */
+.user-profile-sidebar[style] {
+  border-radius: 0;
+}
+.user-profile-sidebar[style]:not(.custom-user-profile-theme) {
+  background-color: var(--sidebar-color);
+}
+.user-profile-sidebar[style] .inner_c0bea0 {
+  border-radius: 0;
+}
+.user-profile-sidebar[style] .inner_c0bea0 .banner__68edb {
+  border-radius: 0;
+}
+.user-profile-sidebar[style] .inner_c0bea0 * {
+  text-shadow: none;
+}
+.user-profile-sidebar[style] .inner_c0bea0 svg {
+  filter: none;
+}
+
+.overlay__3b260 .button__201d5 {
+  --button-height: 36px !important;
+  --button-padding: 0 12px;
+  --button-background: transparent !important;
+  --button-text-color: var(--text-normal);
+  --button-action-color: transparent;
+}

@@ -1,0 +1,62 @@
+/*
+ *
+ *  APP ELEMENTS
+ *
+ */
+body,
+.app__160d8,
+.bg__960e4 {
+  background-color: transparent;
+}
+
+.appMount__51fd7 {
+  background: var(--app-bg) !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+.appMount__51fd7 * {
+  text-shadow: none;
+}
+.appMount__51fd7 svg {
+  filter: none;
+}
+
+::selection {
+  background: hsla(var(--accent-hsl), 0.65);
+  color: var(--accent-text-color);
+  text-shadow: none;
+}
+
+.layers__160d8 {
+  margin-block: 0 var(--app-margin);
+  margin-inline: var(--app-margin);
+  overflow: hidden;
+  z-index: 1;
+  backdrop-filter: none;
+}
+
+.typeMacOS__421ed + .app_a3002d .layers__160d8 {
+  margin: var(--app-margin);
+}
+
+.container_a2f514 {
+  background: var(--app-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.container_a2f514 .content_a2f514 {
+  padding: 16px;
+  background-color: transparent;
+  border-radius: var(--popout-radius);
+  box-shadow: none;
+  border: none;
+  backdrop-filter: blur(var(--popout-blur));
+}
+
+.content_a2f514 {
+  border-radius: 0;
+  overflow: hidden;
+  backdrop-filter: blur(var(--app-blur));
+}

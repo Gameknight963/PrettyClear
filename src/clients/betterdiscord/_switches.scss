@@ -1,0 +1,26 @@
+/*
+ *
+ *  BETTERDISCORD SWITCHES
+ *
+ */
+.bd-switch .bd-switch-body {
+  --switch-color: var(--switch-slider-color);
+}
+.bd-switch .bd-switch-body .bd-switch-handle {
+  fill: var(--switch-knob-color);
+}
+.bd-switch input:active + .bd-switch-body {
+  --switch-color: var(--switch-slider-color);
+}
+.bd-switch input:checked + .bd-switch-body {
+  --switch-color: hsla(var(--accent-hsl),var(--accent-opacity));
+  --switch-knob-color: var(--accent-text-color);
+}
+.bd-switch input:checked:active + .bd-switch-body {
+  --switch-color: hsla(var(--accent-hsl),var(--accent-opacity));
+}
+
+.bd-switch-disabled {
+  opacity: 0.3;
+  filter: none;
+}
